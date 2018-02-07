@@ -1,0 +1,6 @@
+# commands
+alias del="rm -rf"
+
+# dirs
+alias c="cd .."
+alias cd..="cd .."
