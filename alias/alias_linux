@@ -1,3 +1,5 @@
+alias keypub="cat ~/.ssh/id_rsa.pub"
+
 # commands
 alias del="rm -rf"
 
