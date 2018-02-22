@@ -15,7 +15,7 @@ Also this configure
 
 ## Why I did automated this ?
 Well, Always Im configuring __Debian__ VM's, machines to development.
-Somethings I kill the system over I'm developing.
+Sometimes I kill the system over I'm developing.
 
 I don't have time to lose configuring the same, one and again time more ...
 Developing ASAP!
