@@ -1,8 +1,13 @@
+# ALIAS_LINUX
+
 alias keypub="cat ~/.ssh/id_rsa.pub"
 
 # commands
+alias load="source ~/.bashrc"
 alias del="rm -rf"
 
 # dirs
 alias c="cd .."
 alias cd..="cd .."
+
+# ALIAS_LINUX END

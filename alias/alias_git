@@ -1,3 +1,5 @@
+# ALIAS_LINUX
+
 # git user config
 git config --global user.email "felipe_57@live.com.mx"
 git config --global user.name "Felipe de Jesus Ruiz Garcia"
@@ -36,3 +38,5 @@ alias push="git push "
 
 #git review
 alias rv="git review "
+
+# ALIAS_GIT END
