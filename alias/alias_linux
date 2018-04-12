@@ -10,4 +10,5 @@ alias del="rm -rf"
 alias c="cd .."
 alias cd..="cd .."
 
+alias proxy="env | grep proxy"
 # ALIAS_LINUX END
