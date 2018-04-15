@@ -1,5 +1,6 @@
 # ALIAS_LINUX
 
+alias ins="apt-get install -y"
 alias keypub="cat ~/.ssh/id_rsa.pub"
 
 # commands
