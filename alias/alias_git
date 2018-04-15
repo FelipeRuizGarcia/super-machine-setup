@@ -3,6 +3,7 @@
 # git user config
 git config --global user.email "felipe_57@live.com.mx"
 git config --global user.name "Felipe de Jesus Ruiz Garcia"
+git config --global core.editor vim
 
 alias list="git config --list"
 alias config="git config "
