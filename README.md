@@ -1,9 +1,9 @@
 # myDotFiles
 My Personal Linux Profiles, Shortcuts and Configurations
 
-MyDotFiles is a wrapper to install and auto-configure my __Debian__ development environmnet.
+MyDotFiles is a wrapper to install and auto-configure my __Debian__ development environment.
 
-This download and install:
+Download this and install:
 * [ Vim ](http://www.vim.org/)
 * [ Tmux ](https://github.com/tmux/tmux)
 * [ Mutt ](http://www.mutt.org/)
@@ -11,9 +11,9 @@ This download and install:
 
 Also this configure
 * Linux Alias
-* All another sutff that improve development process.
+* All another stuff that improve development process.
 
-## Why I did automated this ?
+## Why did i automate this?
 Well, Always Im configuring __Debian__ VM's, machines to development.
 Sometimes I kill the system over I'm developing.
 
