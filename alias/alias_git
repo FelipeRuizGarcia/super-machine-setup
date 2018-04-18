@@ -9,6 +9,7 @@ alias config="git config "
 alias global="git config --global"
 
 alias add="git add "
+alias clone="git clone "
 
 alias chto="git checkout "
 
