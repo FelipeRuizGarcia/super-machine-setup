@@ -1,5 +1,5 @@
 alias dpr="django-admin startproject"
 alias dapp="django-admin startproject"
 
-alias drn=python3 manage.py runserver
-alias dmi=python3 manage.py migrate
+alias drn="python3 manage.py runserver "
+alias dmi="python3 manage.py migrate "
