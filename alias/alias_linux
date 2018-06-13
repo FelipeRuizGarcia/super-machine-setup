@@ -10,7 +10,7 @@ alias ins="apt-get install -y"
 alias keypub="cat ~/.ssh/id_rsa.pub"
 
 # alias
-alias load="source ~/.bashrac && source ~/.proxy"
+alias load="source ~/.bashrc && source ~/.proxy"
 
 # files
 alias del="rm -rf "
