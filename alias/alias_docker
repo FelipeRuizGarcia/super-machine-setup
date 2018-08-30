@@ -1,4 +1,0 @@
-alias dcrm="docker container rm $(docker container ls -a -q )"
-alias dcls="docker container ls -a "
-alias dirm="docker image rm $(docker image ls -a -q )"
-alias dils="docker image ls -a "

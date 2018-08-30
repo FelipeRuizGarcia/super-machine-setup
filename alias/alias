@@ -1,40 +1,49 @@
+# ALIAS DJANGO
+alias dpr="django-admin startproject"
+alias dapp="django-admin startproject"
+alias drn="python3 manage.py runserver "
+alias dmi="python3 manage.py migrate "
+
+# ALIAS DOCKER
+alias dcls="docker container ls -a "
+alias dils="docker image ls -a "
+
 # ALIAS GIT
-# user config
 git config --global user.email "felipe_57@live.com.mx"
 git config --global user.name "Felipe de Jesus Ruiz Garcia"
 git config --global core.editor vim
-
 alias list="git config --list"
 alias config="git config "
 alias global="git config --global"
-
 alias add="git add "
 alias clone="git clone "
-
 alias chto="git checkout "
-
-alias master="git checkout master"
-
 alias newbr="git checkout -b "
 alias br="git branch"
 alias delbr="git branch -D "
 alias mvbr="git branch -m"
-
 alias log="git log --oneline --decorate"
 alias all="git log --oneline --decorate --all"
-
 alias res="git reset "
 alias clean="git reset --hard "
-
 alias status="git status"
 alias dff="git diff"
 alias cache="git diff --cached"
-
-alias com="git commit"
+alias com="git commit -s"
 alias amend="git commit --amend"
-
 alias pull="git pull"
 alias new="git remote add "
+alias repos="git remote -v"
 alias push="git push "
-
 alias rv="git review "
+
+# LINUX ALIAS
+alias us="setxkbmap us"
+alias latam="setxkbmap latam"
+alias ins="apt-get install -y"
+alias keypub="cat ~/.ssh/id_rsa.pub"
+alias load="source ~/.bashrc && source ~/.proxy"
+alias del="rm -rf "
+alias c="cd .."
+alias cd..="cd .."
+alias proxy="env | grep proxy"
