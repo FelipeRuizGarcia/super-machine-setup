@@ -5,3 +5,5 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 rm ~/.vimrc
 ln -s `pwd`/vimrc ~/.vimrc
+
+vim -c :PlugInstall 
