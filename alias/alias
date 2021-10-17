@@ -1,3 +1,7 @@
+# K8S Alias
+alias mn="minikube"
+alias k="kubectl"
+
 # ALIAS DJANGO
 alias dpr="django-admin startproject"
 alias dapp="django-admin startproject"
@@ -7,11 +11,13 @@ alias dmi="python3 manage.py migrate "
 # ALIAS DOCKER
 alias dcls="docker container ls -a "
 alias dils="docker image ls -a "
+alias dirma="dils -q | xargs docker image rm "
 
 # ALIAS GIT
 git config --global user.email "felipe_57@live.com.mx"
 git config --global user.name "Felipe de Jesus Ruiz Garcia"
 git config --global core.editor vim
+
 alias list="git config --list"
 alias config="git config "
 alias global="git config --global"
