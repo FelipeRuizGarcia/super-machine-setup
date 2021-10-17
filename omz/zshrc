@@ -1,12 +1,15 @@
 #clokta -p ao
 source ~/.secrets/delivery.sh
 
+# my custom alias
+source ~/.bash_aliases
+
 # the local virtual env
 # needs to create the env from scratch on that path
 #source ~/tmp/venv/bin/activate
 
 # the df profile
-export AWS_PROFILE=ao
+export AWS_PROFILE=adapa-dev
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -89,12 +92,21 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    dnf
+    globalias
+    aliases
     git
     docker
     aws
     colored-man-pages
     colorize
     cp
+    # history
+    kops
+    kubectl
+    kubectx
+    kube-ps1
+    helm
     docker
     docker-compose
     docker-machine
@@ -105,12 +117,14 @@ plugins=(
     git-prompt
     github
     gitignore
+    git-extras
+    git-escape-magic
     marked2
     npm
-    # npx
     pep8
     pip
     pyenv
+    terraform
     tmux
     tmux-cssh
     vim-interaction
