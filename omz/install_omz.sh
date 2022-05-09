@@ -5,7 +5,3 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 # changing the default shell to zsh
 chsh -s $(which zsh)
-
-# copy my zshrc file
-rm ~/.zshrc
-ln -s `pwd`/zshrc ~/.zshrc

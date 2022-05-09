@@ -1,5 +1,8 @@
+# Go path
+export PATH=$PATH:/usr/local/go/bin
+
 #clokta -p ao
-source ~/.secrets/delivery.sh
+source ~/.secrets/env.sh
 
 # my custom alias
 source ~/.bash_aliases
@@ -93,15 +96,15 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     dnf
-    globalias
-    aliases
+    # globalias
+    # aliases
     git
     docker
     aws
     colored-man-pages
     colorize
     cp
-    # history
+    history
     kops
     kubectl
     kubectx
@@ -165,3 +168,6 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform

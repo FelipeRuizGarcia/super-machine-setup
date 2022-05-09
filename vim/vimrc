@@ -33,8 +33,11 @@ set expandtab
 
 call plug#begin()
 
+"   git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
+Plug 'pangloss/vim-javascript'
 
 " Make sure you use single quotes
+Plug 'hashivim/vim-terraform'
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'

@@ -3,3 +3,10 @@ My Personal Linux( and Mac now, but not windows :P ) Profiles, Shortcuts and Con
 
 Also this configure
 * All another stuff that improve my development process.
+
+----
+
+### Shortcuts
+
+    $ af <x>
+    allow us to filter alias that include x word

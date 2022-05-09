@@ -1,3 +1,15 @@
+alias nn="nvim"
+
+alias rmf="rm -rf "
+
+# BUILT IN
+alias a="alias"
+alias af="alias | tee | grep \\"
+
+# PACKER
+alias pb="packer build "
+alias pf="packer fmt "
+
 # K8S Alias
 alias mn="minikube"
 alias k="kubectl"
@@ -10,7 +22,11 @@ alias dmi="python3 manage.py migrate "
 
 # ALIAS DOCKER
 alias dcls="docker container ls -a "
+alias dcrm="docker container rm "
+alias dcrma="dcls -q | xargs docker container rm "
+
 alias dils="docker image ls -a "
+alias dirm="docker image rm "
 alias dirma="dils -q | xargs docker image rm "
 
 # ALIAS GIT

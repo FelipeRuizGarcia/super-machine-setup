@@ -1,0 +1,39 @@
+section: screens
+	mymac:
+		halfDuplexCapsLock = false
+		halfDuplexNumLock = false
+		halfDuplexScrollLock = false
+		xtestIsXineramaUnaware = false
+		switchCorners = none 
+		switchCornerSize = 0
+	pipo-legion:
+		halfDuplexCapsLock = false
+		halfDuplexNumLock = false
+		halfDuplexScrollLock = false
+		xtestIsXineramaUnaware = false
+		switchCorners = none 
+		switchCornerSize = 0
+end
+
+section: aliases
+end
+
+section: links
+	mymac:
+		right = pipo-legion
+	pipo-legion:
+		left = mymac
+end
+
+section: options
+	relativeMouseMoves = false
+	win32KeepForeground = false
+	disableLockToScreen = false
+	clipboardSharing = true
+	clipboardSharingSize = 51200
+	switchCorners = none 
+	switchCornerSize = 0
+	keystroke(Pause) = switchToScreen(mymac)
+	keystroke(Insert) = switchToScreen(pipo-legion)
+end
+
