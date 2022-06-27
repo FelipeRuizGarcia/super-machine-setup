@@ -30,9 +30,12 @@ alias dirm="docker image rm "
 alias dirma="dils -q | xargs docker image rm "
 
 # ALIAS GIT
-git config --global user.email "felipe_57@live.com.mx"
-git config --global user.name "Felipe de Jesus Ruiz Garcia"
-git config --global core.editor vim
+git config --global user.email "felipe.ruiz@adapa.mx"
+git config --global user.name "Felipe Ruiz Garcia"
+git config --global core.editor nvim
+
+## submodules
+alias gcls"git submodule update --init --recursive"
 
 alias list="git config --list"
 alias config="git config "
