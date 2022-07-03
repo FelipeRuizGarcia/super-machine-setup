@@ -35,7 +35,8 @@ git config --global user.name "Felipe Ruiz Garcia"
 git config --global core.editor nvim
 
 ## submodules
-alias gcls"git submodule update --init --recursive"
+alias gscl="git submodule update --init --recursive"
+alias gsdf="git diff --cached --submodule"
 
 alias list="git config --list"
 alias config="git config "
