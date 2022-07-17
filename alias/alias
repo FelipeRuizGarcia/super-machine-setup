@@ -1,3 +1,4 @@
+alias vim="nvim"
 alias nn="nvim"
 
 alias rmf="rm -rf "
@@ -37,6 +38,10 @@ git config --global core.editor nvim
 ## submodules
 alias gscl="git submodule update --init --recursive"
 alias gsdf="git diff --cached --submodule"
+
+### Git General
+alias glgs="git log --name-status"
+alias glgsa="git log --name-status --all"
 
 alias list="git config --list"
 alias config="git config "

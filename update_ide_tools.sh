@@ -5,6 +5,7 @@ sudo dnf upgrade --refresh -y
 
 # update nvidia driver
 sudo nvautoinstall driver
+sudo nvautoinstall plcuda
 
 # update snap
 snap refresh
@@ -16,6 +17,6 @@ omz update
 git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull
 
 # update vim plugins
-vim -c "PlugUpgrade" -c q!   
-vim -c "PlugUpdate" -c q!   
+nvim -c "PlugUpgrade" -c q!   
+nvim -c "PlugUpdate" -c q!   
 

@@ -33,7 +33,5 @@ section: options
 	clipboardSharingSize = 51200
 	switchCorners = none 
 	switchCornerSize = 0
-	keystroke(Pause) = switchToScreen(mymac)
-	keystroke(Insert) = switchToScreen(pipo-legion)
 end
 
