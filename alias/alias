@@ -3,6 +3,10 @@ alias nn="nvim"
 
 alias rmf="rm -rf "
 
+# LOCALSTACK
+alias lsc="make clean && make venv && make install && make start"
+alias lss="make start"
+
 # BUILT IN
 alias a="alias"
 alias af="alias | tee | grep \\"
