@@ -10,8 +10,11 @@ sudo nvautoinstall plcuda
 # update snap
 snap refresh
 
+# update flatpak
+flatpak update
+
 # update omz
-omz update
+# omz update
 
 # update powerlevel
 git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull
