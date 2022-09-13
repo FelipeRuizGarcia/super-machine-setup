@@ -12,6 +12,12 @@ set relativenumber
 " Directorio de plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
+" Neoformat
+Plug 'sbdchd/neoformat'
+
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+
 " nvim-treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
