@@ -33,6 +33,10 @@ set expandtab
 
 call plug#begin()
 
+Plug 'nvim-lualine/lualine.nvim'
+" If you want to have icons in your statusline choose one of these
+Plug 'kyazdani42/nvim-web-devicons'
+
 "   git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
 Plug 'pangloss/vim-javascript'
 
