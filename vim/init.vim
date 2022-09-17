@@ -7,6 +7,10 @@ set showcmd
 set showmatch
 set relativenumber
 
+" coc sql
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
 " Black Configs
 
 augroup black_on_save
