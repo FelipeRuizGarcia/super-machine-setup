@@ -1,5 +1,3 @@
-" native configs
-
 syntax enable
 
 set number
@@ -9,8 +7,41 @@ set showcmd
 set showmatch
 set relativenumber
 
+" Black Configs
+
+augroup black_on_save
+  autocmd!
+  autocmd BufWritePre *.py Black
+augroup end
+
+" To run Black on a key press (e.g. F9 below), add this:
+nnoremap <F9> :Black<CR>
+
+
 " Directorio de plugins
 call plug#begin('~/.local/share/nvim/plugged')
+
+" nvim-lint
+Plug 'mfussenegger/nvim-lint'
+
+" DAP
+Plug 'mfussenegger/nvim-dap'
+
+" Vim Script
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'folke/trouble.nvim'
+
+" plenary.nvim
+Plug 'nvim-lua/plenary.nvim'
+
+" Formatter.nvim
+Plug 'mhartington/formatter.nvim'
+
+" LSP Manson Install
+Plug 'williamboman/mason.nvim'
+
+" COC with SLP
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Neoformat
 Plug 'sbdchd/neoformat'
@@ -69,6 +100,6 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'nlknguyen/cloudformation-syntax.vim'
 
-Plug 'psf/black'
+Plug 'psf/black', { 'branch': 'stable' }
 
 call plug#end()
