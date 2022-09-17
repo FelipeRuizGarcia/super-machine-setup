@@ -3,6 +3,9 @@ alias nn="nvim"
 
 alias rmf="rm -rf "
 
+# APIS
+alias post="curl -i -X POST localhost:8000/test -H 'authorization: FFF'"
+
 # LOCALSTACK
 alias lsc="make clean && make venv && make install && make start"
 alias lss="make start"
