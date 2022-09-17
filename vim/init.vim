@@ -53,6 +53,9 @@ let g:coc_snippet_next = '<tab>'
 " Directorio de plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
+
+Plug 'mxw/vim-jsx'
+
 " nvim-lint
 Plug 'mfussenegger/nvim-lint'
 
