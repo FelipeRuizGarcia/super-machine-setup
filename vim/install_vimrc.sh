@@ -3,6 +3,10 @@
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# COC List
+rm ~/.config/coc/extensions/package.json
+ln -s `pwd`/package.json ~/.config/coc/extensions/package.json
+
 # NEOVIM LUA
 rm ~/.config/nvim/init.lua
 # ln -s `pwd`/init.lua ~/.config/nvim/init.lua
