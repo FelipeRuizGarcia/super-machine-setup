@@ -1,4 +1,14 @@
 syntax enable
+"
+" VIM Identation
+
+filetype plugin indent on
+"show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
 
 set number
 set mouse=a
@@ -7,20 +17,30 @@ set showcmd
 set showmatch
 set relativenumber
 
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+:  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+:augroup END
+
 " coc sql
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
-" Black Configs
+" BLACK
 
-augroup black_on_save
-  autocmd!
-  autocmd BufWritePre *.py Black
-augroup end
+let g:black_linelength=79
+
+autocmd BufWritePre *.py execute ':Black'
+
+" ZZ does not work
+" nnoremap ZZ :Black exit <CR>
 
 " To run Black on a key press (e.g. F9 below), add this:
 nnoremap <F9> :Black<CR>
 
+
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 
 " coc snippets
 " Use <C-l> for trigger snippet expand.
