@@ -33,12 +33,12 @@ alias dmi="python3 manage.py migrate "
 
 # ALIAS DOCKER
 alias dcls="docker container ls -a "
-alias dcrm="docker container rm "
-alias dcrma="dcls -q | xargs docker container rm "
+alias dcrm="docker container rm -f "
+alias dcrma="dcls -q | xargs docker container rm -f "
 
 alias dils="docker image ls -a "
-alias dirm="docker image rm "
-alias dirma="dils -q | xargs docker image rm "
+alias dirm="docker image rm -f "
+alias dirma="dils -q | xargs docker image rm -f "
 
 # ALIAS GIT
 git config --global user.email "felipe.ruiz@adapa.mx"
