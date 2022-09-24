@@ -1,10 +1,10 @@
 # Gnome Configs
 
+https://extensions.gnome.org/
 
 ## Install GNOME Extensions
 1. Add GNOME Extensions
 
-https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/master/subprojects/extensions-app/README.md
 
 https://flathub.org/apps/details/org.gnome.Extensions
 
