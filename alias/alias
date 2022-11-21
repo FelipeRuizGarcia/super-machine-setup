@@ -1,10 +1,11 @@
+alias npf="npm start --force"
 
 alias vim="nvim"
 alias nn="nvim"
 
 alias rmf="rm -rf "
 
-alias rem="grep -rl \/inscripcion . | xargs sed -i  -s  -r 's/\/inscripcion/\/inscripcion/g'"
+alias rep="grep -rl \/inscripcion . | xargs sed -i  -s  -r 's/\/inscripcion/\/inscripcion/g'"
 
 # APIS
 alias post="curl -i -X POST localhost:8000/test -H 'authorization: FFF'"
