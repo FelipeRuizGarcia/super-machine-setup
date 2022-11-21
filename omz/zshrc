@@ -11,8 +11,10 @@ source ~/.bash_aliases
 # needs to create the env from scratch on that path
 #source ~/tmp/venv/bin/activate
 
+# AWS Configs
 # the aws profile, localstack default
 export AWS_PROFILE=local
+export AWS_CLI_AUTO_PROMPT=on-partial
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
