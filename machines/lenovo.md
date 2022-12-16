@@ -21,6 +21,12 @@ https://developer.nvidia.com/cuda-downloads
 
 ![image](https://user-images.githubusercontent.com/14207635/139580676-7374bfcf-ad26-43de-8275-a8baee203b16.png)
 
+```
+sudo dnf -y module install nvidia-driver --allowerasing --skip-broken
+
+sudo dnf -y module install nvidia-driver:latest-dkms --allowerasing --skip-broken
+
+```
 
 #### Tips
 Does not install any cuda/nvida driver by rpm package, instead look for add the repolist to your system, which avoid and fix dependecies problems in the future.
