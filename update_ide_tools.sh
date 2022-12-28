@@ -7,11 +7,14 @@ sudo dnf upgrade --refresh -y
 sudo nvautoinstall driver
 sudo nvautoinstall plcuda
 
+# upgrade brew
+brew upgrade
+
 # update snap
-snap refresh
+sudo snap refresh
 
 # update flatpak
-flatpak update
+flatpak upgrade -y
 
 # update omz
 # omz update
