@@ -35,3 +35,10 @@ If there are some rpm installations, search for those and delete ( acordding the
 
 dnf list installed '*nvidia*' 
 ![image](https://user-images.githubusercontent.com/14207635/139586439-2b1e64aa-9cf7-44ea-9110-b3634db84d01.png)
+
+
+---
+
+```
+sudo dnf system-upgrade download --releasever=37 --allowerasing 
+```
