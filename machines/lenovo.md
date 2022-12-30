@@ -39,6 +39,8 @@ dnf list installed '*nvidia*'
 
 ---
 
+https://docs.fedoraproject.org/en-US/quick-docs/dnf-system-upgrade/
+
 ```
 sudo dnf system-upgrade download --releasever=37 --allowerasing 
 ```
