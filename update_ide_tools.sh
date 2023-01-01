@@ -22,7 +22,11 @@ flatpak upgrade -y
 # update powerlevel
 git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull
 
+### IDE ###
+# pnpm
+wget -qO- https://get.pnpm.io/install.sh | sh -
+
 # update vim plugins
+nvim -c "PlugClean" -c q!   
 nvim -c "PlugUpgrade" -c q!   
-nvim -c "PlugUpdate" -c q!   
 
