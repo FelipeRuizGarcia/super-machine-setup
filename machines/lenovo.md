@@ -5,8 +5,11 @@ tee /etc/modprobe.d/blacklist-ideapad.conf <<< "blacklist ideapad_laptop"
 
 ## Nvidia Driver
 
-Disable the secure boot
+#### Disable the secure boot
 ` if you install the nvidia drivers and you have secure boot enabled, you will not be able to load nvidia kernel modules on boot `
+
+#### disable Wayland (enable xorg)
+` Wayland does not work well ... `
 
 https://github.com/t0xic0der/nvidia-auto-installer-for-fedora-linux
 
