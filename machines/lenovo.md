@@ -5,11 +5,18 @@ tee /etc/modprobe.d/blacklist-ideapad.conf <<< "blacklist ideapad_laptop"
 
 ## Nvidia Driver
 
+Disable the secure boot
+` if you install the nvidia drivers and you have secure boot enabled, you will not be able to load nvidia kernel modules on boot `
+
+https://github.com/t0xic0der/nvidia-auto-installer-for-fedora-linux
+
+---
+
 Make sure that repos at `/etc/yum.repos.d/` does not include any thirdparty nvidia service
+add those with 
 
 
 Guia to Repos for Nvidia drivers + CUDA  <br>
-https://ask.fedoraproject.org/t/nvidia-auto-installer-for-fedora-now-works-with-fedora-34/
 
 https://copr.fedorainfracloud.org/coprs/t0xic0der/nvidia-auto-installer-for-fedora/
 
