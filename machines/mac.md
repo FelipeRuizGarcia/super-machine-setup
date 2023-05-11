@@ -1,3 +1,14 @@
+```
+
+Enable option key as meta key
+
+    Go to Terminal > Preferences > Profiles > Keyboard
+    Check Use option key as meta key.
+
+```
+https://stackoverflow.com/questions/327664/mac-os-x-terminal-map-optiondelete-to-backward-delete-word
+
+---
 
 Move and resize windows in macOS using keyboard shortcuts or snap areas
 <br>
