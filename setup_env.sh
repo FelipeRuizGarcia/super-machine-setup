@@ -4,10 +4,8 @@ sudo dnf upgrade --refresh -y
 
 # require for chsh
 dnf install util-linux-user
-sudo dnf install zsh nvim git tmux
-
-# git store credentials
-# git config credential.helper store
+sudo dnf install awscli2 zsh nvim git tmux
+# install the aws cli 
 
 # install omz and configure it
 # ./install_omz.sh

@@ -16,6 +16,9 @@ source ~/.bash_aliases
 export AWS_PROFILE=local
 export AWS_CLI_AUTO_PROMPT=on-partial
 
+# AWS NUKE WITH
+export DISABLE_TELEMETRY=TRUE # Do not send data
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
