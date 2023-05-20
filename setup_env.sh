@@ -22,6 +22,9 @@ pip install virtualenvwrapper
 # JS / NODE INSTALLATION
 sudo dnf install nodejs -y
 # install pnpm
+# via brw
+# brew install pnpm
 #
 
 # install brew
+brew install pnpm cloud-nuke hugo  istioctl  kubernetes-cli  minikube
