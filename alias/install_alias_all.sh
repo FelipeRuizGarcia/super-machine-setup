@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BASEDIR=$(pwd)
-ALIASES=/home/$USER/.bash_aliases
+ALIASES=$HOME/.bash_aliases
 CURRENT_ALIASES=$BASEDIR/alias
 
 if [ -a $ALIASES ]; then
