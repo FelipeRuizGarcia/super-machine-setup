@@ -22,3 +22,6 @@ pip install virtualenvwrapper
 # JS / NODE INSTALLATION
 sudo dnf install nodejs -y
 # install pnpm
+#
+
+# install brew

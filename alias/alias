@@ -45,6 +45,7 @@ alias dirma="dils -q | xargs docker image rm -f "
 git config --global user.email "felipe.ruiz@adapa.mx"
 git config --global user.name "Felipe Ruiz Garcia"
 git config --global core.editor nvim
+git config –global credential. helper store
 
 ## submodules
 alias gscl="git submodule update --init --recursive"
