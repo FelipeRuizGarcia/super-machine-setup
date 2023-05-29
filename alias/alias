@@ -12,11 +12,15 @@ alias post="curl -i -X POST localhost:8000/test -H 'authorization: FFF'"
 
 
 # AWS 
+alias awa="aws iam create-account-alias --account-alias CHANGEME"
 alias awi="aws configure import --profile-prefix CHANGEME --csv file://rootkey.csv"
 alias awlp="aws configure list-profiles"
 alias aws3="aws s3 ls"
 alias awe="export AWS_PROFILE=local"
-alias awnuke="cloud-nuke aws --region us-east-1 global --resource-type s3 --force"
+
+# AWS NUKE
+alias awnukg="cloud-nuke aws --region us-east-1 global --resource-type s3 --force"
+alias awnuk="aws-nuke -c aws-nuke-all-config.yml --profile AWS_PROFILE --no-dry-run --force"
 
 # LOCALSTACK
 alias lsc="make clean && make venv && make install && make start"
