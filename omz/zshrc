@@ -1,3 +1,6 @@
+# EDITOR
+
+export EDITOR=nvim
 # Go path
 export PATH=$PATH:/usr/local/go/bin
 
@@ -25,6 +28,13 @@ export DISABLE_TELEMETRY=TRUE # Do not send data
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+### FZF
+# fzf on Fedora
+if [ -x "$(command -v fzf)"  ]
+then
+    source /usr/share/fzf/shell/key-bindings.zsh
 fi
 
 # If you come from bash you might have to change your $PATH.
@@ -104,6 +114,7 @@ plugins=(
     dnf
     # globalias
     # aliases
+    fzf
     git
     docker
     aws
