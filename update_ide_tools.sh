@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# TMUX PLUGINS
+~/.tmux/plugins/tpm/bin/update_plugins all
+
 # update os
 sudo dnf upgrade --refresh -y 
 
@@ -8,7 +11,7 @@ sudo nvautoinstall driver
 sudo nvautoinstall plcuda
 sudo nvautoinstall ffmpeg
 sudo nvautoinstall vidacc
-sudo nvautoinstall primec
+# sudo nvautoinstall primec
 
 # upgrade brew
 brew upgrade
@@ -26,7 +29,7 @@ flatpak upgrade -y
 git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull
 
 ### IDE ###
-# pnpm
+# pnpm TODO: change for Brew to handle the package
 wget -qO- https://get.pnpm.io/install.sh | sh -
 
 # update vim plugins
