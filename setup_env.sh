@@ -4,7 +4,7 @@ sudo dnf upgrade --refresh -y
 
 # require for chsh
 dnf install util-linux-user
-sudo dnf install awscli2 zsh nvim git tmux
+sudo dnf install awscli2 zsh nvim git tmux alacritty
 # install the aws cli 
 
 # install omz and configure it
@@ -25,4 +25,4 @@ sudo dnf install nodejs -y
 #
 
 # install brew
-brew install pnpm cloud-nuke hugo  istioctl  kubernetes-cli  minikube
+brew install pnpm aws-nuke cloud-nuke hugo  istioctl  kubernetes-cli  minikube
