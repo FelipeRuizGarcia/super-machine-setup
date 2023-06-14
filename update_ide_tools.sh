@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# TMUX PLUGINS
-~/.tmux/plugins/tpm/bin/update_plugins all
-
 # update os
 sudo dnf upgrade --refresh -y 
 
@@ -13,11 +10,11 @@ sudo nvautoinstall ffmpeg
 sudo nvautoinstall vidacc
 # sudo nvautoinstall primec
 
-# upgrade brew
-brew upgrade
-
 # update snap
 sudo snap refresh
+
+# upgrade brew
+brew upgrade
 
 # update flatpak
 flatpak upgrade -y
@@ -36,3 +33,5 @@ wget -qO- https://get.pnpm.io/install.sh | sh -
 nvim -c "PlugClean" -c q!   
 nvim -c "PlugUpgrade" -c q!   
 
+# TMUX PLUGINS
+~/.tmux/plugins/tpm/bin/update_plugins all
