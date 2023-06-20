@@ -26,3 +26,6 @@ sudo dnf install nodejs -y
 
 # install brew
 brew install pnpm aws-nuke cloud-nuke hugo  istioctl  kubernetes-cli  minikube
+
+# brew mac only
+# brew install --cask macs-fan-control --cask rectangle
