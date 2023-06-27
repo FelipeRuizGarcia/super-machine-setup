@@ -1,10 +1,11 @@
 # EDITOR
 
+source $HOME/fzf-git.sh
+
 export EDITOR=nvim
 # Go path
 export PATH=$PATH:/usr/local/go/bin
 
-#clokta -p ao
 #source ~/.secrets/env.sh
 
 # my custom alias
