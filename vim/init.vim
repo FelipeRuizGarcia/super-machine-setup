@@ -1,3 +1,5 @@
+set number
+
 syntax enable
 "
 " VIM Identation

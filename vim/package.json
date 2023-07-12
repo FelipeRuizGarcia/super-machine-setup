@@ -7,8 +7,12 @@
     "coc-pyright": ">=1.1.271",
     "coc-snippets": ">=3.1.2",
     "coc-tsserver": ">=1.11.9",
-    "coc-sql": ">=0.10.4"
+    "coc-tslint-plugin": ">=0",
+    "coc-sql": ">=0.10.4",
+    "coc-git": ">=2.6.1",
+    "coc-tabnine": ">=1.3.7"
   },
   "disabled": [],
-  "locked": []
+  "locked": [],
+  "lastUpdate": 1689180996053
 }

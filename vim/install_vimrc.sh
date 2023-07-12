@@ -1,7 +1,8 @@
 #!/bin/bash
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# NEOVIM unix
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # COC List
 rm ~/.config/coc/extensions/package.json
@@ -20,6 +21,5 @@ ln -s `pwd`/init.vim ~/.config/nvim/init.vim
 
 # VIM NATIVE
 rm ~/.vimrc
-# ln -s `pwd`/vimrc ~/.vimrc
 
 nvim -c :PlugInstall -c q!
