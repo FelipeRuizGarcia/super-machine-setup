@@ -6,6 +6,7 @@ alias nn="nvim"
 alias rmf="rm -rf "
 
 alias rep="grep -rl \/inscripcion . | xargs sed -i  -s  -r 's/\/inscripcion/\/inscripcion/g'"
+alias grepex="grep -R "ENV" --exclude-dir=node_modules ./*"
 
 # APIS
 alias post="curl -i -X POST localhost:8000/test -H 'authorization: FFF'"
