@@ -18,6 +18,7 @@ alias awa="aws iam create-account-alias --account-alias CHANGEME"
 alias awi="aws configure import --profile-prefix CHANGEME --csv file://rootkey.csv"
 alias awlp="aws configure list-profiles"
 alias aws3="aws s3 ls"
+alias aws3cp="aws s3 cp $DIR_FRONT_BUILD s3://$FRONT --recursive --include "*" --acl public-read"
 alias awe="export AWS_PROFILE=local"
 
 # AWS NUKE
