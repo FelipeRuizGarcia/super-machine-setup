@@ -6,8 +6,8 @@ alias nn="nvim"
 alias rmf="rm -rf "
 
 alias rep="grep -rl \/inscripcion . | xargs sed -i  -s  -r 's/\/inscripcion/\/inscripcion/g'"
-alias grepex="grep -R "ENV" --exclude-dir=node_modules ./*"
-alias findit="find ./* -type f -exec grep -l "aws-sdk" {} +"
+alias grepex="grep -R 'ENV' --exclude-dir=node_modules ./*"
+alias findit="find ./* -type f -exec grep -l 'aws-sdk' {} +"
 
 # APIS
 alias post="curl -i -X POST localhost:8000/test -H 'authorization: FFF'"
@@ -18,7 +18,7 @@ alias awa="aws iam create-account-alias --account-alias CHANGEME"
 alias awi="aws configure import --profile-prefix CHANGEME --csv file://rootkey.csv"
 alias awlp="aws configure list-profiles"
 alias aws3="aws s3 ls"
-alias aws3cp="aws s3 cp $DIR_FRONT_BUILD s3://$FRONT --recursive --include "*" --acl public-read"
+alias aws3cp="aws s3 cp $DIR_FRONT_BUILD s3://$FRONT --recursive --include '*' --acl public-read"
 alias awe="export AWS_PROFILE=local"
 
 # AWS NUKE
