@@ -13,8 +13,15 @@ alias findit="find ./* -type f -exec grep -l 'aws-sdk' {} +"
 alias post="curl -i -X POST localhost:8000/test -H 'authorization: FFF'"
 
 
-# AWS 
-alias awa="aws iam create-account-alias --account-alias CHANGEME"
+# AWS ALIAS
+alias awalsa="aws iam create-account-alias --account-alias CHANGEME"
+alias awalias="aws iam list-account-aliases"
+
+# AWS INFO
+alias awinfo="aws account get-contact-information"
+alias awid="aws sts get-caller-identity"
+alias awsum="aws iam get-account-summary"
+
 alias awi="aws configure import --profile-prefix CHANGEME --csv file://rootkey.csv"
 alias awlp="aws configure list-profiles"
 alias aws3="aws s3 ls"
