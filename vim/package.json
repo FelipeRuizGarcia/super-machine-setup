@@ -1,18 +1,16 @@
 {
   "dependencies": {
-    "coc-css": ">=1.3.0",
+    "coc-css": ">=2.1.0",
     "coc-html": ">=1.6.1",
-    "coc-json": ">=1.6.1",
+    "coc-json": ">=1.9.2",
     "coc-marketplace": ">=1.9.0",
-    "coc-pyright": ">=1.1.271",
-    "coc-snippets": ">=3.1.2",
-    "coc-tsserver": ">=1.11.9",
-    "coc-tslint-plugin": ">=0",
-    "coc-sql": ">=0.10.4",
-    "coc-git": ">=2.6.1",
+    "coc-pyright": ">=1.1.325",
+    "coc-snippets": ">=3.1.10",
+    "coc-tsserver": ">=2.1.4",
+    "coc-tslint-plugin": ">=1.2.0",
+    "coc-sql": ">=0.11.0",
+    "coc-git": ">=2.7.0",
     "coc-tabnine": ">=1.3.7"
   },
-  "disabled": [],
-  "locked": [],
-  "lastUpdate": 1689180996053
+  "lastUpdate": 1696017283392
 }
