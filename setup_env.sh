@@ -24,6 +24,9 @@ sudo dnf install nodejs -y
 # brew install pnpm
 #
 
+brew tap oven-sh/bun
+brew install bun
+
 # install brew
 brew install pnpm aws-nuke aws-amplify cloud-nuke hugo  istioctl  kubernetes-cli  minikube typescript bat
 
