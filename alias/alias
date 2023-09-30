@@ -1,4 +1,5 @@
-alias npf="npm start --force"
+# pnpm or bun ? meantime pnpm
+alias pmuf="pnpm up -L -f"
 
 alias vim="nvim"
 alias nn="nvim"
