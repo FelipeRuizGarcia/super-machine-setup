@@ -1,6 +1,5 @@
-set number
-
 syntax enable
+
 "
 " VIM Identation
 
@@ -10,13 +9,12 @@ set tabstop=4
 " when indenting with '>', use 4 spaces width
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
+
 set expandtab
-
-set number
 set mouse=a
-
 set showcmd
 set showmatch
+set number
 set relativenumber
 
 :augroup numbertoggle
@@ -30,7 +28,6 @@ xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
 " BLACK
-
 let g:black_linelength=79
 
 autocmd BufWritePre *.py execute ':Black'
@@ -76,11 +73,28 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
+
+" VIM PLUG AUTOMATIC INSTALLATION
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " Directorio de plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
+" JSX
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
 
-Plug 'mxw/vim-jsx'
+" TS
+Plug 'leafgarland/typescript-vim'
+
+" LSP Manson Install
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
 
 " nvim-lint
 Plug 'mfussenegger/nvim-lint'
@@ -98,10 +112,6 @@ Plug 'nvim-lua/plenary.nvim'
 " Formatter.nvim
 Plug 'mhartington/formatter.nvim'
 
-" LSP Manson Install
-Plug 'williamboman/mason.nvim'
-Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'neovim/nvim-lspconfig'
 
 " COC with SLP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
