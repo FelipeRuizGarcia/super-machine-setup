@@ -1,4 +1,5 @@
 #!/bin/bash
+# NVIM > plugins
 
 nvim \
     -c "PlugClean" \

@@ -73,6 +73,26 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
+" VIM-AIRLINE
+let g:airline#extensions#coc#enabled = 1
+
+" enable/disable coc integration >
+let g:airline#extensions#coc#enabled = 1
+
+" change error symbol: >
+let airline#extensions#coc#error_symbol = 'E:'
+
+" change warning symbol: >
+let airline#extensions#coc#warning_symbol = 'W:'
+
+" enable/disable coc status display >
+g:airline#extensions#coc#show_coc_status = 1
+
+" change the error format (%C - error count, %L - line number): >
+let airline#extensions#coc#stl_format_err = '%C(L%L)'
+
+" change the warning format (%C - error count, %L - line number): >
+let airline#extensions#coc#stl_format_warn = '%C(L%L)'
 
 " VIM PLUG AUTOMATIC INSTALLATION
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
