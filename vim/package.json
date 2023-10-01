@@ -29,7 +29,8 @@
     "coc-markdownlint": ">=1.31.1",
     "coc-eslint": ">=1.6.0",
     "coc-tailwindcss": ">=0.7.0",
-    "@yaegassy/coc-tailwindcss3": ">=0.5.4"
+    "@yaegassy/coc-tailwindcss3": ">=0.5.4",
+    "coc-prettier": ">=9.3.2"
   },
   "lastUpdate": 1696148741040
 }
