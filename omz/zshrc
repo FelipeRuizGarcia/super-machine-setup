@@ -1,5 +1,8 @@
-# EDITOR
+# OMZ UPDATES
+zstyle ':omz:update' mode auto
+zstyle ':omz:update' frequency 1
 
+# EDITOR
 source $HOME/fzf-git.sh
 
 export EDITOR=nvim
