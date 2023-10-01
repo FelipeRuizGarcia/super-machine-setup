@@ -1,4 +1,7 @@
 #!/bin/bash
+#
+# OS > TOOLS
+# OS > ALACRITTY > TMUX > TMUX PLUGINGS > OMZ > NVIM
 
 # update os
 sudo dnf upgrade --refresh -y 
