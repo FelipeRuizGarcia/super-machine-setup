@@ -100,6 +100,8 @@ Plug 'mhartington/formatter.nvim'
 
 " LSP Manson Install
 Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
 
 " COC with SLP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
