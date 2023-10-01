@@ -33,9 +33,3 @@ snapd                           2.57.6                            17883  latest/
 spotify                         1.1.84.716.gc5f8b819              60     latest/stable  spotify**               -
 zoom-client                     5.13.3.651                        196    latest/edge    ogra                    -
 ```
-
-
-brew
-```
-cloud-nuke  hugo  istioctl  kubernetes-cli  minikube
-```
