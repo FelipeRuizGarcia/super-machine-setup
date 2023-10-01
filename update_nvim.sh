@@ -5,5 +5,5 @@ nvim \
     -c "PlugClean" \
     -c "PlugUpgrade" \
     -c "PlugUpdate" \
-    -c "CocUpdate" \
+    -c "CocUpdateSync" \
     -c "quit" -c "quit"
