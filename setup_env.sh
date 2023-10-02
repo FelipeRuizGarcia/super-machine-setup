@@ -4,13 +4,15 @@ sudo dnf upgrade --refresh -y
 
 # require for chsh
 dnf install util-linux-user
-sudo dnf install awscli2 zsh nvim git tmux alacritty
+sudo dnf install awscli2 zsh nvim git tmux alacritty python3
 
 # install omz and configure it
 # ./install_omz.sh
 # ./install_zshrc.sh
 
 pip install virtualenvwrapper
+python3 -m pip install --user --upgrade pynvim
+
 # install p10k
 # configure tmux
 
