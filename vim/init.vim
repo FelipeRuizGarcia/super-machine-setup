@@ -129,6 +129,8 @@ Plug 'nvim-lua/plenary.nvim'
 " Formatter.nvim
 Plug 'mhartington/formatter.nvim'
 
+" DIFFVIEW
+Plug 'sindrets/diffview.nvim'
 
 " COC with SLP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
