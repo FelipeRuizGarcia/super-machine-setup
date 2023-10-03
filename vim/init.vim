@@ -174,7 +174,8 @@ Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
 " Plugin outside ~/.vim/plugged with post-update hook
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Unmanaged plugin (manually installed and updated)
 Plug '~/my-prototype-plugin'
