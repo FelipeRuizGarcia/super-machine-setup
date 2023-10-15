@@ -26,6 +26,11 @@ sudo dnf5 install procps-ng curl file git -y
 # require for chsh
 sudo dnf5 install util-linux-user -y 
 
+# Fedora Nvidia Driver
+dnf5 install dnf-plugins-core -y
+dnf5 copr enable t0xic0der/nvidia-auto-installer-for-fedora -y
+dnf5 install nvautoinstall -y
+
 # compile for linux ? Better performance ?
 sudo dnf5 install -y \
     zsh \
