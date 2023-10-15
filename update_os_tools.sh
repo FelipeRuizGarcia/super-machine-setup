@@ -4,7 +4,7 @@
 # OS > ALACRITTY > TMUX > TMUX PLUGINGS > OMZ > NVIM
 
 # update os
-sudo dnf upgrade --refresh -y 
+sudo dnf5 upgrade --refresh -y
 
 # update nvidia driver
 sudo nvautoinstall driver
@@ -22,12 +22,11 @@ brew upgrade
 # update flatpak
 flatpak upgrade -y
 
+# update omz
+$HOME/.oh-my-zsh/tools/upgrade.sh
+
 # update powerlevel
 git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull
-
-### IDE ###
-# pnpm TODO: change for Brew to handle the package
-# wget -qO- https://get.pnpm.io/install.sh | sh -
 
 # TMUX PLUGINS
 ~/.tmux/plugins/tpm/bin/update_plugins all
