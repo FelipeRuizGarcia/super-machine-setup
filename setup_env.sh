@@ -51,6 +51,9 @@ brew install -s bun pnpm hugo typescript node nvm
 # aws
 brew install -s awscli aws-nuke aws-amplify cloud-nuke
 
+# python
+brew install -s poetry
+
 # devtools # optional
 # brew install -s istioctl kubernetes-cli minikube
 
