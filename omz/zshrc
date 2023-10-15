@@ -1,9 +1,13 @@
+# BREW AUTOCOMPLETE
+# https://docs.brew.sh/Shell-Completion
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
 # OMZ UPDATES
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 1
 
 # EDITOR
-source $HOME/fzf-git.sh
+# source $HOME/fzf-git.sh
 
 export EDITOR=nvim
 # Go path
@@ -115,6 +119,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    brew
     dnf
     # globalias
     # aliases

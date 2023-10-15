@@ -34,6 +34,11 @@ brew install pnpm aws-nuke aws-amplify cloud-nuke hugo  istioctl  kubernetes-cli
 # ./install_omz.sh
 # ./install_zshrc.sh
 
+# brew config
+# autocompletation
+compinit
+chmod -R go-w "$(brew --prefix)/share"
+
 pip install virtualenvwrapper
 python3 -m pip install --user --upgrade pynvim
 
