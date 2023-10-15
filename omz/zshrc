@@ -153,7 +153,13 @@ plugins=(
     npm
     pep8
     pip
+    pipenv
+    pre-commit
+    profiles
+    poetry
+    poetry-env
     pyenv
+    python
     terraform
     tmux
     tmux-cssh
