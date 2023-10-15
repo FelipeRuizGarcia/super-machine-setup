@@ -1,9 +1,12 @@
 #!/bin/bash
 
+# GOAL: Upstream ASAP
 # minimal packages via OS;
 # Fedora and MacOs
+# Assume Fedora, with the unique diff
+# to build-from source for brew
+#
 # Apps packages handled by brew
-# Upstream ASAP
 #
 # 1. Fedora
 # 2. Brew Common
@@ -11,24 +14,40 @@
 # 4. MacOs Only
 
 # Fedora
+# Fedora 39 ? 
 dnf copr enable rpmsoftwaremanagement/dnf5-unstable ;
 sudo dnf groupinstall "Development Tools"
 sudo dnf install dnf5 dnf5-plugins # Fedora 39 ? 
 sudo dnf5 upgrade --refresh -y
 
+# require for brew
+sudo dnf5 install procps-ng curl file git -y
+
 # require for chsh
-sudo dnf5 install util-linux-user
+sudo dnf5 install util-linux-user -y 
 
 # compile for linux ? Better performance ?
-sudo dnf5 install \
+sudo dnf5 install -y \
     zsh \
-    alacritty
+    alacritty \
+    tmux \
+    python3
 
+# Brew
+# ----
+
+# ide
+brew install -s bat fzf nvim 
+
+# web
 brew tap oven-sh/bun
-brew install bun
+brew install -s bun pnpm hugo typescript node nvm
 
-# install brew
-brew install pnpm aws-nuke aws-amplify cloud-nuke hugo  istioctl  kubernetes-cli  minikube typescript bat fzf nvim git tmux alacritty python3 node
+# aws
+brew install -s awscli aws-nuke aws-amplify cloud-nuke
+
+# devtools # optional
+# brew install -s istioctl kubernetes-cli minikube
 
 # install omz and configure it
 # ./install_omz.sh
