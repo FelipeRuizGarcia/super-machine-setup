@@ -1,5 +1,7 @@
 # JS DEV
 # pnpm or bun ? meantime pnpm
+
+alias pmis="pnpm i standart -E"
 alias pmuf="pnpm up -L -f"
 alias pmes="pnpm create @eslint/config"
 
