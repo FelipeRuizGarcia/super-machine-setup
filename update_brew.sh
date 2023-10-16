@@ -9,31 +9,29 @@
 
 # Snap packages should be configure as cask packages
 # Since brew cask does not work on linux
+# assuming stable versions from those.
 
-SNAP_PACKAGES="${SNAP_PACKAGES}"
+# Those that are custom name for snap
+PKGS_SNAP_ONLY=(
+    figma-linux
+    zoom-client
+    code # visual-studio-code
+)
 
-# ide
-brew install \
-    # \ -s
-    bat fzf nvim gh
+# TODO is the firefox-dev ? firefox-developer-edition same as snap --beta ?
+# firefox-dev-119.0b9-1.fc38.x86_64.rpm
 
-# web
-brew tap oven-sh/bun
-brew install -s bun pnpm hugo typescript node nvm
+# Brew CASK
+PKGS_BREW_MAC = (
+    authy
+    chromium
+    figma
+    firefox
+    slack
+    spotify
+    zoom
+    visual-studio-code
+)
 
-# aws
-brew install -s awscli aws-nuke aws-amplify cloud-nuke
+echo ${SNAP_PACKAGES[@]}
 
-# python
-brew install -s poetry
-
-# devtools # optional
-# brew install -s istioctl kubernetes-cli minikube
-
-# brew config
-# autocompletation
-compinit
-chmod -R go-w "$(brew --prefix)/share"
-
-# MacOs only
-# brew install --cask macs-fan-control --cask rectangle
