@@ -19,7 +19,16 @@ Get Upstream packages
 
 ----
 
-## List of Features
+## List of Features + Tools
+
+
+### Monitoring
+* `htop` : for OS process.
+* `nethogs` : for Network bandwidth.
+* `nvidia-smi -l 2` : for GPU process.
+
+### Markdown files with Glow
+
 
 ## Setup + Installation
 
@@ -57,13 +66,6 @@ Snap
 ## Practical Guide How to Use
 
 This relies in the terminal
-
-### Monitoring
-* `htop` : for OS process.
-* `nethogs` : for Network bandwidth.
-* `nvidia-smi -l 2` : for GPU process.
-
-### Markdown files with Glow
 
 ### How to use the Alias
 
