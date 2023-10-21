@@ -23,14 +23,19 @@ PKGS_SNAP_ONLY=(
 
 # Brew CASK
 PKGS_BREW_MAC = (
+    gh
     authy
     chromium
     figma
-    firefox
+    firefox-developer-edition # special tap
     slack
     spotify
     zoom
     visual-studio-code
+    nethogs # monitor the network
+    # md viewers
+    mdless
+    glow
 )
 
 echo ${SNAP_PACKAGES[@]}

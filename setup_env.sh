@@ -20,6 +20,9 @@ sudo dnf groupinstall "Development Tools"
 sudo dnf install dnf5 dnf5-plugins # Fedora 39 ? 
 sudo dnf5 upgrade --refresh -y
 
+# firefox-dev as firefox-aurora
+sudo dnf5 copr enable the4runner/firefox-dev
+
 # require for brew
 sudo dnf5 install procps-ng curl file git -y
 
@@ -47,6 +50,10 @@ brew install -s bat fzf nvim
 # web
 brew tap oven-sh/bun
 brew install -s bun pnpm hugo typescript node nvm
+
+# firefox-developer-edition
+brew tap homebrew/cask-versions
+brew install --cask firefox-developer-edition
 
 # aws
 brew install -s awscli aws-nuke aws-amplify cloud-nuke

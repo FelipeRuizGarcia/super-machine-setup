@@ -2,6 +2,10 @@
 # https://docs.brew.sh/Shell-Completion
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
+# GITHUB AUTOCOMPLETE
+# https://cli.github.com/manual/gh_completion
+# gh completion -s zsh > "$(brew --prefix)/share/zsh/site-functions/_gh"
+
 # OMZ UPDATES
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 1
@@ -40,10 +44,10 @@ fi
 
 ### FZF
 # fzf on Fedora
-if [ -x "$(command -v fzf)"  ]
-then
-    source /usr/share/fzf/shell/key-bindings.zsh
-fi
+# if [ -x "$(command -v fzf)"  ]
+# then
+#     source /usr/share/fzf/shell/key-bindings.zsh
+# fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -166,6 +170,7 @@ plugins=(
     vim-interaction
     virtualenv
     virtualenvwrapper
+    z # https://github.com/agkozak/zsh-z#for-oh-my-zsh-users
 )
 
 source $ZSH/oh-my-zsh.sh

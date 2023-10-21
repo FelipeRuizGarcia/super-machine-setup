@@ -1,7 +1,7 @@
 #!/bin/bash
-#
+
 # OS > TOOLS
-# OS > ALACRITTY > TMUX > TMUX PLUGINGS > OMZ > NVIM
+# OS > ALACRITTY > TMUX > TMUX PLUGINGS > OMZ
 
 # update os
 sudo dnf5 upgrade --refresh -y
@@ -14,10 +14,12 @@ sudo nvautoinstall vidacc
 # sudo nvautoinstall primec
 
 # update snap
+# sudo snap refresh figma-linux --edge
 sudo snap refresh
 
 # upgrade brew
 brew upgrade
+# brew list --formula | xargs brew reinstall --build-from-source --verbose
 
 # update flatpak
 flatpak upgrade -y
