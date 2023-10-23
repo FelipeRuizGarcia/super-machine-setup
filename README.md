@@ -5,7 +5,12 @@ Profiles, Development Tools, Shortcuts and Configurations
 for a day of SUPER PRODUCTIVITY.
 
 The project is under development.
-PRs are welcome.
+
+Use the stable setup in the `master` branch.
+
+Use `next` branch for development.
+
+PR's are welcome.
 
 ## Goals and Motivations
 
