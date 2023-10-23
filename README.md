@@ -1,25 +1,47 @@
-# myDotFiles
+# Super Machine Setup
 
-My Personal Linux( and Mac now, but not windows :P )
-Profiles, Development Tools, Shortcuts and Configurations.
+Fedora and Mac Setup with
+Profiles, Development Tools, Shortcuts and Configurations
+for a day of SUPER PRODUCTIVITY.
 
 The project is under development.
 PRs are welcome.
 
 ## Goals and Motivations
 
-0. Productivity: FOCUS to Terminal Tmux Nvim 
+0. Productivity: FOCUS to Terminal Tmux Nvim
+
 1. Machine Setup agnostic
 
 2. Get the latest versions of the app /
 Get Upstream packages
 
-3. More open source and support for LONG PROJECTS.
-999. No paid software.
+3. More open source
+
+4. Support for LONG PROJECTS.
+
+999. No payments for software: Mandatory "Free use"
+even if there is some paid license.
+
+### Story
+
+super-machine-setup started as personal "MyDotFiles"
+For Debian, Fedora and Mac setup.
+
+Use for general Software Develpoment and
+AWS cloud operations and agnostic dev tools.
+
+Since more people are using this setup
+the development of the project will be
+transition from individual projecto to
+comunitty driven project.
 
 ----
 
 ## List of Features + Tools
+
+
+### Machines Supported / Tested
 
 
 ### Monitoring
