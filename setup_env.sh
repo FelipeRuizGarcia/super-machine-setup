@@ -51,6 +51,8 @@ brew install -s bat fzf nvim
 brew tap oven-sh/bun
 brew install -s bun pnpm hugo typescript node nvm
 
+brew install charmbracelet/tap/mods
+
 # firefox-developer-edition
 brew tap homebrew/cask-versions
 brew install --cask firefox-developer-edition

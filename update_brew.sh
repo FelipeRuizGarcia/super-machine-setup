@@ -36,6 +36,7 @@ PKGS_BREW_MAC = (
     # md viewers
     mdless
     glow
+    xwmx/taps/nb # nb
 )
 
 echo ${SNAP_PACKAGES[@]}

@@ -1,18 +1,13 @@
-# TEST
-alias ttt="echo \$NAME "
+# TEST 
+alias hi="echo \$SMS_VERSION "
+
+# TODO: where, which,  command -v
 
 # Fedora
 alias dnf="dnf5" # Fedora 39 ?
 
 # JS DEV
 # pnpm or bun ? meantime pnpm
-
-alias pmis="pnpm i standart -E"
-alias pmuf="pnpm up -L -f"
-
-# JS DEV
-# pnpm or bun ? meantime pnpm
-
 alias pmis="pnpm i standart -E"
 alias pmuf="pnpm up -L -f"
 alias pmes="pnpm create @eslint/config"
