@@ -1,0 +1,1 @@
+/home/adapa/repos/super-machine-setup/alias

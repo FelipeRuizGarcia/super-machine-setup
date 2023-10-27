@@ -63,6 +63,10 @@ brew install -s awscli aws-nuke aws-amplify cloud-nuke
 # python
 brew install -s poetry
 
+# speedtest
+brew tap teamookla/speedtest
+brew install speedtest --force
+
 # devtools # optional
 # brew install -s istioctl kubernetes-cli minikube
 

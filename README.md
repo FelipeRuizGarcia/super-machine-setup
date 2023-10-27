@@ -1,7 +1,7 @@
 # Super Machine Setup
 
 Fedora and Mac Setup with
-Profiles, Development Tools, Shortcuts and Configurations
+Profiles, DevUtils, DevTools, Shortcuts, Alias and Configurations
 for a day of SUPER PRODUCTIVITY.
 
 The project is under development.
