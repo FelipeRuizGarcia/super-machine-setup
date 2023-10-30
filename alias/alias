@@ -66,6 +66,10 @@ alias pf="packer fmt "
 alias mn="minikube"
 alias k="kubectl"
 
+# PYTHON
+# provider | https://neovim.io/doc/user/provider.html
+alias pyprovider="python3 -m pip install --user --upgrade pynvim"
+
 # ALIAS DJANGO
 alias dpr="django-admin startproject"
 alias dapp="django-admin startproject"
