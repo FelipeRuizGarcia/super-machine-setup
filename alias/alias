@@ -1,6 +1,12 @@
 # TEST 
 alias hi="echo \$SMS_VERSION "
 
+# br brew
+alias bri="brew install \$SMS "
+alias bris="brew install -s \$SMS "
+alias brih="brew install -s --HEAD \$SMS "
+alias brh="brew install --HEAD \$SMS "
+
 # TODO: where, which,  command -v
 
 # Fedora
@@ -98,10 +104,6 @@ alias global="git config --global"
 alias add="git add "
 alias clone="git clone "
 alias chto="git checkout "
-alias newbr="git checkout -b "
-alias br="git branch"
-alias delbr="git branch -D "
-alias mvbr="git branch -m"
 alias log="git log --oneline --decorate"
 alias all="git log --oneline --decorate --all"
 alias res="git reset "
