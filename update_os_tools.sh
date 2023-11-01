@@ -3,8 +3,16 @@
 # OS > TOOLS
 # OS > ALACRITTY > TMUX > TMUX PLUGINGS > OMZ
 
+# clean up
+dnf5 clean all
+
 # update os
+sudo dnf5 distro-sync -y
 sudo dnf5 upgrade --refresh -y
+
+# avoid kernel updates
+# sudo dnf5 distro-sync -y --exclude=kernel
+# sudo dnf5 upgrade --refresh -y --exclude=kernel
 
 # update nvidia driver
 sudo nvautoinstall driver
