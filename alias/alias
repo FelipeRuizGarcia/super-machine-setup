@@ -2,10 +2,10 @@
 alias hi="echo \$SMS_VERSION "
 
 # br brew
-alias bri="brew install \$SMS "
-alias bris="brew install -s \$SMS "
-alias brih="brew install -s --HEAD \$SMS "
-alias brh="brew install --HEAD \$SMS "
+alias bri="brew install "
+alias bris="brew install -s "
+alias brish="brew install -s --HEAD "
+alias brih="brew install --HEAD "
 
 # TODO: where, which,  command -v
 
