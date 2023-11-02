@@ -190,7 +190,12 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'nlknguyen/cloudformation-syntax.vim'
 
-Plug 'psf/black', { 'branch': 'stable' }
+" Python Black
+" Plug 'psf/black', { 'branch': 'stable' }
+Plug 'psf/black', { 'tag': '*.*.*' }
+
+" Test Python Black
+" Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
 
 Plug 'codota/tabnine-nvim', { 'do': './dl_binaries.sh' }
 

@@ -30,7 +30,8 @@
     "coc-eslint": ">=1.6.0",
     "coc-tailwindcss": ">=0.7.0",
     "@yaegassy/coc-tailwindcss3": ">=0.5.4",
-    "coc-prettier": ">=9.3.2"
+    "coc-prettier": ">=9.3.2",
+    "coc-java": ">=1.15.2"
   },
-  "lastUpdate": 1697478420802
+  "lastUpdate": 1698956336959
 }
