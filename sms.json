@@ -1,0 +1,48 @@
+{
+    "profiles": {
+        "default": {
+            "packages": [
+                {
+                    "name": "bat",
+                    "manager": "brew",
+                    "install-options": "-s --HEAD",
+                    "alternative": "it can be a different package in the list",
+                    "depends": []
+
+                }
+            ],
+        "extra_setup_entry": ""
+        },
+        "dev": {
+            "packages": [
+                {
+                    "name": "gh",
+                    "manager": "brew",
+                    "install-options": "-s --HEAD",
+                    "alternative": "it can be a different package in the list"
+
+                }
+            ],
+        "extra_setup_entry": ""
+        }
+    },
+    "machines": {
+         "Fedora": {
+            "os": "Fedora",
+            "version": "39",
+            "profiles": ["default", "cli", "dev", "desk_fedora" ],
+            "extra_setup_entry": "uname -a"
+        },
+        "Amazon": {
+            "os": "Fedora",
+            "version": "39",
+            "profiles": ["default", "cli", "dev" ],
+            "extra_setup_entry": ""
+        },
+         "Mac": {
+            "os": "Darwin",
+            "version": "23.2",
+            "profiles": ["default", "cli", "dev", "desk_mac" ],
+            "extra_setup_entry": "uname -a"
+    }
+}
