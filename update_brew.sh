@@ -37,6 +37,13 @@ PKGS_BREW_MAC = (
     mdless
     glow
     xwmx/taps/nb # nb
+    virtualenvwrapper
+    starship
+    jq
+    tmux # build from source and HEAD
+    git # build from source and HEAD
+    zsh # build from source and HEAD
+    bat # build from source and HEAD
 )
 
 echo ${SNAP_PACKAGES[@]}
