@@ -7,7 +7,12 @@ alias bris="brew install -s "
 alias brish="brew install -s --HEAD "
 alias brih="brew install --HEAD "
 
-# TODO: where, which,  command -v
+# SYSTEM UTILS TODO: where, which,  command -v
+
+alias st="tree -L 3"
+alias swe="whereis"
+alias swi="which"
+alias sc="command -v "
 
 # Fedora
 alias dnf="dnf5" # Fedora 39 ?
@@ -93,6 +98,7 @@ git config --global credential.helper store
 
 ### Github CLI
 alias ghrcp="gh repo create EXAMPLE --private --add-readme -c"
+alias ghil="gh project item-list --owner @me"
 
 ## submodules
 alias gscl="git submodule update --init --recursive"

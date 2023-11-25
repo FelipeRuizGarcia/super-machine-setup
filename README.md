@@ -25,8 +25,20 @@ Get Upstream packages
 
 4. Support for LONG PROJECTS.
 
+998. Why not use `pkgsrc` ? Well, we care about the configs and profiles.
+
 999. No payments for software: Mandatory "Free use"
 even if there is some paid license.
+
+## Features
+
+Handle your
+
+You can manage your current setup
+
+Brew allows "build from source"
+and "head" upstream, usually via github
+We use brew as our main.
 
 ### Roadmap
 
@@ -115,6 +127,20 @@ Snap
 ## Practical Guide How to Use
 
 This relies in the terminal
+tmux
+
+
+### How to save and restore your custom tmux sessions ( windows, panels, etc )
+
+This features uses tmux-resurrect
+
+https://github.com/tmux-plugins/tmux-continuum/blob/master/docs/faq.md
+
+https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/restoring_previously_saved_environment.md
+
+
+So, you can save your custom tmux-resurrect file in
+
 
 ### How to use the Alias
 

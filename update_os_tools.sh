@@ -6,8 +6,10 @@
 # clean up
 dnf5 clean all
 
-# update os
-sudo dnf5 distro-sync -y
+# update os packages
+# sudo dnf5 distro-sync -y
+
+# update os packages and kernel
 sudo dnf5 upgrade --refresh -y
 
 # avoid kernel updates
@@ -25,8 +27,8 @@ sudo nvautoinstall vidacc
 # sudo snap refresh figma-linux --edge
 sudo snap refresh
 
-# upgrade brew
-brew upgrade
+# brew upgrade
+brew upgrade --fetch-HEAD # update HEAD packages
 # brew list --formula | xargs brew reinstall --build-from-source --verbose
 
 # update flatpak

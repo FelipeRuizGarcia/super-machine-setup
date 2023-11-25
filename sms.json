@@ -1,7 +1,78 @@
 {
     "profiles": {
+        "desk_fedora": {
+            "packages": [
+                {
+                    "name": "slack",
+                    "manager": "snap",
+                    "install-options": "--beta",
+                    "alternative": "it can be a different package in the list",
+                    "depends": []
+
+                },
+                {
+                    "name": "zoom-client",
+                    "manager": "snap",
+                    "install-options": "--edge",
+                    "alternative": "it can be a different package in the list",
+                    "depends": []
+
+                },
+                {
+                    "name": "figma-to-linux",
+                    "manager": "snap",
+                    "install-options": "--beta",
+                    "alternative": "it can be a different package in the list",
+                    "depends": []
+
+                },
+                {
+                    "name": "authy",
+                    "manager": "snap",
+                    "install-options": "",
+                    "alternative": "it can be a different package in the list",
+                    "depends": []
+
+                },
+                {
+                    "name": "firefox-dev",
+                    "manager": "dnf5",
+                    "install-options": "",
+                    "alternative": "it can be a different package in the list",
+                    "depends": []
+
+                }
+            ],
+        "extra_setup_entry": ""
+        },
         "default": {
             "packages": [
+                {
+                    "name": "git",
+                    "manager": "brew",
+                    "install-options": "-s --HEAD"
+
+                },
+                {
+                    "name": "zsh",
+                    "manager": "brew",
+                    "install-options": "-s --HEAD"
+
+                },
+                {
+                    "name": "tmux",
+                    "manager": "brew",
+                    "install-options": "-s --HEAD"
+
+                },
+                {
+                    "name": "fd",
+                    "manager": "brew",
+                    "install-options": "-s --HEAD",
+                    "alternative": "it can be a different package in the list",
+                    "depends": []
+
+                },
                 {
                     "name": "bat",
                     "manager": "brew",
@@ -19,7 +90,8 @@
                     "name": "gh",
                     "manager": "brew",
                     "install-options": "-s --HEAD",
-                    "alternative": "it can be a different package in the list"
+                    "alternative": "it can be a different package in the list",
+                    "depends": []
 
                 }
             ],

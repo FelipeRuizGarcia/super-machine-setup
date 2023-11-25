@@ -17,6 +17,8 @@ sudo dnf system-upgrade download --releasever=39 -y
 
 # sudo dnf5 system-upgrade reboot
 
+# sudo dnf5 remove $(rpm -qa 'kernel*' | grep "5.9.300*"
+
 # create grub
 sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
 

@@ -1,9 +1,22 @@
 syntax enable
 
+"""""""""""""""""
+
+" neoformat
+
+let g:neoformat_run_all_formatters = 1
+
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
+
+"""""""""""""""""
 " VIM Identation
 
 filetype plugin indent on
 "show existing tab with 4 spaces width
+
 set tabstop=4
 " when indenting with '>', use 4 spaces width
 set shiftwidth=4
@@ -96,6 +109,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+
 " TABNINE
 
 " BEGIN
@@ -127,7 +141,9 @@ Plug 'folke/trouble.nvim'
 Plug 'nvim-lua/plenary.nvim'
 
 " Formatter.nvim
-Plug 'mhartington/formatter.nvim'
+" EXPERIMENTAL / NEEDS CONFIG FORMATTERS AND NEOFORMAT DOES
+" https://github.com/mhartington/formatter.nvim/issues/97
+" Plug 'mhartington/formatter.nvim'
 
 " DIFFVIEW
 Plug 'sindrets/diffview.nvim'
@@ -200,3 +216,31 @@ Plug 'psf/black', { 'tag': '*.*.*' }
 Plug 'codota/tabnine-nvim', { 'do': './dl_binaries.sh' }
 
 call plug#end()
+
+" LUA CONFIGS
+
+" nvim-treesitter
+"At the bottom of your init.vim, keep all configs on one line
+
+lua <<EOF
+
+require("nvim-treesitter.install").prefer_git = true
+require"nvim-treesitter.configs".setup{highlight={enable=true}}
+
+-- makes sure the language servers configured later with lspconfig are
+-- actually available, and install them automatically if they're not
+-- !! THIS MUST BE CALLED BEFORE ANY LANGUAGE SERVER CONFIGURATION
+require("mason").setup()
+require("mason-lspconfig").setup {
+  -- automatically install language servers setup below for lspconfig
+  automatic_installation = true
+}
+
+-- Actually setup the language servers so that they're available for our
+-- LSP client. I'm mainly working with Ruby and JS, so I'm configuring
+-- language servers for these 2 languages
+local nvim_lsp = require('lspconfig')
+nvim_lsp.solargraph.setup{}
+nvim_lsp.tsserver.setup{}
+
+EOF

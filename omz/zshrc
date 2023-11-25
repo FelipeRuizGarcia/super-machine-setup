@@ -1,3 +1,6 @@
+# STARSHIP | https://github.com/starship/starship
+eval "$(starship init zsh)"
+
 # BREW AUTOCOMPLETE
 # https://docs.brew.sh/Shell-Completion
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -122,11 +125,13 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+# globalias
+# aliases
+
 plugins=(
     brew
     dnf
-    # globalias
-    # aliases
     fzf
     git
     docker
@@ -170,8 +175,11 @@ plugins=(
     vim-interaction
     virtualenv
     virtualenvwrapper
-    z # https://github.com/agkozak/zsh-z#for-oh-my-zsh-users
+    z
 )
+
+# z plugin
+# https://github.com/agkozak/zsh-z#for-oh-my-zsh-users
 
 source $ZSH/oh-my-zsh.sh
 

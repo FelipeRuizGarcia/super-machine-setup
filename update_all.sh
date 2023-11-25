@@ -1,4 +1,11 @@
 #!/bin/bash
 
-bash ./update_os_tools.sh
-bash ./update_nvim.sh
+# do need to grant sudo permission
+
+sudo echo "SMS UPDATE ALL"
+
+# os common
+brew cleanup && brew autoremove
+
+bash -x ./update_os_tools.sh
+bash -x ./update_nvim.sh

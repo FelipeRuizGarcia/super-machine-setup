@@ -31,7 +31,8 @@
     "coc-tailwindcss": ">=0.7.0",
     "@yaegassy/coc-tailwindcss3": ">=0.5.4",
     "coc-prettier": ">=9.3.2",
-    "coc-java": ">=1.15.2"
+    "coc-java": ">=1.15.2",
+    "coc-diagnostic": ">=0.24.1"
   },
-  "lastUpdate": 1698956336959
+  "lastUpdate": 1700891723686
 }
