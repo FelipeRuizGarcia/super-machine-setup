@@ -1,0 +1,11 @@
+[env]
+TERM = "alacritty"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "F11"
+
+[window]
+dynamic_padding = true
+dynamic_title = false
+option_as_alt = "Both"
