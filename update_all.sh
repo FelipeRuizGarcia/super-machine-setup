@@ -5,7 +5,8 @@
 sudo echo "SMS UPDATE ALL"
 
 # os common
-brew cleanup --prune=all
+# brew cleanup
+# brew cleanup --prune=all
 brew autoremove
 
 bash -x ./update_os_tools.sh
