@@ -26,6 +26,7 @@ alias pmes="pnpm create @eslint/config"
 
 alias vim="nvim"
 alias nn="nvim"
+alias nvimgg="pnpm install -g neovim"
 
 alias rmf="rm -rf "
 
@@ -83,6 +84,7 @@ alias drn="python3 manage.py runserver "
 alias dmi="python3 manage.py migrate "
 
 # ALIAS DOCKER
+alias dcadduser="sudo usermod -aG kvm $USER"
 alias dcls="docker container ls -a "
 alias dcrm="docker container rm -f "
 alias dcrma="dcls -q | xargs docker container rm -f "
@@ -106,6 +108,8 @@ alias gscl="git submodule update --init --recursive"
 alias gsdf="git diff --cached --submodule"
 
 ### Git General
+### Git log
+alias glgg="git log -p --color-words"
 alias glgs="git log --name-status"
 alias glgsa="git log --name-status --all"
 
@@ -118,7 +122,7 @@ alias chto="git checkout "
 alias log="git log --oneline --decorate"
 alias all="git log --oneline --decorate --all"
 alias status="git status"
-alias dff="git diff"
+alias dff="git diff --color-words"
 alias cache="git diff --cached"
 alias com="git commit -s"
 alias amend="git commit --amend"
