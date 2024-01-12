@@ -1,9 +1,10 @@
 syntax enable
 
 """""""""""""""""
+" whitespaces endlines
+set listchars=space:·,tab:->\
 
 " neoformat
-
 let g:neoformat_run_all_formatters = 1
 
 augroup fmt
@@ -162,7 +163,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " prettier.nvim
 Plug 'neovim/nvim-lspconfig'
-Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'nvimtools/none-ls.nvim'
 Plug 'MunifTanjim/prettier.nvim'
 
 Plug 'nvim-lualine/lualine.nvim'
