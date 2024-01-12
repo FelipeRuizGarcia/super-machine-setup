@@ -241,7 +241,6 @@ require("mason-lspconfig").setup {
 -- LSP client. I'm mainly working with Ruby and JS, so I'm configuring
 -- language servers for these 2 languages
 local nvim_lsp = require('lspconfig')
-nvim_lsp.solargraph.setup{}
 nvim_lsp.tsserver.setup{}
 
 EOF
