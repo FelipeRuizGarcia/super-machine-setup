@@ -23,6 +23,7 @@ alias dnf="dnf5" # Fedora 39 ?
 alias pmis="pnpm i standart -E"
 alias pmuf="pnpm up -L -f"
 alias pmes="pnpm create @eslint/config"
+alias pmo="pnpm exec oxlint"
 
 alias vim="nvim"
 alias nn="nvim"
