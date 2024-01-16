@@ -28,7 +28,7 @@ sudo nvautoinstall vidacc
 sudo snap refresh
 
 # brew upgrade
-brew upgrade --fetch-HEAD # update HEAD packages
+brew upgrade --fetch-HEAD --verbose # update HEAD packages
 # brew list --formula | xargs brew reinstall --build-from-source --verbose
 
 # update flatpak
