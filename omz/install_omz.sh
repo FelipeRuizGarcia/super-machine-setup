@@ -2,7 +2,7 @@
 
 # this instalation should be part of the setup ?
 # handled by brew ?
-# install o`mz
+# install omz
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # changing the default shell to zsh

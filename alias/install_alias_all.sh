@@ -2,7 +2,7 @@
 
 BASEDIR=$(pwd)
 ALIASES=$HOME/.bash_aliases
-CURRENT_ALIASES=$BASEDIR/alias
+CURRENT_ALIASES=$BASEDIR/alias/alias
 
 if [ -a $ALIASES ]; then
 	echo "moving prev aliases"

@@ -3,4 +3,4 @@ rm ~/.alacritty.toml
 
 # ln -s `pwd`/alacritty.yml ~/.alacritty.yml
 
-ln -s `pwd`/alacritty.toml ~/.alacritty.toml
+ln -s `pwd`/tmux/alacritty.toml ~/.alacritty.toml

@@ -1,1 +1,1 @@
-/home/adapa/repos/super-machine-setup/alias
+/home/adapa/repos/super-machine-setup/alias/alias
