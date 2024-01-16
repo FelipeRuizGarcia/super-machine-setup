@@ -1,16 +1,18 @@
 syntax enable
 
+" prettier
+nmap <Leader>py <Plug>(Prettier)
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
+
+" treesitter
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+set nofoldenable                     " Disable folding at startup.
+
 """""""""""""""""
 " whitespaces endlines
 set listchars=space:·,tab:->\
-
-" neoformat
-let g:neoformat_run_all_formatters = 1
-
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END
 
 """""""""""""""""
 " VIM Identation
@@ -150,21 +152,23 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'sindrets/diffview.nvim'
 
 " COC with SLP
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
 
-" Neoformat
-Plug 'sbdchd/neoformat'
 
+" prettier.nvim
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
 " nvim-treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+Plug 'nvim-treesitter/nvim-treesitter-refactor'
 
-" prettier.nvim
-Plug 'neovim/nvim-lspconfig'
+" telescope
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '*.*.*' }
+
 Plug 'nvimtools/none-ls.nvim'
-Plug 'MunifTanjim/prettier.nvim'
 
 Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
@@ -219,14 +223,69 @@ Plug 'codota/tabnine-nvim', { 'do': './dl_binaries.sh' }
 call plug#end()
 
 " LUA CONFIGS
-
-" nvim-treesitter
-"At the bottom of your init.vim, keep all configs on one line
-
 lua <<EOF
-
 require("nvim-treesitter.install").prefer_git = true
-require"nvim-treesitter.configs".setup{highlight={enable=true}}
+require"nvim-treesitter.configs".setup{
+
+  -- A list of parser names, or "all" (the five listed parsers should always be installed)
+  ensure_installed = "all",
+
+  ignore_install = {"klotin", "tlaplus"},
+
+  -- Install parsers synchronously (only applied to `ensure_installed`)
+  sync_install = true,
+
+  -- Automatically install missing parsers when entering buffer
+  -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+  auto_install = true,
+
+  highlight={enable=true},
+
+  indent = {
+    enable = true
+  },
+
+  incremental_selection = {
+  enable = true,
+keymaps = {
+init_selection = "gnn", -- set to `false` to disable one of the mappings
+node_incremental = "grn",
+scope_incremental = "grc",
+node_decremental = "grm",
+},
+},
+
+  --  nvim-treesitter-context 
+  enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+  max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
+  min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
+  line_numbers = true,
+  multiline_threshold = 20, -- Maximum number of lines to show for a single context
+  trim_scope = 'outer', -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
+  mode = 'cursor',  -- Line used to calculate context. Choices: 'cursor', 'topline'
+  -- Separator between context and content. Should be a single character string, like '-'.
+  -- When separator is set, the context will only show up when there are at least 2 lines above cursorline.
+  separator = nil,
+  zindex = 20, -- The Z-index of the context window
+  on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
+
+
+  refactor = {
+          smart_rename = {
+      enable = true,
+      -- Assign keymaps to false to disable them, e.g. `smart_rename = false`.
+      keymaps = {
+        smart_rename = "grr",
+      },
+    },
+    highlight_current_scope = { enable = true },
+    highlight_definitions = {
+      enable = true,
+      -- Set to false if you have an `updatetime` of ~100.
+      clear_on_cursor_move = true,
+    },
+  }
+}
 
 -- makes sure the language servers configured later with lspconfig are
 -- actually available, and install them automatically if they're not
@@ -242,5 +301,12 @@ require("mason-lspconfig").setup {
 -- language servers for these 2 languages
 local nvim_lsp = require('lspconfig')
 nvim_lsp.tsserver.setup{}
+
+-- telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 EOF
