@@ -166,7 +166,7 @@ Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'nvim-treesitter/nvim-treesitter-refactor'
 
 " telescope
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '*.*.*' }
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 
 Plug 'nvimtools/none-ls.nvim'
 
@@ -192,20 +192,12 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " https://github.com/ults-io/vscode-react-javascript-snippets
 Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
 
-" On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-
 " Using a non-default branch
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
-" Unmanaged plugin (manually installed and updated)
-Plug '~/my-prototype-plugin'
-
 
 Plug 'vim-airline/vim-airline'
 
@@ -230,7 +222,7 @@ require"nvim-treesitter.configs".setup{
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = "all",
 
-  ignore_install = {"klotin", "tlaplus"},
+  ignore_install = {"tree-sitter-csv", "tree-sitter-kotlin", "klotin", "tlaplus", "gomod"},
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = true,

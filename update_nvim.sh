@@ -2,10 +2,10 @@
 # NVIM > plugins
 
 nvim \
+    -c "PlugClean" \
     -c "PlugUpgrade" \
-    -c "PlugUpdate!" \
-    -c "TSUpdate all" \
+    -c "PlugUpdate" \
+    -c "TSUpdateSync all" \
     -c "CocUpdateSync" \
     -c "MasonUpdate" \
-    -c "PlugClean" \
-    -c "quit" -c "quit"
+    -c "qa!"
