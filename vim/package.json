@@ -29,10 +29,13 @@
     "coc-markdownlint": ">=1.31.1",
     "coc-eslint": ">=1.6.0",
     "coc-tailwindcss": ">=0.7.0",
-    "@yaegassy/coc-tailwindcss3": ">=0.5.4",
+    "@yaegassy/coc-tailwindcss3": ">=0.5.7",
     "coc-prettier": ">=9.3.2",
     "coc-java": ">=1.15.2",
-    "coc-diagnostic": ">=0.24.1"
+    "coc-diagnostic": ">=0.24.1",
+    "coc-dictionary": ">=1.2.2",
+    "coc-tag": ">=1.2.5",
+    "coc-syntax": ">=1.2.5"
   },
-  "lastUpdate": 1705446141836
+  "lastUpdate": 1705523302628
 }

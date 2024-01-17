@@ -153,7 +153,7 @@ Plug 'sindrets/diffview.nvim'
 
 " COC with SLP
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'pnpm ci'}
 
 
 " prettier.nvim
