@@ -40,6 +40,66 @@ Brew allows "build from source"
 and "head" upstream, usually via github
 We use brew as our main.
 
+##### Alias Parameters
+
+You can put env variables as alias commands,
+which allows to just define the variable of the
+desired command.
+
+Example
+
+```
+    # Add an alias with the parameter SMS_VERSION
+    $  alias hi
+       hi='echo $SMS_VERSION'
+
+    # Define the value for the parameter
+    $  SMS_VERSION=HelloTeam_FOCUS!
+
+    # The alias take the parameter.
+    $  hi
+       HelloTeam_FOCUS!
+
+```
+
+Another example with more parameters is
+
+```
+
+# see the sln `alias` also with st
+ ~  alias sln
+sln='ln -sf $SLN1 $SLN2'
+ 
+# create a dir and create a file
+ ~  mkdir tmp
+ ~  cd tmp
+ ~/tmp  touch 1
+
+# see the file
+ ~/tmp  la
+total 0
+-rw-r--r--. 1 adapa adapa 0 Jan 19 05:20 1
+
+# define the variables for the symnlink creation
+ ~/tmp  SLN1=1
+ ~/tmp  SLN2=2
+ ~/tmp  la
+total 0
+-rw-r--r--. 1 adapa adapa 0 Jan 19 05:20 1
+
+# create the symlink with sln
+ ~/tmp  sln
+ ~/tmp  la
+total 0
+-rw-r--r--. 1 adapa adapa 0 Jan 19 05:20 1
+lrwxrwxrwx. 1 adapa adapa 1 Jan 19 05:21 2 -> 1
+
+# file 2 is "pointing" to file 1 
+
+```
+
+video demo etc etc WIP
+
 ### Roadmap
 
 Our rodmap is hosted in the Github project.
@@ -140,6 +200,23 @@ https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/restoring_previo
 
 
 So, you can save your custom tmux-resurrect file in
+
+
+```
+
+    ~/.local/share/tmux/resurrect
+
+```
+
+The path is defined by the resurrect tmux plugin.
+The path is defined with $XDG_DATA_DIRS .
+
+you can learn more about custom path tmux resurrect configs at
+
+https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/restoring_previously_saved_environment.md
+
+https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/save_dir.md
+
 
 
 ### How to use the Alias

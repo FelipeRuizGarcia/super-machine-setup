@@ -1,5 +1,5 @@
 # TEST 
-alias hi="echo \$SMS_VERSION "
+alias hi="echo \$SMS_VERSION"
 
 # br brew
 
@@ -14,6 +14,7 @@ alias tre="tree -L 3"
 alias swe="whereis"
 alias swi="which"
 alias sc="command -v "
+alias sln="ln -sf \$SLN1 \$SLN2"
 
 # Fedora
 alias dnf="dnf5" # Fedora 39 ?
@@ -33,7 +34,7 @@ alias nvimgg="pnpm install -g neovim"
 alias rmf="rm -rf "
 
 alias rep="grep -rl \/inscripcion . | xargs sed -i  -s  -r 's/\/inscripcion/\/inscripcion/g'"
-alias grepex="grep -R 'ENV' --exclude-dir=node_modules ./*"
+alias grepex="grep -R -n \$GREPEX --exclude-dir=node_modules ./*"
 alias findit="find ./* -type f -exec grep -l 'aws-sdk' {} +"
 
 
