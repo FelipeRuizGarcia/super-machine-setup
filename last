@@ -1,32 +1,29 @@
-pane	JAEL	0	0	:-	0	adapa-group	:/home/adapa/repos/jael/Jael-back	0	zsh	:
-pane	JAEL	0	0	:-	1	adapa-group	:/home/adapa	1	zsh	:
+pane	ADAPA	0	1	:*	0	adapa-group	:/home/adapa/repos/adapa-platform/adapa-website-frontend	1	zsh	:
+pane	ADAPA	0	1	:*	1	adapa-group	:/home/adapa/repos/adapa-platform/adapa-website-frontend	0	zsh	:
+pane	ADAPA	0	1	:*	2	adapa-group	:/home/adapa/repos/adapa-platform/adapa-website-frontend/src	0	zsh	:
+pane	JAEL	0	0	:-	0	adapa-group	:/home/adapa/repos/jael/Jael-back	1	zsh	:
 pane	JAEL	1	1	:*	0	adapa-group	:/home/adapa/repos/jael/jael-front	1	zsh	:
-pane	MONITOR	0	1	:*	0	adapa-group	:/home/adapa	0	htop	:htop
-pane	MONITOR	0	1	:*	1	adapa-group	:/home/adapa	0	nvidia-smi	:nvidia-smi -l 20
-pane	MONITOR	0	1	:*	2	adapa-group	:/home/adapa	1	watch	:watch -n 120 speedtest
-pane	MONITOR	0	1	:*	3	adapa-group	:/home/adapa	0	sudo	:sudo /home/linuxbrew/.linuxbrew/sbin/nethogs
-pane	SMS	0	0	:-	0	adapa-group	:/home/adapa/repos/super-machine-setup/tmux	1	zsh	:
-pane	SMS	0	0	:-	1	adapa-group	:/home/adapa/repos/super-machine-setup	0	zsh	:
-pane	SMS	1	0	:	0	adapa-group	:/home/adapa/repos/Learner/linux	0	zsh	:
-pane	SMS	1	0	:	1	adapa-group	:/home/adapa/repos/Learner	0	zsh	:
-pane	SMS	1	0	:	2	adapa-group	:/home/adapa/repos/Learner	1	zsh	:
-pane	SMS	2	0	:	0	adapa-group	:/home/adapa/repos/nvidia-auto-installer-for-fedora-linux/nvautoinstall/operations	0	zsh	:
-pane	SMS	2	0	:	1	adapa-group	:/home/adapa/repos/nvidia-auto-installer-for-fedora-linux	0	zsh	:
-pane	SMS	2	0	:	2	adapa-group	:/home/adapa/repos/nvidia-auto-installer-for-fedora-linux/nvautoinstall	1	zsh	:
-pane	SMS	3	1	:*	0	adapa-group	:/home/adapa/.local/share/tmux/resurrect	1	zsh	:
-pane	SMS	3	1	:*	1	adapa-group	:/home/adapa/.tmux/plugins/tmux-resurrect	0	zsh	:
-pane	SMS	4	0	:	0	adapa-group	:/home/adapa/repos/sand	0	zsh	:
-pane	SMS	4	0	:	1	adapa-group	:/home/adapa/repos/sand	1	zsh	:
-pane	SMS	5	0	:	0	adapa-group	:/home/adapa/repos/abraham	1	zsh	:
-pane	SMS	5	0	:	1	adapa-group	:/home/adapa/repos/abraham	0	zsh	:
-pane	SMS	5	0	:	2	adapa-group	:/home/adapa/repos/abraham	0	zsh	:
-window	JAEL	0	:BACK	0	:-	87db,284x64,0,0[284x32,0,0,1,284x31,0,33,2]	off
-window	JAEL	1	:FRONT	1	:*	c080,142x64,0,0,3	off
-window	MONITOR	0	:watch	1	:*	51a4,284x73,0,0[284x17,0,0,4,284x33,0,18{142x33,0,18,22,141x33,143,18,23},284x21,0,52,6]	:
-window	SMS	0	:SMS	0	:-	fb21,142x64,0,0[142x32,0,0,7,142x31,0,33,8]	off
-window	SMS	1	:LEARNER	0	:	e4fb,284x64,0,0[284x32,0,0{142x32,0,0,9,141x32,143,0,10},284x31,0,33,11]	off
-window	SMS	2	:NVIDIA	0	:	0623,284x64,0,0{133x64,0,0,12,150x64,134,0[150x21,134,0,13,150x42,134,22,14]}	off
-window	SMS	3	:PERSONAL	1	:*	5e74,142x64,0,0[142x32,0,0,15,142x31,0,33,16]	off
-window	SMS	4	:SAND	0	:	5e77,142x64,0,0[142x32,0,0,17,142x31,0,33,18]	off
-window	SMS	5	:ABRAHAM	0	:	1629,284x64,0,0{133x64,0,0,19,150x64,134,0[150x40,134,0,20,150x23,134,41,21]}	off
-state	SMS	MONITOR
+pane	MONITOR	0	1	:*	0	adapa-group	:/home/adapa	1	zsh	:
+pane	MONITOR	0	1	:*	1	adapa-group	:/home/adapa	0	zsh	:
+pane	MONITOR	0	1	:*	2	adapa-group	:/home/adapa	0	zsh	:
+pane	MONITOR	0	1	:*	3	adapa-group	:/home/adapa	0	zsh	:
+pane	SMS	0	1	:*	0	adapa-group	:/home/adapa/repos/super-machine-setup	1	zsh	:
+pane	SMS	0	1	:*	1	adapa-group	:/home/adapa/repos/super-machine-setup	0	zsh	:
+pane	SMS	1	0	:	0	adapa-group	:/home/adapa/repos/Learner	1	zsh	:
+pane	SMS	2	0	:	0	adapa-group	:/home/adapa/repos/nvidia-auto-installer-for-fedora-linux/nvautoinstall/operations	1	zsh	:
+pane	SMS	3	0	:	0	adapa-group	:/home/adapa/repos/personal/projects/adapa	1	zsh	:
+pane	SMS	3	0	:	1	adapa-group	:/home/adapa/repos/personal	0	zsh	:
+pane	SMS	4	0	:-	0	adapa-group	:/home/adapa/repos/esland-web	1	zsh	:
+pane	SMS	4	0	:-	1	adapa-group	:/home/adapa/test-nb	0	zsh	:
+pane	SMS	6	0	:	0	adapa-group	:/home/adapa/repos/tranzemc	1	zsh	:
+window	ADAPA	0	:FRONTEND	1	:*	b73b,88x26,0,0{27x26,0,0,1,60x26,28,0[60x11,28,0,2,60x14,28,12,3]}	off
+window	JAEL	0	:BACK	0	:-	be61,88x26,0,0,4	off
+window	JAEL	1	:FRONT	1	:*	be62,88x26,0,0,5	off
+window	MONITOR	0	:zsh	1	:*	c5b8,88x26,0,0[88x11,0,0,6,88x12,0,12{27x12,0,12,7,60x12,28,12,8},88x1,0,25,9]	:
+window	SMS	0	:SMS	1	:*	5680,284x61,0,0[284x33,0,0,10,284x27,0,34,11]	off
+window	SMS	1	:LEARNER	0	:	5f61,88x26,0,0,12	off
+window	SMS	2	:NVIDIA	0	:	5f62,88x26,0,0,13	off
+window	SMS	3	:PERSONAL	0	:	ad55,88x26,0,0[88x12,0,0,14,88x13,0,13,15]	off
+window	SMS	4	:SAND	0	:-	ad5a,88x26,0,0[88x12,0,0,16,88x13,0,13,17]	off
+window	SMS	6	:TRANZEMC	0	:	5f67,88x26,0,0,18	off
+state	SMS	ADAPA

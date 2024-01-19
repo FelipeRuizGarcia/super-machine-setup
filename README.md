@@ -32,15 +32,47 @@ even if there is some paid license.
 
 ## Features
 
-Handle your
+* Alias Filter
 
-You can manage your current setup
+See `alias/alias` for more infor about the aliases and environment variables.
 
-Brew allows "build from source"
-and "head" upstream, usually via github
-We use brew as our main.
+Do not use wildcards.
 
-##### Alias Parameters
+The list of alias relies in environment variables
+most of them called `$CHANGEME-<alias>` or simply `$CHANGEME`.
+
+Example:
+```
+$ alias awalsa="aws iam create-account-alias --account-alias $CHANGEME"
+
+```
+
+The env vars use for the alias are splited in 2
+
+* Query: Temporal envs, used in alias for READ, do not change anything in the system / app.
+    Query's are handled by $SMS, $SMS1, $SMS2 and so on.
+
+Example
+```
+
+```
+
+* Commands:
+
+Intended to track and know which value is use for a COMMAND.
+
+To use an alias you can use this
+
+Use to see the alias installed
+You can search in the alias with
+
+    $ af <x>
+    allow us to filter alias that include x word
+
+---
+
+
+* Alias Parameters
 
 You can put env variables as alias commands,
 which allows to just define the variable of the
@@ -100,6 +132,38 @@ lrwxrwxrwx. 1 adapa adapa 1 Jan 19 05:21 2 -> 1
 
 video demo etc etc WIP
 
+---
+
+* Tmux Session Template WIP
+
+### How to save and restore your custom tmux sessions ( windows, panels, etc )
+
+This features uses tmux-resurrect
+
+https://github.com/tmux-plugins/tmux-continuum/blob/master/docs/faq.md
+
+https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/restoring_previously_saved_environment.md
+
+
+So, you can save your custom tmux-resurrect file in
+
+
+```
+
+    ~/.local/share/tmux/resurrect
+
+```
+
+The path is defined by the resurrect tmux plugin.
+The path is defined with $XDG_DATA_DIRS .
+
+you can learn more about custom path tmux resurrect configs at
+
+https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/restoring_previously_saved_environment.md
+
+https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/save_dir.md
+
+
 ### Roadmap
 
 Our rodmap is hosted in the Github project.
@@ -108,6 +172,12 @@ We use Github Projects, Discussions,
 Issues and PR for the development.
 
 Feel free to file your question.
+
+WIP features:
+* You can manage your current setup with json file
+* Brew allows "build from source"
+* and "head" upstream, usually via github
+* We use brew as our main.
 
 ---
 
@@ -189,69 +259,3 @@ Snap
 This relies in the terminal
 tmux
 
-
-### How to save and restore your custom tmux sessions ( windows, panels, etc )
-
-This features uses tmux-resurrect
-
-https://github.com/tmux-plugins/tmux-continuum/blob/master/docs/faq.md
-
-https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/restoring_previously_saved_environment.md
-
-
-So, you can save your custom tmux-resurrect file in
-
-
-```
-
-    ~/.local/share/tmux/resurrect
-
-```
-
-The path is defined by the resurrect tmux plugin.
-The path is defined with $XDG_DATA_DIRS .
-
-you can learn more about custom path tmux resurrect configs at
-
-https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/restoring_previously_saved_environment.md
-
-https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/save_dir.md
-
-
-
-### How to use the Alias
-
-See `alias/alias` for more infor about the aliases and environment variables.
-
-Do not use wildcards.
-
-The list of alias relies in environment variables
-most of them called `$CHANGEME-<alias>` or simply `$CHANGEME`.
-
-Example:
-```
-$ alias awalsa="aws iam create-account-alias --account-alias $CHANGEME"
-
-```
-
-The env vars use for the alias are splited in 2
-
-* Query: Temporal envs, used in alias for READ, do not change anything in the system / app.
-    Query's are handled by $SMS, $SMS1, $SMS2 and so on.
-
-Example
-```
-
-```
-
-* Commands:
-
-Intended to track and know which value is use for a COMMAND.
-
-To use an alias you can use this
-
-Use to see the alias installed
-You can search in the alias with
-
-    $ af <x>
-    allow us to filter alias that include x word
