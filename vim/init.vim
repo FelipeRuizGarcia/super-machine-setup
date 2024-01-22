@@ -223,16 +223,17 @@ require"nvim-treesitter.configs".setup{
   ensure_installed = "all",
 
   ignore_install = {
-              "tree-sitter-scala",
-              "tree-sitter-php_only",
-              "tree-sitter-php",
-              "tree-sitter-bash",
-              "tree-sitter-csv",
-              "tree-sitter-kotlin",
-              "klotin",
-              "tlaplus",
-              "gomod"
-          },
+    "tree-sitter-scala",
+    "tree-sitter-php_only",
+    "tree-sitter-phpdoc",
+    "tree-sitter-php",
+    "klotin",
+    "tree-sitter-kotlin",
+    "tlaplus",
+    "gomod",
+    "tree-sitter-wing",
+    "tree-sitter-zathurarc"
+},
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = true,
