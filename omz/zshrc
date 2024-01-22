@@ -1,6 +1,10 @@
 # STARSHIP | https://github.com/starship/starship
 eval "$(starship init zsh)"
 
+# BREW
+export HOMEBREW_MAKE_JOBS=4
+export HOMEBREW_VERBOSE=4
+
 # BREW AUTOCOMPLETE
 # https://docs.brew.sh/Shell-Completion
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
