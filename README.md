@@ -4,7 +4,21 @@ Fedora and Mac Setup with
 Profiles, DevUtils, DevTools, Shortcuts, Alias and Configurations
 for a day of SUPER PRODUCTIVITY.
 
-The project is under development.
+The project is under development:
+At this stage all the commands assume that
+the path is from to the project root
+
+Example
+
+```
+# recommended
+$ ./vim/install_vimrc.sh
+
+# does not work
+$ cd ./vim/
+./install_vimrc.sh
+
+```
 
 Use the stable setup in the `master` branch.
 
