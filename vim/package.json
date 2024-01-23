@@ -16,16 +16,16 @@
   },
   "dependencies": {
     "coc-css": ">=2.1.0",
-    "coc-html": ">=1.6.1",
+    "coc-html": ">=1.8.0",
     "coc-json": ">=1.9.2",
     "coc-marketplace": ">=1.9.0",
-    "coc-pyright": ">=1.1.325",
+    "coc-pyright": ">=1.1.348",
     "coc-snippets": ">=3.1.10",
     "coc-tsserver": ">=2.1.4",
     "coc-tslint-plugin": ">=1.2.0",
     "coc-sql": ">=0.11.0",
     "coc-git": ">=2.7.0",
-    "coc-markdownlint": ">=1.31.1",
+    "coc-markdownlint": ">=1.33.0",
     "coc-eslint": ">=1.6.0",
     "coc-tailwindcss": ">=0.7.0",
     "@yaegassy/coc-tailwindcss3": ">=0.5.7",
@@ -36,5 +36,5 @@
     "coc-tag": ">=1.2.5",
     "coc-syntax": ">=1.2.5"
   },
-  "lastUpdate": 1705984428798
+  "lastUpdate": 1705996689415
 }
