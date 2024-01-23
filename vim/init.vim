@@ -105,14 +105,6 @@ let airline#extensions#coc#stl_format_err = '%C(L%L)'
 " change the warning format (%C - error count, %L - line number): >
 let airline#extensions#coc#stl_format_warn = '%C(L%L)'
 
-" VIM PLUG AUTOMATIC INSTALLATION
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-if empty(glob(data_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-
 " TABNINE
 
 " BEGIN
@@ -152,9 +144,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'sindrets/diffview.nvim'
 
 " COC with SLP
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'pnpm ci'}
-
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
 
 " prettier.nvim
 " post install (yarn install | npm install) then load plugin only for editing supported files

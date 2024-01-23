@@ -192,6 +192,7 @@ WIP features:
 * Brew allows "build from source"
 * and "head" upstream, usually via github
 * We use brew as our main.
+* Migrate from coc.nvim
 
 ---
 
