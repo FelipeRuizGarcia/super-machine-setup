@@ -25,7 +25,6 @@
     "coc-tslint-plugin": ">=1.2.0",
     "coc-sql": ">=0.11.0",
     "coc-git": ">=2.7.0",
-    "coc-tabnine": ">=1.3.7",
     "coc-markdownlint": ">=1.31.1",
     "coc-eslint": ">=1.6.0",
     "coc-tailwindcss": ">=0.7.0",
@@ -37,5 +36,5 @@
     "coc-tag": ">=1.2.5",
     "coc-syntax": ">=1.2.5"
   },
-  "lastUpdate": 1705664408506
+  "lastUpdate": 1705984428798
 }
