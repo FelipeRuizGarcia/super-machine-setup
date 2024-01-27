@@ -7,6 +7,9 @@
 # brew cleanup --prune=all
 # brew autoremove
 
+# Config Values
+# SMS_VERSION = 0.2
+
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 
     # if Fedora do need to grant sudo permission
