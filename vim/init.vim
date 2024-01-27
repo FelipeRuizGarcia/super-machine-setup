@@ -213,6 +213,7 @@ require"nvim-treesitter.configs".setup{
   ensure_installed = "all",
 
   ignore_install = {
+    "tree-sitter-gnuplot",
     "tree-sitter-scala",
     "tree-sitter-php_only",
     "tree-sitter-phpdoc",
