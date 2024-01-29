@@ -26,6 +26,7 @@ alias pmuf="pnpm up -L -f"
 alias pmes="pnpm create @eslint/config"
 alias pmo="pnpm exec oxlint"
 alias pms="pnpm start -d"
+alias pmam="pnpm create amplify@latest"
 
 alias vim="nvim"
 alias nn="nvim"
