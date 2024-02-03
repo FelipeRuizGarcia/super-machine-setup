@@ -18,6 +18,9 @@ alias sln="ln -sf \$SLN1 \$SLN2"
 
 # Fedora
 alias dnf="dnf5" # Fedora 39 ?
+alias dnfcrm="sudo dnf5 copr remove"
+alias dnfcl="sudo dnf5 copr list"
+alias dnfrl="sudo dnf5 repo list"
 
 # JS DEV
 # pnpm or bun ? meantime pnpm
