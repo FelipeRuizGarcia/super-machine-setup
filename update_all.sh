@@ -12,6 +12,10 @@
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 
+    # Cleaning ? Uncomment
+    # sudo dnf5 clean all
+    # sudo dnf5 autoremove
+
     # if Fedora do need to grant sudo permission
     sudo echo "SMS UPDATE ALL"
 
