@@ -156,7 +156,7 @@ Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'nvim-treesitter/nvim-treesitter-refactor'
 
 " telescope
-Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'nvimtools/none-ls.nvim'
 
@@ -209,10 +209,13 @@ lua <<EOF
 require("nvim-treesitter.install").prefer_git = true
 require"nvim-treesitter.configs".setup{
 
-  -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  ensure_installed = "all",
-
   ignore_install = {
+    "tree-sitter-angular",
+    "tree-sitter-beancount",
+    "tree-sitter-liquidsoap",
+    "tree-sitter-purescript",
+    "tree-sitter-groovy",
+    "tree-sitter-haskell",
     "tree-sitter-gnuplot",
     "tree-sitter-scala",
     "tree-sitter-php_only",
@@ -223,8 +226,18 @@ require"nvim-treesitter.configs".setup{
     "tlaplus",
     "gomod",
     "tree-sitter-wing",
-    "tree-sitter-zathurarc"
+    "tree-sitter-zathurarc",
+    "tree-sitter-bitbake",
+    "tree-sitter-groovy",
+    "tree-sitter-haskell",
+    "tree-sitter-kconfig",
+    "tree-sitter-luadoc",
+    "tree-sitter-starlark",
+    "tree-sitter-wing",
 },
+
+  -- A list of parser names, or "all" (the five listed parsers should always be installed)
+  ensure_installed = "all",
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = true,
