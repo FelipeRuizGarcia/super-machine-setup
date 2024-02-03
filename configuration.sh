@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# DEFAULT VALUE FOR THE ENV VARS.
-SMS_VERSION = 1.0.0
