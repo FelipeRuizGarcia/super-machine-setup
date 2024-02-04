@@ -18,6 +18,9 @@ alias sln="ln -sf \$SLN1 \$SLN2"
 
 # Fedora
 alias dnf="dnf5" # Fedora 39 ?
+alias dnfcrm="sudo dnf5 copr remove"
+alias dnfcl="sudo dnf5 copr list"
+alias dnfrl="sudo dnf5 repo list"
 
 # JS DEV
 # pnpm or bun ? meantime pnpm
@@ -26,6 +29,7 @@ alias pmuf="pnpm up -L -f"
 alias pmes="pnpm create @eslint/config"
 alias pmo="pnpm exec oxlint"
 alias pms="pnpm start -d"
+alias pmam="pnpm create amplify@latest"
 
 alias vim="nvim"
 alias nn="nvim"
@@ -54,7 +58,8 @@ alias awinfo="aws account get-contact-information"
 alias awid="aws sts get-caller-identity"
 alias awsum="aws iam get-account-summary"
 
-alias awi="aws configure import --profile-prefix CHANGEME --csv file://rootkey.csv"
+# alias awi="aws configure import --profile-prefix \$AWI --csv file://rootkey.csv"
+alias awi="aws configure import --profile-prefix \$AWI --csv "
 alias awlp="aws configure list-profiles"
 alias aws3="aws s3 ls"
 alias aws3cp="aws s3 cp $DIR_FRONT_BUILD s3://$FRONT --recursive --include '*' --acl public-read"
@@ -131,7 +136,7 @@ alias all="git log --oneline --decorate --all"
 alias status="git status"
 alias dff="git diff --color-words"
 alias cache="git diff --cached"
-alias com="git commit -s"
+alias com="git commit -s --verbose"
 alias amend="git commit --amend"
 alias pull="git pull"
 alias new="git remote add "

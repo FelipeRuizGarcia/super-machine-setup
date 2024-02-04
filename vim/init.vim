@@ -105,14 +105,6 @@ let airline#extensions#coc#stl_format_err = '%C(L%L)'
 " change the warning format (%C - error count, %L - line number): >
 let airline#extensions#coc#stl_format_warn = '%C(L%L)'
 
-" VIM PLUG AUTOMATIC INSTALLATION
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-if empty(glob(data_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-
 " TABNINE
 
 " BEGIN
@@ -152,9 +144,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'sindrets/diffview.nvim'
 
 " COC with SLP
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'pnpm ci'}
-
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
 
 " prettier.nvim
 " post install (yarn install | npm install) then load plugin only for editing supported files
@@ -166,7 +156,7 @@ Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'nvim-treesitter/nvim-treesitter-refactor'
 
 " telescope
-Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'nvimtools/none-ls.nvim'
 
@@ -219,17 +209,35 @@ lua <<EOF
 require("nvim-treesitter.install").prefer_git = true
 require"nvim-treesitter.configs".setup{
 
+  ignore_install = {
+    "tree-sitter-angular",
+    "tree-sitter-beancount",
+    "tree-sitter-liquidsoap",
+    "tree-sitter-purescript",
+    "tree-sitter-groovy",
+    "tree-sitter-haskell",
+    "tree-sitter-gnuplot",
+    "tree-sitter-scala",
+    "tree-sitter-php_only",
+    "tree-sitter-phpdoc",
+    "tree-sitter-php",
+    "klotin",
+    "tree-sitter-kotlin",
+    "tlaplus",
+    "gomod",
+    "tree-sitter-wing",
+    "tree-sitter-zathurarc",
+    "tree-sitter-bitbake",
+    "tree-sitter-groovy",
+    "tree-sitter-haskell",
+    "tree-sitter-kconfig",
+    "tree-sitter-luadoc",
+    "tree-sitter-starlark",
+    "tree-sitter-wing",
+},
+
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = "all",
-
-  ignore_install = {
-      "tree-sitter-scala",
-      "tree-sitter-csv",
-      "tree-sitter-kotlin",
-      "klotin",
-      "tlaplus",
-      "gomod"
-      },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = true,
@@ -307,5 +315,16 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+-- tabnine
+require('tabnine').setup({
+  disable_auto_comment=true,
+  accept_keymap="<C-space>",
+  dismiss_keymap = "<C-]>",
+  debounce_ms = 800,
+  suggestion_color = {gui = "#808080", cterm = 244},
+  exclude_filetypes = {"TelescopePrompt", "NvimTree"},
+  log_file_path = nil, -- absolute path to Tabnine log file
+})
 
 EOF
