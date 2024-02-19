@@ -1,5 +1,8 @@
 syntax enable
 
+" neoformat
+let g:neoformat_run_all_formatters = 1
+
 " prettier
 nmap <Leader>py <Plug>(Prettier)
 let g:prettier#autoformat = 1
@@ -8,7 +11,9 @@ let g:prettier#autoformat_require_pragma = 0
 " treesitter
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
-set nofoldenable                     " Disable folding at startup.
+
+" Disable folding at startup.
+set nofoldenable 
 
 """""""""""""""""
 " whitespaces endlines
@@ -105,10 +110,11 @@ let airline#extensions#coc#stl_format_err = '%C(L%L)'
 " change the warning format (%C - error count, %L - line number): >
 let airline#extensions#coc#stl_format_warn = '%C(L%L)'
 
-" TABNINE
-
 " BEGIN
 call plug#begin('~/.local/share/nvim/plugged')
+
+" neoformat
+Plug 'sbdchd/neoformat'
 
 " JSX
 Plug 'yuezk/vim-js'
@@ -154,6 +160,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --producti
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'nvim-treesitter/nvim-treesitter-refactor'
+Plug 'nvim-treesitter/nvim-treesitter-context'
 
 " telescope
 Plug 'nvim-telescope/telescope.nvim'
@@ -210,6 +217,7 @@ require("nvim-treesitter.install").prefer_git = true
 require"nvim-treesitter.configs".setup{
 
   ignore_install = {
+    "tree-sitter-haskell",
     "tree-sitter-angular",
     "tree-sitter-beancount",
     "tree-sitter-liquidsoap",
@@ -233,8 +241,7 @@ require"nvim-treesitter.configs".setup{
     "tree-sitter-kconfig",
     "tree-sitter-luadoc",
     "tree-sitter-starlark",
-    "tree-sitter-wing",
-},
+    },
 
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = "all",
@@ -262,22 +269,19 @@ node_decremental = "grm",
 },
 },
 
-  --  nvim-treesitter-context 
-  enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
-  max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
-  min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
-  line_numbers = true,
-  multiline_threshold = 20, -- Maximum number of lines to show for a single context
-  trim_scope = 'outer', -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
-  mode = 'cursor',  -- Line used to calculate context. Choices: 'cursor', 'topline'
-  -- Separator between context and content. Should be a single character string, like '-'.
-  -- When separator is set, the context will only show up when there are at least 2 lines above cursorline.
-  separator = nil,
-  zindex = 20, -- The Z-index of the context window
-  on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
-
-
   refactor = {
+
+          navigation = {
+      enable = true,
+      -- Assign keymaps to false to disable them, e.g. `goto_definition = false`.
+      keymaps = {
+        goto_definition = "gnd",
+        list_definitions = "gnD",
+        list_definitions_toc = "gO",
+        goto_next_usage = "<a-*>",
+        goto_previous_usage = "<a-#>",
+      },
+      },
           smart_rename = {
       enable = true,
       -- Assign keymaps to false to disable them, e.g. `smart_rename = false`.
@@ -326,5 +330,21 @@ require('tabnine').setup({
   exclude_filetypes = {"TelescopePrompt", "NvimTree"},
   log_file_path = nil, -- absolute path to Tabnine log file
 })
+
+  --  nvim-treesitter-context 
+  require'treesitter-context'.setup{
+  enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+  max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
+  min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
+  line_numbers = true,
+  multiline_threshold = 20, -- Maximum number of lines to show for a single context
+  trim_scope = 'outer', -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
+  mode = 'cursor',  -- Line used to calculate context. Choices: 'cursor', 'topline'
+  -- Separator between context and content. Should be a single character string, like '-'.
+  -- When separator is set, the context will only show up when there are at least 2 lines above cursorline.
+  separator = nil,
+  zindex = 20, -- The Z-index of the context window
+  on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
+  }
 
 EOF
