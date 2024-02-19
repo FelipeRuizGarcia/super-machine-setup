@@ -19,8 +19,8 @@ alias sln="ln -sf \$SLN1 \$SLN2"
 # Fedora
 alias dnf="dnf5" # Fedora 39 ?
 alias dnfcrm="sudo dnf5 copr remove"
-alias dnfcl="sudo dnf5 copr list"
-alias dnfrl="sudo dnf5 repo list"
+alias dnfcl="dnf5 copr list"
+alias dnfrl="dnf5 repo list"
 
 # JS DEV
 # pnpm or bun ? meantime pnpm
@@ -40,7 +40,6 @@ alias rmf="rm -rf "
 alias rep="grep -rl \/inscripcion . | xargs sed -i  -s  -r 's/\/inscripcion/\/inscripcion/g'"
 alias grepex="grep -R -n \$GREPEX --exclude-dir=node_modules ./*"
 alias findit="find ./* -type f -exec grep -l 'aws-sdk' {} +"
-
 
 # TMUX
 alias tmuxkk="tmux kill-server"
