@@ -2,11 +2,11 @@
 # NVIM > plugins
 
 nvim \
-    -c "PlugClean" \
     -c "PlugUpgrade" \
     -c "PlugUpdate" \
-    -c "TSUpdateSync all" \
-    -c "CocCommand extensions.forceUpdateAll" \
     -c "CocUpdateSync" \
+    -c "CocCommand extensions.forceUpdateAll" \
     -c "MasonUpdate" \
+    -c "TSUpdateSync" \
+    -c "PlugClean" \
     -c "qa!"
