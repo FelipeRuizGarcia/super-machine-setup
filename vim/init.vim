@@ -113,6 +113,9 @@ let airline#extensions#coc#stl_format_warn = '%C(L%L)'
 " BEGIN
 call plug#begin('~/.local/share/nvim/plugged')
 
+" THEME
+Plug 'folke/tokyonight.nvim'
+
 " neoformat
 Plug 'sbdchd/neoformat'
 
@@ -346,5 +349,8 @@ require('tabnine').setup({
   zindex = 20, -- The Z-index of the context window
   on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
   }
+
+-- THEME
+vim.cmd[[colorscheme tokyonight-night]]
 
 EOF
