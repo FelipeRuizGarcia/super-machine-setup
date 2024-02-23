@@ -115,6 +115,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " THEME
 Plug 'folke/tokyonight.nvim'
+Plug 'daltonmenezes/aura-theme', { 'rtp': 'packages/neovim' }
 
 " neoformat
 Plug 'sbdchd/neoformat'
@@ -352,5 +353,7 @@ require('tabnine').setup({
 
 -- THEME
 vim.cmd[[colorscheme tokyonight-night]]
+--vim.cmd[[colorscheme aura-dark]]
+--vim.cmd[[colorscheme aura-soft-dark-soft-text]]
 
 EOF
