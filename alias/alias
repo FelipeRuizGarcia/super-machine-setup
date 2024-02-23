@@ -1,8 +1,8 @@
-# TEST 
+# SMS
 alias hi="echo \$SMS_VERSION"
+alias smskk="brkk && dnfkk"
 
 # br brew
-
 alias bri="brew install --verbose"
 alias bris="brew install -s --verbose"
 alias brish="brew install -s --HEAD --verbose"
@@ -15,12 +15,15 @@ alias swe="whereis"
 alias swi="which"
 alias sc="command -v "
 alias sln="ln -sf \$SLN1 \$SLN2"
+alias jkk="kill %1"
+alias brkk="brew cleanup --prune=all && brew autoremove"
 
 # Fedora
 alias dnf="dnf5" # Fedora 39 ?
 alias dnfcrm="sudo dnf5 copr remove"
 alias dnfcl="dnf5 copr list"
 alias dnfrl="dnf5 repo list"
+alias dnfkk="dnf5 clean all && dnf5 autoremove"
 
 # JS DEV
 # pnpm or bun ? meantime pnpm
