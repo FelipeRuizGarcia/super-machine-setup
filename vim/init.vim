@@ -48,7 +48,7 @@ xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
 " BLACK
-let g:black_linelength=79
+" let g:black_linelength=79
 
 autocmd BufWritePre *.py execute ':Black'
 
@@ -115,7 +115,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " THEME
 Plug 'folke/tokyonight.nvim'
-Plug 'daltonmenezes/aura-theme', { 'rtp': 'packages/neovim' }
+" Plug 'daltonmenezes/aura-theme', { 'rtp': 'packages/neovim' }
 
 " neoformat
 Plug 'sbdchd/neoformat'
@@ -206,7 +206,7 @@ Plug 'nlknguyen/cloudformation-syntax.vim'
 
 " Python Black
 " Plug 'psf/black', { 'branch': 'stable' }
-Plug 'psf/black', { 'tag': '*.*.*' }
+" Plug 'psf/black', { 'tag': '*.*.*' }
 
 " Test Python Black
 " Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
