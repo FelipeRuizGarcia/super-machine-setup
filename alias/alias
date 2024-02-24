@@ -1,3 +1,13 @@
+# SMS Nomeclature
+# the main goal about the `alias naming` is to
+# keep those `easy to remember`
+
+# for exclude arguments we use `ex` in he alias
+# for kill arguments we use `kk` in he alias
+# for clean or remove arguments we use `kk` in he alias
+
+# you can filter for the desired alias with `$ af word-searched-in-the-alias`
+
 # SMS
 alias hi="echo \$SMS_VERSION"
 alias smskk="brkk && dnfkk"
@@ -33,6 +43,10 @@ alias pmes="pnpm create @eslint/config"
 alias pmo="pnpm exec oxlint"
 alias pms="pnpm start -d"
 alias pmam="pnpm create amplify@latest"
+alias pmad="pnpm add -D"
+
+# Node
+alias ndcp="corepack enable pnpm && corepack use pnpm@latest"
 
 alias vim="nvim"
 alias nn="nvim"
@@ -122,10 +136,17 @@ alias gscl="git submodule update --init --recursive"
 alias gsdf="git diff --cached --submodule"
 
 ### Git General
+
+### GIT DIFF
+alias gdex="git diff -- :\^$GDEX1 :\^$GDEX2"
+alias dff="git diff --color-words"
+
 ### Git log
 alias glgg="git log -p --color-words"
 alias glgs="git log --name-status"
 alias glgsa="git log --name-status --all"
+alias log="git log --oneline --decorate"
+alias all="git log --oneline --decorate --all"
 
 alias list="git config --list"
 alias config="git config "
@@ -133,11 +154,7 @@ alias global="git config --global"
 alias add="git add "
 alias clone="git clone "
 alias chto="git checkout "
-alias log="git log --oneline --decorate"
-alias all="git log --oneline --decorate --all"
 alias status="git status"
-alias dff="git diff --color-words"
-alias cache="git diff --cached"
 alias com="git commit -s --verbose"
 alias amend="git commit --amend"
 alias pull="git pull"
