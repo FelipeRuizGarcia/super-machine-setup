@@ -12,6 +12,8 @@ brew upgrade --fetch-HEAD --verbose --force
 corepack enable pnpm
 corepack use pnpm@latest
 
+pnpm up -L -f -g
+
 # update omz
 $HOME/.oh-my-zsh/tools/upgrade.sh
 

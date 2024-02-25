@@ -71,6 +71,12 @@ PR's are welcome.
 
 ## Features
 
+- Alias Expansions
+
+    You can expand the aliases typing and hitting space
+    on this way you can edit the command line.
+    We recommend use ` ctrl+x ctrl+e `
+
 -   Alias Filter
 
 See `alias/alias` for more infor about the aliases and environment variables.
