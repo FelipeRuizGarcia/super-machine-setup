@@ -138,7 +138,6 @@ plugins=(
     brew
     dnf
     fzf
-    git
     docker
     aws
     colored-man-pages
