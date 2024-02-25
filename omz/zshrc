@@ -155,14 +155,22 @@ plugins=(
     docker-machine
     emoji
     fd
+    gh
     git
+    git-auto-fetch
+    git-commit
+    git-escape-magic
+    git-extras
     gitfast
     git-flow
-    git-prompt
+    git-flow-avh
     github
+    git-hubflow
     gitignore
-    git-extras
-    git-escape-magic
+    git-lfs
+    git-prompt
+    glassfish
+    globalias
     marked2
     npm
     pep8

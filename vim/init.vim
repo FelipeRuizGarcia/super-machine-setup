@@ -1,18 +1,18 @@
 syntax enable
 
-" neoformat
+" neoformat "
 let g:neoformat_run_all_formatters = 1
 
-" prettier
+" prettier"
 nmap <Leader>py <Plug>(Prettier)
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 
-" treesitter
+" treesitter"
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 
-" Disable folding at startup.
+" Disable folding at startup."
 set nofoldenable 
 
 """""""""""""""""
@@ -23,12 +23,12 @@ set listchars=space:·,tab:->\
 " VIM Identation
 
 filetype plugin indent on
-"show existing tab with 4 spaces width
+"show existing tab with 4 spaces width"
 
 set tabstop=4
-" when indenting with '>', use 4 spaces width
+" when indenting with '>', use 4 spaces width"
 set shiftwidth=4
-" On pressing tab, insert 4 spaces
+" On pressing tab, insert 4 spaces"
 
 set expandtab
 set mouse=a
@@ -43,17 +43,17 @@ set relativenumber
 :  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
 :augroup END
 
-" coc sql
+" coc sql"
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
-" BLACK
-" let g:black_linelength=79
+" BLACK"
+" let g:black_linelength=79"
 
 autocmd BufWritePre *.py execute ':Black'
 
-" ZZ does not work
-" nnoremap ZZ :Black exit <CR>
+" ZZ does not work"
+" nnoremap ZZ :Black exit <CR>"
 
 " To run Black on a key press (e.g. F9 below), add this:
 nnoremap <F9> :Black<CR>
@@ -204,21 +204,67 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'nlknguyen/cloudformation-syntax.vim'
 
-" Python Black
+" Python Black"
 " Plug 'psf/black', { 'branch': 'stable' }
 " Plug 'psf/black', { 'tag': '*.*.*' }
 
-" Test Python Black
+" Test Python Black"
 " Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
 
 Plug 'codota/tabnine-nvim', { 'do': './dl_binaries.sh' }
 
 call plug#end()
 
-" LUA CONFIGS
+" LUA CONFIGS"
 lua <<EOF
+
 require("nvim-treesitter.install").prefer_git = true
 require"nvim-treesitter.configs".setup{
+
+-- textobjects
+
+  textobjects = {
+    select = {
+      enable = true,
+
+      -- Automatically jump forward to textobj, similar to targets.vim
+      lookahead = true,
+
+      keymaps = {
+        -- You can use the capture groups defined in textobjects.scm
+        ["af"] = "@function.outer",
+        ["if"] = "@function.inner",
+        ["ac"] = "@class.outer",
+        -- You can optionally set descriptions to the mappings (used in the desc parameter of
+        -- nvim_buf_set_keymap) which plugins like which-key display
+        ["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
+        -- You can also use captures from other query groups like `locals.scm`
+        ["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" },
+      },
+      -- You can choose the select mode (default is charwise 'v')
+      --
+      -- Can also be a function which gets passed a table with the keys
+      -- * query_string: eg '@function.inner'
+      -- * method: eg 'v' or 'o'
+      -- and should return the mode ('v', 'V', or '<c-v>') or a table
+      -- mapping query_strings to modes.
+      selection_modes = {
+        ['@parameter.outer'] = 'v', -- charwise
+        ['@function.outer'] = 'V', -- linewise
+        ['@class.outer'] = '<c-v>', -- blockwise
+      },
+      -- If you set this to `true` (default is `false`) then any textobject is
+      -- extended to include preceding or succeeding whitespace. Succeeding
+      -- whitespace has priority in order to act similarly to eg the built-in
+      -- `ap`.
+      --
+      -- Can also be a function which gets passed a table with the keys
+      -- * query_string: eg '@function.inner'
+      -- * selection_mode: eg 'v'
+      -- and should return true of false
+      include_surrounding_whitespace = true,
+    },
+  },
 
   ignore_install = {
     "tree-sitter-haskell",
