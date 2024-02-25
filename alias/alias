@@ -143,6 +143,7 @@ alias gsdf="git diff --cached --submodule"
 
 ### GIT BRANCH
 alias gbv="git branch -vv"
+alias gbva="git branch -vv -a"
 
 ### GIT DIFF
 alias gdex="git diff -- :\^$GDEX1 :\^$GDEX2"
