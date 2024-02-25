@@ -128,6 +128,7 @@ git config --global user.email "felipe.ruiz@adapa.mx"
 git config --global user.name "Felipe Ruiz"
 git config --global core.editor nvim
 git config --global credential.helper store
+git config --global diff.tool nvimdiff
 
 ### Github CLI
 alias ghrcp="gh repo create EXAMPLE --private --add-readme -c"
@@ -138,6 +139,10 @@ alias gscl="git submodule update --init --recursive"
 alias gsdf="git diff --cached --submodule"
 
 ### Git General
+
+
+### GIT BRANCH
+alias gbv="git branch -vv"
 
 ### GIT DIFF
 alias gdex="git diff -- :\^$GDEX1 :\^$GDEX2"
@@ -156,7 +161,6 @@ alias global="git config --global"
 alias add="git add "
 alias clone="git clone "
 alias chto="git checkout "
-alias status="git status"
 alias com="git commit -s --verbose"
 alias amend="git commit --amend"
 alias pull="git pull"
