@@ -139,7 +139,7 @@ alias gscl="git submodule update --init --recursive"
 alias gsdf="git diff --cached --submodule"
 
 ### Git General
-
+alias gtr="git ls-tree --name-only -r HEAD"
 
 ### GIT BRANCH
 alias gbv="git branch -vv"
