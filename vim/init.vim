@@ -96,7 +96,7 @@ let g:coc_snippet_next = '<tab>'
 " VIM-AIRLINE
 
 " enable/disable coc integration >
-" let g:airline#extensions#coc#enabled = 1
+let g:airline#extensions#coc#enabled = 1
 
 " change error symbol: >
 let airline#extensions#coc#error_symbol = 'E:'
