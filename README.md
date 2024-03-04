@@ -4,6 +4,11 @@ Fedora and Mac Setup with
 Profiles, DevUtils, DevTools, Shortcuts, Alias and Configurations
 for a day of SUPER PRODUCTIVITY.
 
+This repo is designed to work in conjuction with the super machine ecosystem.
+
+`super-machine-setup` include all the configs for the os / ide setup.
+`super-machine-templates` include all the templates and scripts for software development.
+
 The project is under development:
 At this stage all the commands assume that
 the path is from to the project root
