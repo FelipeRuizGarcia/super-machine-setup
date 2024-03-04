@@ -1,30 +1,5 @@
 # Super Machine Setup
 
-### Stages
-
-`./update_all.sh`:
-Fedora, you can skip an stage with `Ctrl + C`
-
-You can stop the full script moving the job to background with `Ctrl + Z` and then kill with `kill %NUMBER_OF_THE_JOB`
-You can use the alias `jkk` to kill the job suspended in the background by `Ctrl + Z`.
-
-Example:
-
-```
-
- ~/repos/super-machine-setup │ $ ./update_all.sh
-SMS UPDATE ALL
-+ sudo dnf5 upgrade --refresh -y --no-allow-downgrade '
-Updating and loading repositories:
- Fedora 39 - x86_64 - Updates
-^Z
-[1]  + 540689 suspended  ./update_all.sh
-
- ~/re/super-machine-setup $ jkk
-[1]  + 540689 terminated  ./update_all.sh
-
-```
-
 Fedora and Mac Setup with
 Profiles, DevUtils, DevTools, Shortcuts, Alias and Configurations
 for a day of SUPER PRODUCTIVITY.
@@ -70,6 +45,36 @@ PR's are welcome.
    even if there is some paid license.
 
 ## Features
+
+### Update Stages
+
+You can update the setup by stages:
+    OS: Tools: Nvim: Plugings and configs
+
+You can use the `./update_all.sh`: script to update all the stages.
+
+#### you can skip an stage with `Ctrl + C`
+You can stop the full script moving the job to background with `Ctrl + Z` and then kill with `kill %NUMBER_OF_THE_JOB`
+
+#### You can use the alias `jkk` to kill the job suspended in the background by `Ctrl + Z`.
+
+Example:
+
+```
+
+ ~/repos/super-machine-setup │ $ ./update_all.sh
+SMS UPDATE ALL
++ sudo dnf5 upgrade --refresh -y --no-allow-downgrade '
+Updating and loading repositories:
+ Fedora 39 - x86_64 - Updates
+^Z
+[1]  + 540689 suspended  ./update_all.sh
+
+ ~/re/super-machine-setup $ jkk
+[1]  + 540689 terminated  ./update_all.sh
+
+```
+
 
 - Alias Expansions
 
