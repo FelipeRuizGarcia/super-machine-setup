@@ -6,7 +6,7 @@
 # ALACRITTY > TMUX > TMUX PLUGINGS > OMZ
 
 # brew upgrade with HEAD packages
-brew upgrade --fetch-HEAD --verbose --force
+brew upgrade --fetch-HEAD --verbose --force # --formula -s
 # brew list --formula | xargs brew reinstall --build-from-source --verbose
 
 corepack enable pnpm
