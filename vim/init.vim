@@ -15,18 +15,16 @@ set foldexpr=nvim_treesitter#foldexpr()
 " Disable folding at startup."
 set nofoldenable 
 
-"""""""""""""""""
 " whitespaces endlines
 set listchars=space:·,tab:->\
 
-"""""""""""""""""
 " VIM Identation
-
 filetype plugin indent on
 "show existing tab with 4 spaces width"
 
 set tabstop=4
 " when indenting with '>', use 4 spaces width"
+
 set shiftwidth=4
 " On pressing tab, insert 4 spaces"
 
@@ -146,9 +144,6 @@ Plug 'nvim-lua/plenary.nvim'
 " EXPERIMENTAL / NEEDS CONFIG FORMATTERS AND NEOFORMAT DOES
 " https://github.com/mhartington/formatter.nvim/issues/97
 " Plug 'mhartington/formatter.nvim'
-
-" DIFFVIEW
-Plug 'sindrets/diffview.nvim'
 
 " COC with SLP
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
