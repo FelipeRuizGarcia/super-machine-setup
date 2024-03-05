@@ -49,15 +49,12 @@ nmap <leader>f  <Plug>(coc-format-selected)
 
 " BLACK"
 " let g:black_linelength=79"
-
-autocmd BufWritePre *.py execute ':Black'
-
+" autocmd BufWritePre *.py execute ':Black'
 " ZZ does not work"
 " nnoremap ZZ :Black exit <CR>"
-
 " To run Black on a key press (e.g. F9 below), add this:
-nnoremap <F9> :Black<CR>
-
+" nnoremap <F9> :Black<CR>
+"""""""""""""""""
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 
@@ -202,7 +199,7 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'vim-airline/vim-airline'
 
-Plug 'nlknguyen/cloudformation-syntax.vim'
+" Plug 'nlknguyen/cloudformation-syntax.vim'
 
 " Python Black"
 " Plug 'psf/black', { 'branch': 'stable' }
