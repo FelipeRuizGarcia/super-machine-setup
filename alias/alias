@@ -17,6 +17,7 @@ alias bri="brew install --verbose"
 alias bris="brew install -s --verbose"
 alias brish="brew install -s --HEAD --verbose"
 alias brih="brew install --HEAD --verbose"
+alias brkk="brew cleanup --prune=all && brew autoremove"
 
 # SYSTEM UTILS
 alias st="type"
@@ -26,7 +27,7 @@ alias swi="which"
 alias sc="command -v "
 alias sln="ln -sf \$SLN1 \$SLN2"
 alias jkk="kill %1"
-alias brkk="brew cleanup --prune=all && brew autoremove"
+alias sdnscl="resolvectl flush-caches"
 
 # Fedora
 alias dnf="dnf5" # Fedora 39 ?
@@ -45,9 +46,11 @@ alias pmats="pnpm exec tsc --init"
 alias pmam="pnpm create amplify@latest"
 
 alias pmuf="pnpm up -L -f"
-alias pmo="pnpm exec oxlint"
 alias pms="pnpm start -d"
 alias pmad="pnpm add -D"
+
+alias pmxo="pnpm exec oxlint"
+alias pmxt="pnpm exec typedoc"
 
 # Node
 alias ndcp="corepack enable pnpm && corepack use pnpm@latest"
