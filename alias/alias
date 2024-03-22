@@ -10,7 +10,7 @@
 
 # SMS
 alias hi="echo \$SMS_VERSION"
-alias smskk="brkk && dnfkk"
+alias smskk="dnfkk && brkk"
 
 # br brew
 alias bri="brew install --verbose"
@@ -34,7 +34,7 @@ alias dnf="dnf5" # Fedora 39 ?
 alias dnfcrm="sudo dnf5 copr remove"
 alias dnfcl="dnf5 copr list"
 alias dnfrl="dnf5 repo list"
-alias dnfkk="dnf5 clean all && dnf5 autoremove"
+alias dnfkk="sudo dnf5 clean all && sudo dnf5 autoremove"
 
 # JS DEV
 # pnpm or bun ? meantime pnpm
