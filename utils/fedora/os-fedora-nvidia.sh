@@ -1,3 +1,8 @@
+# https://docs.fedoraproject.org/en-US/quick-docs/set-nvidia-as-primary-gpu-on-optimus-based-laptops/
+
+sudo akmods --force
+sudo akmods --force
+
 sudo dnf5 reinstall \
     kernel \
     kernel-core \
