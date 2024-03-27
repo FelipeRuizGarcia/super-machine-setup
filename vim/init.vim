@@ -445,7 +445,7 @@ vim.keymap.set('n', '<leader>gs', builtin.git_status, {})
 -- tabnine
 require('tabnine').setup({
   disable_auto_comment=true,
-  accept_keymap="<C-space>",
+  accept_keymap="<C-Tab>",
   dismiss_keymap = "<C-]>",
   debounce_ms = 800,
   suggestion_color = {gui = "#808080", cterm = 244},
