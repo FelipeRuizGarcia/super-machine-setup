@@ -38,6 +38,7 @@ alias dnfkk="sudo dnf5 clean all && sudo dnf5 autoremove"
 
 # JS DEV
 # pnpm or bun ? meantime pnpm
+alias npm="pnpm"
 alias pmvt="pnpm create vite@latest"
 alias pmes="pnpm create @eslint/config"
 
@@ -49,6 +50,7 @@ alias pmuf="pnpm up -L -f"
 alias pms="pnpm start -d"
 alias pmad="pnpm add -D"
 
+alias pmxb="pnpm biome format --write --files-ignore-unknown=true ./src && pnpm biome lint --apply ./src"
 alias pmxo="pnpm exec oxlint"
 alias pmxt="pnpm exec typedoc"
 
