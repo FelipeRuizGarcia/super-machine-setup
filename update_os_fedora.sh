@@ -10,7 +10,7 @@
 # sudo dnf5 distro-sync -y --exclude=kernel
 
 # update os packages and kernel # avoid kernel updates
-sudo dnf5 upgrade --refresh -y --no-allow-downgrade --exclude=kernel-*
+sudo dnf5 upgrade --refresh -y --exclude=code-insiders # --exclude=kernel
 
 sudo snap refresh
 
@@ -21,4 +21,4 @@ sudo nvautoinstall ffmpeg
 sudo nvautoinstall vidacc
 # sudo nvautoinstall primec
 
-# flatpak upgrade -y
+flatpak upgrade -y

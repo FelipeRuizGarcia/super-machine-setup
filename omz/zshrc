@@ -1,9 +1,15 @@
+# ZOXIDE | https://github.com/ajeetdsouza/zoxide
+eval "$(zoxide init zsh)"
+
 # STARSHIP | https://github.com/starship/starship
 eval "$(starship init zsh)"
 
 # BREW
 export HOMEBREW_MAKE_JOBS=4
 export HOMEBREW_VERBOSE=4
+
+# https://github.com/marlonrichert/zsh-autocomplete
+source /home/linuxbrew/.linuxbrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # BREW AUTOCOMPLETE
 # https://docs.brew.sh/Shell-Completion
@@ -187,7 +193,6 @@ plugins=(
     vim-interaction
     virtualenv
     virtualenvwrapper
-    z
 )
 
 # z plugin

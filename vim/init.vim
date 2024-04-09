@@ -3,11 +3,6 @@ syntax enable
 " neoformat "
 let g:neoformat_run_all_formatters = 1
 
-" prettier"
-nmap <Leader>py <Plug>(Prettier)
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
-
 " treesitter"
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
@@ -177,10 +172,6 @@ Plug 'nvim-lua/plenary.nvim'
 " COC with SLP
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
 
-" prettier.nvim
-" post install (yarn install | npm install) then load plugin only for editing supported files
-Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
-
 " nvim-treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
@@ -336,6 +327,7 @@ require"nvim-treesitter.configs".setup{
   },
 
   ignore_install = {
+    "tree-sitter-wing",
     "tree-sitter-haskell",
     "tree-sitter-angular",
     "tree-sitter-beancount",
@@ -352,7 +344,6 @@ require"nvim-treesitter.configs".setup{
     "tree-sitter-kotlin",
     "tlaplus",
     "gomod",
-    "tree-sitter-wing",
     "tree-sitter-zathurarc",
     "tree-sitter-bitbake",
     "tree-sitter-groovy",
@@ -593,8 +584,6 @@ vim.api.nvim_set_keymap('n', '<S-F10>', [[:lua require"dap".step_into()<CR>]], {
 vim.api.nvim_set_keymap('n', '<F12>', [[:lua require"dap.ui.widgets".hover()<CR>]], { noremap = true })
 vim.api.nvim_set_keymap('n', '<F5>', [[:lua require"osv".launch({port = 8086})<CR>]], { noremap = true })
 
----
-
 --- nvim lint with biome
 -- biome
 require'lspconfig'.biome.setup{}
@@ -609,7 +598,6 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
     require("lint").try_lint()
   end,
 })
-
 ---
 
 EOF
