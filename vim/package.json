@@ -24,15 +24,13 @@
     "coc-tslint-plugin": ">=1.2.0",
     "coc-sql": ">=0.11.0",
     "coc-git": ">=2.7.0",
-    "coc-markdownlint": ">=1.33.0",
-    "coc-eslint": ">=1.6.0",
+    "coc-markdownlint": ">=1.34.0",
     "coc-tailwindcss": ">=0.7.0",
     "@yaegassy/coc-tailwindcss3": ">=0.5.7",
-    "coc-prettier": ">=9.3.2",
     "coc-diagnostic": ">=0.24.1",
     "coc-dictionary": ">=1.2.2",
     "coc-tag": ">=1.2.5",
     "coc-syntax": ">=1.2.5"
   },
-  "lastUpdate": 1712604384661
+  "lastUpdate": 1713287101736
 }

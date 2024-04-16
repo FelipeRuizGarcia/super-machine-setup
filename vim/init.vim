@@ -145,7 +145,6 @@ Plug 'leafgarland/typescript-vim'
 " LSP Manson Install
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'neovim/nvim-lspconfig'
 
 " nvim-lint
 Plug 'mfussenegger/nvim-lint'
@@ -444,6 +443,7 @@ require('tabnine').setup({
   log_file_path = nil, -- absolute path to Tabnine log file
 })
 
+  -- Error executing vim.schedule lua callback: ...im-treesitter-context/lua/treesitter-context/context.lua:157: 'start' is higher than 'end'
   --  nvim-treesitter-context 
   require'treesitter-context'.setup{
   enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
@@ -586,7 +586,8 @@ vim.api.nvim_set_keymap('n', '<F5>', [[:lua require"osv".launch({port = 8086})<C
 
 --- nvim lint with biome
 -- biome
-require'lspconfig'.biome.setup{}
+require('lspconfig').biome.setup{
+filetypes =  { "javascript", "javascriptreact", "json", "jsonc", "typescript", "typescript.tsx", "typescriptreact", "astro", "svelte", "vue" }}
 
 --- https://github.com/mfussenegger/nvim-lint?tab=readme-ov-file#available-linters
 require('lint').linters_by_ft = {
