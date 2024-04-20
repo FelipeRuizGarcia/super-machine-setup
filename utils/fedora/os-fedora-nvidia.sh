@@ -6,6 +6,9 @@ sudo dnf5 reinstall \
     nvidia-modprobe \
     nvidia-persistenced \
     nvidia-settings \
+    xorg-x11-server-Xwayland \
+    xorg-x11-server-common \
+    xorg-x11-server-Xorg \
     xorg-x11-drv-nvidia \
     xorg-x11-drv-nvidia-libs \
     xorg-x11-drv-nvidia-power \
