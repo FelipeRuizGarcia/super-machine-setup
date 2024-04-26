@@ -10,7 +10,7 @@
 # sudo dnf5 distro-sync -y --exclude=kernel
 
 # update os packages and kernel # avoid kernel updates
-sudo dnf5 upgrade --refresh -y --exclude=code-insiders # --exclude=kernel
+sudo dnf5 upgrade --refresh -y --exclude=code-insiders # --exclude=kernel --force
 
 sudo snap refresh
 

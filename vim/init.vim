@@ -3,6 +3,11 @@ syntax enable
 " neoformat "
 let g:neoformat_run_all_formatters = 1
 
+" prettier"
+nmap <Leader>py <Plug>(Prettier)
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
+
 " treesitter"
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
@@ -170,6 +175,10 @@ Plug 'nvim-lua/plenary.nvim'
 
 " COC with SLP
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
+
+" prettier.nvim
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
 " nvim-treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -435,10 +444,10 @@ vim.keymap.set('n', '<leader>gs', builtin.git_status, {})
 -- tabnine
 require('tabnine').setup({
   disable_auto_comment=true,
-  accept_keymap="<C-Tab>",
-  dismiss_keymap = "<C-]>",
+  accept_keymap = '<leader>t',
+  dismiss_keymap = '<leader>n',
   debounce_ms = 800,
-  suggestion_color = {gui = "#808080", cterm = 244},
+  suggestion_color = {gui = "#908080", cterm = 244},
   exclude_filetypes = {"TelescopePrompt", "NvimTree"},
   log_file_path = nil, -- absolute path to Tabnine log file
 })
@@ -502,7 +511,7 @@ vim.cmd[[colorscheme tokyonight-night]]
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
       ['<C-Space>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
-      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+      ['<Ctrl>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },

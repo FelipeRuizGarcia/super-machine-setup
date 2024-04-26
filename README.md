@@ -54,11 +54,12 @@ PR's are welcome.
 ### Update Stages
 
 You can update the setup by stages:
-    OS: Tools: Nvim: Plugings and configs
+OS: Tools: Nvim: Plugings and configs
 
 You can use the `./update_all.sh`: script to update all the stages.
 
 #### you can skip an stage with `Ctrl + C`
+
 You can stop the full script moving the job to background with `Ctrl + Z` and then kill with `kill %NUMBER_OF_THE_JOB`
 
 #### You can use the alias `jkk` to kill the job suspended in the background by `Ctrl + Z`.
@@ -80,12 +81,11 @@ Updating and loading repositories:
 
 ```
 
-
-- Alias Expansions
+-   Alias Expansions
 
     You can expand the aliases typing and hitting space
     on this way you can edit the command line.
-    We recommend use ` ctrl+x ctrl+e `
+    We recommend use `ctrl+x ctrl+e`
 
 -   Alias Filter
 
@@ -228,6 +228,9 @@ Feel free to file your question.
 
 WIP features:
 
+-   nix integration
+-   brew packages list
+-   tmux session
 -   You can manage your current setup with json file
 -   Brew allows "build from source"
 -   and "head" upstream, usually via github

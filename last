@@ -1,29 +1,71 @@
-pane	ADAPA	0	1	:*	0	adapa-group	:/home/adapa/repos/adapa-platform/adapa-website-frontend	1	zsh	:
+grouped_session	ADAPA-7	ADAPA	:	:0
+grouped_session	JAEL-5	JAEL	:	:0
+grouped_session	JAEL-6	JAEL	:	:0
+pane	ADAPA	0	1	:*	0	adapa-group	:/home/adapa/repos/adapa-platform/adapa-website-frontend	0	zsh	:
 pane	ADAPA	0	1	:*	1	adapa-group	:/home/adapa/repos/adapa-platform/adapa-website-frontend	0	zsh	:
-pane	ADAPA	0	1	:*	2	adapa-group	:/home/adapa/repos/adapa-platform/adapa-website-frontend/src	0	zsh	:
-pane	JAEL	0	0	:-	0	adapa-group	:/home/adapa/repos/jael/Jael-back	1	zsh	:
-pane	JAEL	1	1	:*	0	adapa-group	:/home/adapa/repos/jael/jael-front	1	zsh	:
-pane	MONITOR	0	1	:*	0	adapa-group	:/home/adapa	1	zsh	:
-pane	MONITOR	0	1	:*	1	adapa-group	:/home/adapa	0	zsh	:
-pane	MONITOR	0	1	:*	2	adapa-group	:/home/adapa	0	zsh	:
-pane	MONITOR	0	1	:*	3	adapa-group	:/home/adapa	0	zsh	:
-pane	SMS	0	1	:*	0	adapa-group	:/home/adapa/repos/super-machine-setup	1	zsh	:
+pane	ADAPA	0	1	:*	2	adapa-group	:/home/adapa/repos/super-machine-templates	0	zsh	:
+pane	ADAPA	0	1	:*	3	adapa-group	:/home/adapa/repos/personal/learning	1	zsh	:
+pane	ADAPA	1	0	:-	0	adapa-group	:/home/adapa/repos/adapa-platform/adapa-erp-front/erp-frontend/src	0	zsh	:
+pane	ADAPA	1	0	:-	1	adapa-group	:/home/adapa/repos/adapa-platform/adapa-erp-front/erp-frontend/src	1	zsh	:
+pane	ADAPA	1	0	:-	2	adapa-group	:/home/adapa/repos/adapa-platform/adapa-erp-front/erp-frontend/src	0	zsh	:
+pane	ADAPA	1	0	:-	3	adapa-group	:/home/adapa/repos/adapa-platform/adapa-erp-front/erp-frontend/src	0	zsh	:
+pane	JAEL	0	0	:-	0	adapa-group	:/home/adapa/repos/jael/jael-front/src	0	zsh	:
+pane	JAEL	0	0	:-	1	adapa-group	:/home/adapa/repos/jael/jael-front	0	zsh	:
+pane	JAEL	0	0	:-	2	adapa-group	:/home/adapa/repos/jael/jael-front/docs	0	zsh	:
+pane	JAEL	0	0	:-	3	adapa-group	:/home/adapa/repos/jael/jael-front/src/middleware	1	zsh	:
+pane	JAEL	0	0	:-	4	adapa-group	:/home/adapa/repos/jael/jael-front/src	0	zsh	:
+pane	JAEL	0	0	:-	5	adapa-group	:/home/adapa/repos/jael/Jael-back/amplify/backend	0	zsh	:
+pane	JAEL	1	1	:*	0	adapa-group	:/home/adapa/repos/jael/Jael-back/docs	0	zsh	:
+pane	JAEL	1	1	:*	1	adapa-group	:/home/adapa/repos/jael/Jael-back	0	zsh	:
+pane	JAEL	1	1	:*	2	adapa-group	:/home/adapa/repos/jael/Jael-back/src	0	zsh	:
+pane	JAEL	1	1	:*	3	adapa-group	:/home/adapa/repos/jael/Jael-back/provisioning	1	zsh	:
+pane	MONITOR	0	0	:-	0	adapa-group	:/home/adapa	0	zsh	:
+pane	MONITOR	0	0	:-	1	adapa-group	:/home/adapa	0	zsh	:
+pane	MONITOR	0	0	:-	2	adapa-group	:/home/adapa	1	zsh	:
+pane	MONITOR	0	0	:-	3	adapa-group	:/home/adapa	0	zsh	:
+pane	MONITOR	1	1	:*	0	adapa-group	:/home/adapa/repos/cognito-local	1	zsh	:
+pane	MONITOR	1	1	:*	1	adapa-group	:/home/adapa/repos/cognito-local	0	zsh	:
+pane	SMS	0	1	:*	0	adapa-group	:/home/adapa/repos/super-machine-templates	0	zsh	:
 pane	SMS	0	1	:*	1	adapa-group	:/home/adapa/repos/super-machine-setup	0	zsh	:
-pane	SMS	1	0	:	0	adapa-group	:/home/adapa/repos/Learner	1	zsh	:
-pane	SMS	2	0	:	0	adapa-group	:/home/adapa/repos/nvidia-auto-installer-for-fedora-linux/nvautoinstall/operations	1	zsh	:
-pane	SMS	3	0	:	0	adapa-group	:/home/adapa/repos/personal/projects/adapa	1	zsh	:
-pane	SMS	3	0	:	1	adapa-group	:/home/adapa/repos/personal	0	zsh	:
-pane	SMS	4	0	:-	0	adapa-group	:/home/adapa/repos/esland-web	1	zsh	:
-pane	SMS	4	0	:-	1	adapa-group	:/home/adapa/test-nb	0	zsh	:
-pane	SMS	6	0	:	0	adapa-group	:/home/adapa/repos/tranzemc	1	zsh	:
-window	ADAPA	0	:FRONTEND	1	:*	b73b,88x26,0,0{27x26,0,0,1,60x26,28,0[60x11,28,0,2,60x14,28,12,3]}	off
-window	JAEL	0	:BACK	0	:-	be61,88x26,0,0,4	off
-window	JAEL	1	:FRONT	1	:*	be62,88x26,0,0,5	off
-window	MONITOR	0	:zsh	1	:*	c5b8,88x26,0,0[88x11,0,0,6,88x12,0,12{27x12,0,12,7,60x12,28,12,8},88x1,0,25,9]	:
-window	SMS	0	:SMS	1	:*	5680,284x61,0,0[284x33,0,0,10,284x27,0,34,11]	off
-window	SMS	1	:LEARNER	0	:	5f61,88x26,0,0,12	off
-window	SMS	2	:NVIDIA	0	:	5f62,88x26,0,0,13	off
-window	SMS	3	:PERSONAL	0	:	ad55,88x26,0,0[88x12,0,0,14,88x13,0,13,15]	off
-window	SMS	4	:SAND	0	:-	ad5a,88x26,0,0[88x12,0,0,16,88x13,0,13,17]	off
-window	SMS	6	:TRANZEMC	0	:	5f67,88x26,0,0,18	off
-state	SMS	ADAPA
+pane	SMS	0	1	:*	2	adapa-group	:/home/adapa/repos/super-machine-setup	1	zsh	:
+pane	SMS	0	1	:*	3	adapa-group	:/home/adapa/repos/super-machine-setup	0	zsh	:
+pane	SMS	1	0	:	0	adapa-group	:/home/adapa/repos/Learner	0	zsh	:
+pane	SMS	1	0	:	1	adapa-group	:/home/adapa/repos/Learner	0	zsh	:
+pane	SMS	1	0	:	2	adapa-group	:/home/adapa/repos/Learner	0	zsh	:
+pane	SMS	1	0	:	3	adapa-group	:/home/adapa/repos/Learner	0	zsh	:
+pane	SMS	1	0	:	4	adapa-group	:/home/adapa/repos/Learner	1	zsh	:
+pane	SMS	2	0	:	0	adapa-group	:/home/adapa/repos/react-expense-tracker	1	zsh	:
+pane	SMS	2	0	:	1	adapa-group	:/home/adapa/repos/react-expense-tracker	0	zsh	:
+pane	SMS	2	0	:	2	adapa-group	:/home/adapa/repos	0	zsh	:
+pane	SMS	2	0	:	3	adapa-group	:/home/adapa/repos	0	zsh	:
+pane	SMS	2	0	:	4	adapa-group	:/home/adapa/repos	0	zsh	:
+pane	SMS	2	0	:	5	adapa-group	:/home/adapa/repos	0	zsh	:
+pane	SMS	2	0	:	6	adapa-group	:/home/adapa/repos	0	zsh	:
+pane	SMS	4	0	:	0	adapa-group	:/home/adapa/repos/personal/fe	0	zsh	:
+pane	SMS	4	0	:	1	adapa-group	:/home/adapa/repos/personal/fe	0	zsh	:
+pane	SMS	4	0	:	2	adapa-group	:/home/adapa/repos/personal/fe	0	zsh	:
+pane	SMS	4	0	:	3	adapa-group	:/home/adapa/repos/personal/fe	0	zsh	:
+pane	SMS	4	0	:	4	adapa-group	:/home/adapa/repos/personal	1	zsh	:
+pane	SMS	6	0	:-	0	adapa-group	:/home/adapa/repos/tranzemc	0	zsh	:
+pane	SMS	6	0	:-	1	adapa-group	:/home/adapa/repos/tranzemc	0	zsh	:
+pane	SMS	6	0	:-	2	adapa-group	:/home/adapa/repos/tranzemc	0	zsh	:
+pane	SMS	6	0	:-	3	adapa-group	:/home/adapa/repos/tranzemc	1	zsh	:
+pane	SMS	6	0	:-	4	adapa-group	:/home/adapa/repos/tranzemc	0	zsh	:
+pane	SMS	6	0	:-	5	adapa-group	:/home/adapa/repos/tranzemc	0	zsh	:
+pane	SMS	6	0	:-	6	adapa-group	:/home/adapa/repos/tranzemc	0	zsh	:
+pane	SMS	7	0	:	0	adapa-group	:/home/adapa/repos/super-machine-setup-website	0	zsh	:
+pane	SMS	7	0	:	1	adapa-group	:/home/adapa/repos/super-machine-setup-website	0	zsh	:
+pane	SMS	7	0	:	2	adapa-group	:/home/adapa/repos/super-machine-setup-website	1	zsh	:
+window	ADAPA	0	:FRONTEND	1	:*	41f8,284x62,0,0{183x62,0,0[183x31,0,0,1,183x30,0,32,2],100x62,184,0[100x33,184,0,3,100x28,184,34,4]}	off
+window	ADAPA	1	:ERP-FRONT	0	:-	ac9c,284x62,0,0[284x16,0,0{101x16,0,0,5,182x16,102,0,6},284x21,0,17,7,284x23,0,39,8]	off
+window	JAEL	0	:FRONT	0	:-	211d,284x62,0,0[284x32,0,0{184x32,0,0[184x19,0,0,9,184x12,0,20,10],99x32,185,0,11},284x29,0,33{142x29,0,33[142x22,0,33,12,142x6,0,56,13],141x29,143,33,14}]	off
+window	JAEL	1	:BACK	1	:*	c73b,284x62,0,0[284x12,0,0,15,284x22,0,13,16,284x26,0,36{142x26,0,36,17,141x26,143,36,18}]	off
+window	MONITOR	0	:TOOLS	0	:-	0597,284x62,0,0[284x17,0,0,19,284x16,0,18{125x16,0,18,20,158x16,126,18,21},284x27,0,35,22]	off
+window	MONITOR	1	:zsh	1	:*	af45,284x62,0,0[284x31,0,0,23,284x30,0,32,24]	:
+window	SMS	0	:SMS	1	:*	0efa,284x62,0,0{122x62,0,0,25,161x62,123,0[161x19,123,0,26,161x24,123,20,27,161x17,123,45,28]}	off
+window	SMS	1	:LEARNER	0	:	4db8,284x62,0,0[284x9,0,0,29,284x9,0,10,30,284x9,0,20,31,284x7,0,30,32,284x24,0,38,33]	off
+window	SMS	2	:SANDBOX	0	:	4542,284x62,0,0[284x7,0,0,34,284x7,0,8,35,284x7,0,16,37,284x6,0,24,39,284x6,0,31,40,284x5,0,38,42,284x18,0,44,44]	off
+window	SMS	4	:PERSONAL	0	:	2724,284x62,0,0[284x9,0,0,43,284x10,0,10,47,284x9,0,21,48,284x7,0,31,52,284x23,0,39,54]	off
+window	SMS	6	:TRANZEMC	0	:-	3a06,284x62,0,0[284x8,0,0,51,284x8,0,9,53,284x8,0,18,56,284x19,0,27,58,284x6,0,47,61,284x8,0,54{142x8,0,54,66,141x8,143,54,68}]	off
+window	SMS	7	:SMS_WEB	0	:	cc47,284x62,0,0[284x13,0,0,63,284x13,0,14,65,284x34,0,28,71]	off
+state	SMS	MONITOR
