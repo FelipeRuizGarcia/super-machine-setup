@@ -19,7 +19,7 @@
     "coc-html": ">=1.8.0",
     "coc-json": ">=1.9.2",
     "coc-marketplace": ">=1.9.0",
-    "coc-pyright": ">=1.1.355",
+    "coc-pyright": ">=1.1.362",
     "coc-snippets": ">=3.1.10",
     "coc-tslint-plugin": ">=1.2.0",
     "coc-sql": ">=0.11.0",
@@ -32,5 +32,5 @@
     "coc-tag": ">=1.2.5",
     "coc-syntax": ">=1.2.5"
   },
-  "lastUpdate": 1714145168893
+  "lastUpdate": 1716242780575
 }

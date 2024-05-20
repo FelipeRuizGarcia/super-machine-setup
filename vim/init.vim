@@ -191,6 +191,7 @@ Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'nvimtools/none-ls.nvim'
 Plug 'nvimtools/none-ls-extras.nvim'
+Plug 'gbprod/none-ls-shellcheck.nvim'
 
 Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
@@ -222,6 +223,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'vim-airline/vim-airline'
+Plug 'supermaven-inc/supermaven-nvim'
 
 " Plug 'nlknguyen/cloudformation-syntax.vim'
 
@@ -231,8 +233,6 @@ Plug 'vim-airline/vim-airline'
 
 " Test Python Black"
 " Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
-
-Plug 'codota/tabnine-nvim', { 'do': './dl_binaries.sh' }
 
 call plug#end()
 
@@ -441,17 +441,6 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>fl', builtin.diagnostics, {})
 vim.keymap.set('n', '<leader>gs', builtin.git_status, {})
 
--- tabnine
-require('tabnine').setup({
-  disable_auto_comment=true,
-  accept_keymap = '<leader>t',
-  dismiss_keymap = '<leader>n',
-  debounce_ms = 800,
-  suggestion_color = {gui = "#908080", cterm = 244},
-  exclude_filetypes = {"TelescopePrompt", "NvimTree"},
-  log_file_path = nil, -- absolute path to Tabnine log file
-})
-
   -- Error executing vim.schedule lua callback: ...im-treesitter-context/lua/treesitter-context/context.lua:157: 'start' is higher than 'end'
   --  nvim-treesitter-context 
   require'treesitter-context'.setup{
@@ -475,12 +464,14 @@ local null_ls = require("null-ls")
 null_ls.setup({
     debug = true,
     sources = {
+        null_ls.builtins.formatting.stylua,
+        null_ls.builtins.completion.spell,
+        require("none-ls.diagnostics.eslint"),
+        require("none-ls.code_actions.eslint"),
         require("none-ls.diagnostics.cpplint"),
         require("none-ls.formatting.jq"),
-        require("none-ls.code_actions.eslint"),
-        null_ls.builtins.formatting.stylua,
-        null_ls.builtins.diagnostics.eslint,
-        null_ls.builtins.completion.spell,
+        require("none-ls-shellcheck.diagnostics"),
+        require("none-ls-shellcheck.code_actions"),
     },
 })
 
@@ -609,5 +600,20 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
   end,
 })
 ---
+
+--- supermaven
+
+require("supermaven-nvim").setup({
+  keymaps = {
+    accept_suggestion = "<Tab>",
+    clear_suggestion = "<C-]>",
+    accept_word = "<C-j>",
+  },
+  ignore_filetypes = { cpp = true },
+  color = {
+    suggestion_color = "#ffffff",
+    cterm = 244,
+  }
+})
 
 EOF
