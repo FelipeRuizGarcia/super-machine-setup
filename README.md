@@ -10,8 +10,33 @@ This repo is designed to work in conjuction with the super machine ecosystem.
 `super-machine-templates` include all the templates and scripts for software development.
 
 The project is under development:
-At this stage all the commands assume that
-the path is from to the project root
+
+Fedora
+Fedora RawHide systems and packages
+Fedora Kernel from `copr  @kernel-vanilla/fedora   Package: stable-fedora-releases ` 
+```
+https://copr.fedorainfracloud.org/coprs/g/kernel-vanilla/fedora/package/stable-fedora-releases/
+```
+
+I use `./utils/fedora/nvidia` script to reinstall to the proper arch(latest stable) and release
+
+Branch | PROD | TEST
+Hardware primary | Lenovo Legion 7 16ACHg6
+OS Primary | Fedora 40 | Fedora 41 / Beta distribution
+OS MacOs | Fedora 40 | Fedora Raid
+Terminal Console 1 | alacritty | wezterm
+Terminal Console 2 | alacritty | wezterm
+Terminal Editor 1 | Neovim | Neovim
+Terminal Editor 2 | Vim | Helix
+Shell | Zsh | Nushell
+Prompt Shell | powerlevel10k | Starship
+External packager Manager | Brew | Nix
+Network Tool | NetHogs | Bandwhich from brew
+
+---
+
+At this stage( prod branch vs test branch ) all the commands assume that
+the path is from to the project root:
 
 Example
 
@@ -230,6 +255,7 @@ WIP features:
 
 -   nix integration
 -   brew packages list
+-   node packages
 -   tmux session
 -   You can manage your current setup with json file
 -   Brew allows "build from source"
