@@ -13,10 +13,9 @@ alias hi="echo \$SMS_VERSION"
 alias smskk="dnfkk && brkk"
 
 # br brew
-alias bri="brew install --verbose"
-alias bris="brew install -s --verbose"
-alias brish="brew install -s --HEAD --verbose"
-alias brih="brew install --HEAD --verbose"
+alias bri="brew install --fetch-HEAD --verbose"
+alias bris="brew install -s --fetch-HEAD --verbose"
+alias brish="brew install -s --HEAD --fetch-HEAD --verbose"
 alias brkk="brew cleanup --prune=all && brew autoremove"
 
 # SYSTEM UTILS
@@ -155,6 +154,9 @@ alias gbva="git branch -vv -a"
 ### GIT DIFF
 alias gdex="git diff -- :\^$GDEX1 :\^$GDEX2"
 alias dff="git diff --color-words"
+
+### GIT STATUS
+alias gssm="git status --porcelain | grep '^ M' | awk '{print $2}'"
 
 ### Git log
 alias glgg="git log -p --color-words"
