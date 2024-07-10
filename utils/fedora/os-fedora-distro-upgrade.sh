@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Prepare Upgrade
-sudo dnf5 distro-sync
+# sudo dnf5 distro-sync
 
 # required?
 # sudo dnf5 install dnf5-plugins
 
 # Upgrade to Fedora Release
-sudo dnf system-upgrade download --releasever=39 -y
+sudo dnf system-upgrade download --releasever=41 -y
 
 # WARNING: Optial skipe broke dependencies
 # sudo dnf system-upgrade download --releasever=40 -y --skip-broken
