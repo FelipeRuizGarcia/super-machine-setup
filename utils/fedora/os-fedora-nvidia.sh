@@ -2,7 +2,14 @@
 
 sudo akmods --force
 
+# 'kernel-*6.9.5-350.vanilla.fc40.x86_64' \
+    #--releasever=40 \
+    #--allow-downgrade \
+    #--allowerasing \
+
 sudo dnf5 reinstall \
+    --releasever=40 \
+    --allow-downgrade \
     nvidia-modprobe \
     nvidia-persistenced \
     nvidia-settings \
@@ -16,8 +23,11 @@ sudo dnf5 reinstall \
     xorg-x11-drv-nvidia-cuda-libs \
     xorg-x11-drv-nvidia-kmodsrc \
     akmod-nvidia \
+    'kmod*' \
+    'akmod*' \
     kmod-nvidia \
     kernel \
+    kernel-devel \
     kernel-core \
     kernel-modules \
     kernel-modules-core
