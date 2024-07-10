@@ -1,4 +1,5 @@
 syntax enable
+set ignorecase
 
 " neoformat "
 let g:neoformat_run_all_formatters = 1
@@ -210,7 +211,8 @@ Plug 'junegunn/vim-easy-align'
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
 " Multiple Plug commands can be written in a single line using | separators
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " https://github.com/ults-io/vscode-react-javascript-snippets
 Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
@@ -223,7 +225,11 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'vim-airline/vim-airline'
-Plug 'supermaven-inc/supermaven-nvim'
+
+" Code_Runner
+Plug 'CRAG666/code_runner.nvim'
+
+" Plug 'supermaven-inc/supermaven-nvim'
 
 " Plug 'nlknguyen/cloudformation-syntax.vim'
 
@@ -233,6 +239,9 @@ Plug 'supermaven-inc/supermaven-nvim'
 
 " Test Python Black"
 " Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
+
+" CODEIUM
+" Plug 'Exafunction/codeium.nvim'
 
 call plug#end()
 
@@ -335,6 +344,9 @@ require"nvim-treesitter.configs".setup{
   },
 
   ignore_install = {
+    "norg", --- correct
+    "tree-sitter-norg",
+    "tree-sitter-systemverilog",
     "tree-sitter-wing",
     "tree-sitter-haskell",
     "tree-sitter-angular",
@@ -504,7 +516,8 @@ vim.cmd[[colorscheme tokyonight-night]]
       ['<C-e>'] = cmp.mapping.abort(),
       ['<Ctrl>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
-    sources = cmp.config.sources({
+    sources = cmp.config.sources(
+    {
       { name = 'nvim_lsp' },
       { name = 'vsnip' }, -- For vsnip users.
       -- { name = 'luasnip' }, -- For luasnip users.
@@ -512,6 +525,7 @@ vim.cmd[[colorscheme tokyonight-night]]
       -- { name = 'snippy' }, -- For snippy users.
     }, {
       { name = 'buffer' },
+      --- { name = "codeium" }
     })
   })
 
@@ -603,17 +617,31 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 
 --- supermaven
 
-require("supermaven-nvim").setup({
-  keymaps = {
-    accept_suggestion = "<Tab>",
-    clear_suggestion = "<C-]>",
-    accept_word = "<C-j>",
-  },
-  ignore_filetypes = { cpp = true },
-  color = {
-    suggestion_color = "#ffffff",
-    cterm = 244,
+---require("supermaven-nvim").setup({
+---  keymaps = {
+---    accept_suggestion = "<Tab>",
+---    clear_suggestion = "<C-]>",
+---    accept_word = "<C-j>",
+---  },
+---  ignore_filetypes = { cpp = true },
+---  color = {
+---    suggestion_color = "#ffffff",
+---    cterm = 244,
+---  }
+---})
+
+--- Code_Runner
+
+require('code_runner').setup({
+  filetype = {
+    python = "python3 -u",
+    typescript = "tsx",
+    javascript = "tsx",
+    markdown = "bat",
   }
 })
+
+
+vim.keymap.set('n', '<leader>r', ':RunCode<CR>', { noremap = true, silent = false })
 
 EOF
