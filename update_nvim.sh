@@ -8,5 +8,5 @@ nvim \
     -c "CocCommand extensions.forceUpdateAll" \
     -c "MasonUpdate" \
     -c "TSUpdateSync" \
-    -c "PlugClean" \
+    -c "PlugClean!" \
     -c "qa!"
