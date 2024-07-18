@@ -25,6 +25,7 @@ sudo dnf5 reinstall \
     akmod-nvidia \
     'kmod*' \
     'akmod*' \
+    'bpftool' \
     kmod-nvidia \
     kernel \
     kernel-devel \
