@@ -28,8 +28,8 @@ zstyle ':omz:update' frequency 1
 
 # EDITOR
 # source $HOME/fzf-git.sh
-
 export EDITOR=nvim
+
 # Go path
 export PATH=$PATH:/usr/local/go/bin
 
@@ -60,10 +60,10 @@ fi
 
 ### FZF
 # fzf on Fedora
-# if [ -x "$(command -v fzf)"  ]
-# then
-#     source /usr/share/fzf/shell/key-bindings.zsh
-# fi
+if [ -x "$(command -v fzf)"  ]
+then
+     source /usr/share/fzf/shell/key-bindings.zsh
+fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
