@@ -26,11 +26,11 @@
     "coc-git": ">=2.7.0",
     "coc-markdownlint": ">=1.34.0",
     "coc-tailwindcss": ">=0.7.0",
-    "@yaegassy/coc-tailwindcss3": ">=0.5.11",
+    "@yaegassy/coc-tailwindcss3": ">=0.5.12",
     "coc-diagnostic": ">=0.24.1",
     "coc-dictionary": ">=1.2.2",
     "coc-tag": ">=1.2.5",
     "coc-syntax": ">=1.2.5"
   },
-  "lastUpdate": 1720639995837
+  "lastUpdate": 1721680890244
 }
