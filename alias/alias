@@ -13,12 +13,14 @@ alias hi="echo \$SMS_VERSION"
 alias smskk="dnfkk && brkk"
 
 # br brew
-alias bri="brew install --fetch-HEAD --verbose"
+alias bri="brew info "
+alias brbd="brew bundle dump"
 alias bris="brew install -s --fetch-HEAD --verbose"
 alias brish="brew install -s --HEAD --fetch-HEAD --verbose"
 alias brkk="brew cleanup --prune=all && brew autoremove"
 
 # SYSTEM UTILS
+alias sj="journalctl --reverse"
 alias st="type"
 alias tre="tree -L 3"
 alias swe="whereis"
@@ -30,7 +32,9 @@ alias jkk="kill %1"
 alias sdnscl="resolvectl flush-caches"
 
 # Fedora
-alias dnf="dnf5" # Fedora 39 ?
+alias dnf="dnf5"
+alias dnfli="dnf5 list --installed"
+alias dnfla="dnf5 list --available  '*' --repo="
 alias dnfcrm="sudo dnf5 copr remove"
 alias dnfcl="dnf5 copr list"
 alias dnfrl="dnf5 repo list"
@@ -68,6 +72,7 @@ alias grepex="grep -R -n \$GREPEX --exclude-dir=node_modules ./*"
 alias findit="find ./* -type f -exec grep -l 'aws-sdk' {} +"
 
 # TMUX
+alias tmuxa="tmux new-session -t"
 alias tmuxkk="tmux kill-server"
 
 # APIS
@@ -119,6 +124,10 @@ alias dpr="django-admin startproject"
 alias dapp="django-admin startproject"
 alias drn="python3 manage.py runserver "
 alias dmi="python3 manage.py migrate "
+
+# ALIAS DOCKER AI
+alias dcaos="docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama "
+alias dcaor="docker exec -it ollama ollama run deepseek-coder-v2"
 
 # ALIAS DOCKER
 alias dcadduser="sudo usermod -aG kvm $USER"
