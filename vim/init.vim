@@ -242,6 +242,9 @@ Plug 'CRAG666/code_runner.nvim'
 
 " CODEIUM
 " Plug 'Exafunction/codeium.nvim'
+"
+" GP
+Plug 'robitx/gp.nvim'
 
 call plug#end()
 
@@ -654,5 +657,18 @@ require('code_runner').setup({
 
 
 vim.keymap.set('n', '<leader>r', ':RunCode<CR>', { noremap = true, silent = false })
+
+--- GP
+
+local conf = {
+	providers = {
+		ollama = {
+			endpoint = "http://localhost:11434/v1/chat/completions",
+		},
+
+	},
+}
+
+require("gp").setup(conf)
 
 EOF
