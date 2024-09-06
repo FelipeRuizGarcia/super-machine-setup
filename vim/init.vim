@@ -118,9 +118,6 @@ Plug 'hrsh7th/nvim-cmp'
 
 Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 
-" For vsnip users.
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/vim-vsnip'
 
 " For luasnip users.
  Plug 'L3MON4D3/LuaSnip'
@@ -220,6 +217,9 @@ Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --f
 " Using a non-default branch
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
+" fzf in the plugin
+set rtp+=/home/linuxbrew/.linuxbrew/opt/fzf
+
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -240,9 +240,6 @@ Plug 'CRAG666/code_runner.nvim'
 " Test Python Black"
 " Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
 
-" CODEIUM
-" Plug 'Exafunction/codeium.nvim'
-"
 " GEN
 Plug 'David-Kunz/gen.nvim'
 
@@ -492,7 +489,7 @@ null_ls.setup({
     sources = {
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.completion.spell,
-        require("none-ls.diagnostics.eslint"),
+        -- require("none-ls.diagnostics.eslint"),
         require("none-ls.code_actions.eslint"),
         require("none-ls.diagnostics.cpplint"),
         require("none-ls.formatting.jq"),
@@ -513,7 +510,6 @@ vim.cmd[[colorscheme tokyonight-night]]
     snippet = {
       -- REQUIRED - you must specify a snippet engine
       expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
         -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
         -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
         -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
@@ -533,13 +529,11 @@ vim.cmd[[colorscheme tokyonight-night]]
     sources = cmp.config.sources(
     {
       { name = 'nvim_lsp' },
-      { name = 'vsnip' }, -- For vsnip users.
       -- { name = 'luasnip' }, -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.
     }, {
       { name = 'buffer' },
-      --- { name = "codeium" }
     })
   })
 
@@ -661,7 +655,7 @@ vim.keymap.set('n', '<leader>r', ':RunCode<CR>', { noremap = true, silent = fals
 require('gen').setup({
     --- if runs from the container, needs to add the full container name
     --- deepseek-coder-v2:latest
-        model = "deepseek-coder-v2:latest",
+        model = "deepseek-coder-v2",
         host = "0.0.0.0", -- The host running the Ollama service.
         port = "11434", -- The port on which the Ollama service is listening.
         quit_map = "q", -- set keymap for close the response window
@@ -678,11 +672,18 @@ require('gen').setup({
         -- (context property is optional).
         -- list_models = '<omitted lua function>', -- Retrieves a list of model names
         display_mode = "float", -- The display mode. Can be "float" or "split" or "horizontal-split".
-        show_prompt = true, -- Shows the prompt submitted to Ollama.
+        show_prompt = false, -- Shows the prompt submitted to Ollama.
         show_model = true, -- Displays which model you are using at the beginning of your chat session.
         no_auto_close = false, -- Never closes the window automatically.
-        debug = true -- Prints errors and the command which is run.
+        debug = false -- Prints errors and the command which is run.
   -- same as above
 })
+
+require('gen').prompts['F'] = {
+  -- prompt = "Fix the following code. Only ouput the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n``` also ```$input```",
+  prompt = "Fix the following code. Only ouput the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+  replace = true,
+  extract = "```$filetype\n(.-)```"
+}
 
 EOF
