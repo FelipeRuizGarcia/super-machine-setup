@@ -1,6 +1,7 @@
 # SMS Nomeclature
 # the main goal about the `alias naming` is to
 # keep those `easy to remember`
+# 4 chars
 
 # for exclude arguments we use `ex` in he alias
 # for kill arguments we use `kk` in he alias
@@ -20,6 +21,8 @@ alias brish="brew install -s --HEAD --fetch-HEAD --verbose"
 alias brkk="brew cleanup --prune=all && brew autoremove"
 
 # SYSTEM UTILS
+alias ssdr="sudo service docker restart"
+alias ssds="sudo service docker stop"
 alias sj="journalctl --reverse"
 alias st="type"
 alias tre="tree -L 3"
@@ -39,6 +42,8 @@ alias dnfcrm="sudo dnf5 copr remove"
 alias dnfcl="dnf5 copr list"
 alias dnfrl="dnf5 repo list"
 alias dnfkk="sudo dnf5 clean all && sudo dnf5 autoremove"
+alias smrr="sudo modprobe --force --remove --remove-dependencies --verbose"
+alias sgpum=" glxinfo | egrep 'OpenGL vendor|OpenGL renderer' "
 
 # JS DEV
 # pnpm or bun ? meantime pnpm
@@ -63,13 +68,16 @@ alias ndcp="corepack enable pnpm && corepack use pnpm@latest"
 
 alias vim="nvim"
 alias nn="nvim"
+alias snn="ps aux | rg nvim "
+alias nnn="nvim --noplugin"
+# nvim --noplugin -c 'buffers'
 alias nvimgg="pnpm install -g neovim"
 
 alias rmf="rm -rf "
 
-alias rep="grep -rl \/inscripcion . | xargs sed -i  -s  -r 's/\/inscripcion/\/inscripcion/g'"
-alias grepex="grep -R -n \$GREPEX --exclude-dir=node_modules ./*"
-alias findit="find ./* -type f -exec grep -l 'aws-sdk' {} +"
+alias rep="rg -rl \/inscripcion . | xargs sed -i  -s  -r 's/\/inscripcion/\/inscripcion/g'"
+alias grepex="rg -R -n \$GREPEX --exclude-dir=node_modules ./*"
+alias findit="find ./* -type f -exec rg -l 'aws-sdk' {} +"
 
 # TMUX
 alias tmuxa="tmux new-session -t"
@@ -88,12 +96,17 @@ alias awinfo="aws account get-contact-information"
 alias awid="aws sts get-caller-identity"
 alias awsum="aws iam get-account-summary"
 
-# alias awi="aws configure import --profile-prefix \$AWI --csv file://rootkey.csv"
+# alias awi="aws configure import --profile-prefix \$AWI --csv file://aws_key.csv"
 alias awi="aws configure import --profile-prefix \$AWI --csv "
 alias awlp="aws configure list-profiles"
 alias aws3="aws s3 ls"
 alias aws3cp="aws s3 cp $DIR_FRONT_BUILD s3://$FRONT --recursive --include '*' --acl public-read"
 alias awe="export AWS_PROFILE=local"
+
+# AWS COGNITO
+alias awcgu="aws cognito-idp admin-get-user --user-pool-id us-east- --username"
+alias awccu="aws cognito-idp admin-confirm-sign-up --user-pool-id us-east-1_ --username d4f83468"
+alias awcru="aws cognito-idp admin-set-user-password --user-pool-id us-east-1_ --username d4f83468 --password 'HackersMx!' --permanent "
 
 # AWS NUKE
 alias awnukg="cloud-nuke aws --region us-east-1 global --resource-type s3 --force"
@@ -105,7 +118,7 @@ alias lss="make start"
 
 # BUILT IN
 alias a="alias"
-alias af="alias | tee | grep "
+alias af="alias | rg "
 
 # PACKER
 alias pb="packer build "
@@ -125,19 +138,29 @@ alias dapp="django-admin startproject"
 alias drn="python3 manage.py runserver "
 alias dmi="python3 manage.py migrate "
 
+# s setup
+# r run
+# l list
 # ALIAS DOCKER AI
-alias dcaos="docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama "
-alias dcaor="docker exec -it ollama ollama run deepseek-coder-v2"
+
+# OLLAMA
+# docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --memory=14g --memory-swap=50g --name ollama ollama/ollama
+alias dcos="docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama "
+alias ollu="docker pull ollama/ollama"
+alias ollx="docker exec -it ollama ollama run deepseek-coder-v2"
+alias olll="docker exec -it ollama ollama list"
+alias oll="docker exec -it ollama ollama"
+alias olls="docker start ollama"
 
 # ALIAS DOCKER
 alias dcadduser="sudo usermod -aG kvm $USER"
 alias dcls="docker container ls -a "
 alias dcrm="docker container rm -f "
-alias dcrma="dcls -q | xargs docker container rm -f "
+alias dcrma="docker container ls -aq | xargs docker container rm -f "
 
 alias dils="docker image ls -a "
 alias dirm="docker image rm -f "
-alias dirma="dils -q | xargs docker image rm -f "
+alias dirma="docker image ls -a -q | xargs docker image rm -f "
 
 # GIT
 git config --global user.email "felipe.ruiz@adapa.mx"
@@ -166,7 +189,7 @@ alias gdex="git diff -- :\^$GDEX1 :\^$GDEX2"
 alias dff="git diff --color-words"
 
 ### GIT STATUS
-alias gssm="git status --porcelain | grep '^ M' | awk '{print $2}'"
+alias gssm="git status --porcelain | rg '^ M' | awk '{print $2}'"
 
 ### Git log
 alias glgg="git log -p --color-words"
@@ -198,4 +221,4 @@ alias load="source ~/.bashrc && source ~/.proxy"
 alias del="rm -rf "
 alias c="cd .."
 alias cd..="cd .."
-alias proxy="env | grep proxy"
+alias proxy="env | rg proxy"
