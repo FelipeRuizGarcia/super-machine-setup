@@ -3,6 +3,7 @@
 
 nvim \
     -c "PlugUpgrade" \
+    -c "UpdateRemotePlugins" \
     -c "PlugUpdate" \
     -c "CocUpdateSync" \
     -c "CocCommand extensions.forceUpdateAll" \
