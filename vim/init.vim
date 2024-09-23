@@ -452,7 +452,7 @@ require("mason-lspconfig").setup {
 -- LSP client. I'm mainly working with Ruby and JS, so I'm configuring
 -- language servers for these 2 languages
 local nvim_lsp = require('lspconfig')
-nvim_lsp.tsserver.setup{}
+nvim_lsp.ts_ls.setup{}
 
 
 -- telescope
@@ -567,7 +567,7 @@ vim.cmd[[colorscheme tokyonight-night]]
   -- Set up lspconfig.
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
   -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-  require('lspconfig')['tsserver'].setup {
+  require('lspconfig')['ts_ls'].setup {
     capabilities = capabilities
   }
 
