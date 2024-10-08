@@ -172,6 +172,7 @@ git config --global diff.tool nvimdiff
 ### Github CLI
 alias ghrcp="gh repo create EXAMPLE --private --add-readme -c"
 alias ghil="gh project item-list --owner @me"
+alias ghs="gh auth switch "
 
 ## submodules
 alias gscl="git submodule update --init --recursive"
