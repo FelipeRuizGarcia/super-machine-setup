@@ -655,7 +655,8 @@ vim.keymap.set('n', '<leader>r', ':RunCode<CR>', { noremap = true, silent = fals
 require('gen').setup({
     --- if runs from the container, needs to add the full container name
     --- deepseek-coder-v2:latest
-        model = "deepseek-coder-v2",
+        --- model = "deepseek-coder-v2",
+        model = "qwen2.5-coder",
         host = "0.0.0.0", -- The host running the Ollama service.
         port = "11434", -- The port on which the Ollama service is listening.
         quit_map = "q", -- set keymap for close the response window
