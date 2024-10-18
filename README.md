@@ -13,12 +13,67 @@ The project is under development:
 
 Fedora
 Fedora RawHide systems and packages
-Fedora Kernel from `copr  @kernel-vanilla/fedora   Package: stable-fedora-releases ` 
+Fedora Kernel from `copr  @kernel-vanilla/fedora   Package: stable-fedora-releases `
+
 ```
 https://copr.fedorainfracloud.org/coprs/g/kernel-vanilla/fedora/package/stable-fedora-releases/
 ```
 
-I use `./utils/fedora/nvidia` script to reinstall to the proper arch(latest stable) and release
+#### Kernel
+
+The kernel `kernel.x86_64 6.11.4-450.vanilla.fc41  vanilla`
+works pretty well, it fixes some nvidia issues related to wayland.
+
+#### Nvidia
+
+`| NVIDIA-SMI 560.35.03              Driver Version: 560.35.03      CUDA Version: 12.6`
+
+the smi command show the processes correctly.
+
+#### Nvidia Trouble
+
+We follow the approach of install the drivers from the rpmfusion packages.
+See
+https://rpmfusion.org/Howto/NVIDIA
+
+This is my tuned setup to run with nvidia drivers.
+
+~ nvidia-smi ✔ │ local us-east-1 AWS │ 0.40 L │ 01:08:05 PM │ ⇣0 B/s ⇡0 B/s IP
+Failed to initialize NVML: Driver/library version mismatch
+NVML library version: 560.31
+
+---
+
+We use Wayland.
+Always active prime support option to avoid issues with sleep events.
+
+We use the nvidia packages via dnf5 instead of download nvidia binary.
+This with the intention of help the project of use and support
+`https://github.com/gridhead/nvidia-auto-installer-for-fedora-linux.git `
+
+Just enable the third party fedora repo
+
+```/etc/X11/xorg.conf.d/nvidia.conf
+#This file is provided by xorg-x11-drv-nvidia
+#Do not edit
+
+Section "OutputClass"
+    Identifier "nvidia"
+    MatchDriver "nvidia-drm"
+    Driver "nvidia"
+    Option "AllowEmptyInitialConfiguration"
+    Option "SLI" "Auto"
+    Option "BaseMosaic" "on"
+EndSection
+
+Section "ServerLayout"
+    Identifier "layout"
+    Option "AllowNVIDIAGPUScreens"
+EndSection
+```
+
+I use `./utils/fedora/nvidia` script to reinstall to the proper arch(latest / stable) and release
+I try to compile or install Recommended/Certified drivers, not beta.
 
 Branch | PROD | TEST
 Hardware primary | Lenovo Legion 7 16ACHg6
@@ -243,6 +298,11 @@ https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/restoring_previo
 https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/save_dir.md
 
 ### Roadmap
+
+configure dnf5 properly
+
+    to use multiple threads to process
+    to store the packages as 30gb
 
 Our rodmap is hosted in the Github project.
 
