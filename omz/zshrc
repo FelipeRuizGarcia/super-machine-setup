@@ -8,8 +8,21 @@ eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
 # BREW
+# https://docs.brew.sh/Manpage#environment
+export HOMEBREW_BAT=1
 export HOMEBREW_MAKE_JOBS=4
 export HOMEBREW_VERBOSE=4
+export HOMEBREW_CLEANUP_MAX_AGE_DAYS=9
+
+export HOMEBREW_CURL_RETRIES=5
+export HOMEBREW_DEBUG=1
+export HOMEBREW_FORCE_BREWED_CURL=1
+export HOMEBREW_FORCE_BREWED_GIT=1
+export HOMEBREW_FORCE_VENDOR_RUBY=1
+
+# BREW AUTOCOMPLETE
+# https://docs.brew.sh/Shell-Completion
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 # https://github.com/marlonrichert/zsh-autocomplete
 source /home/linuxbrew/.linuxbrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
@@ -18,9 +31,6 @@ source /home/linuxbrew/.linuxbrew/share/zsh-autocomplete/zsh-autocomplete.plugin
 zstyle ':autocomplete:*' min-input 3
 # zstyle ':autocomplete:*' default-context history-incremental-search-backward
 
-# BREW AUTOCOMPLETE
-# https://docs.brew.sh/Shell-Completion
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 # GITHUB AUTOCOMPLETE
 # https://cli.github.com/manual/gh_completion
