@@ -10,3 +10,6 @@ dynamic_padding = true
 dynamic_title = false
 option_as_alt = "Both"
 decorations = "none"
+
+[scrolling]
+history = 100000
