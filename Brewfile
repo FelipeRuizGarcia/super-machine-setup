@@ -10,17 +10,20 @@ brew "awscli"
 brew "bandwhich"
 brew "bat"
 brew "bottom", args: ["HEAD"]
-brew "curl", args: ["HEAD"]
+brew "curl"
 brew "eza"
 brew "fd", args: ["HEAD"]
 brew "fzf"
 brew "gh"
+brew "git"
 brew "glow"
 brew "go"
 brew "lua"
 brew "luajit"
 brew "tree-sitter", args: ["HEAD"]
-brew "neovim"
+brew "utf8proc", args: ["HEAD"]
+brew "neovim", args: ["HEAD"]
+brew "nethogs"
 brew "pnpm"
 brew "ripgrep", args: ["HEAD"]
 brew "rust"
