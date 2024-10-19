@@ -20,6 +20,7 @@ brew "glow"
 brew "go"
 brew "lua"
 brew "luajit"
+brew "msgpack", args: ["HEAD"]
 brew "tree-sitter", args: ["HEAD"]
 brew "utf8proc", args: ["HEAD"]
 brew "neovim", args: ["HEAD"]
