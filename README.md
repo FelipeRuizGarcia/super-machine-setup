@@ -13,15 +13,18 @@ The project is under development:
 with Fedora 40, Fedora 41 and Fedora RawHide systems and packages.
 Support with Windows WSL and MacOs.
 
-Use the stable setup in the `master` branch.
+Use the stable `master` branch.
 
-Use `next` branch for development.
+Use `next` branch for development, we run test on this branch before move to `master`.
+
+Use `test` for the latest unstable and experimental changes to add to `next`.
 
 #### PR's are welcome.
 
 ## Table of Contents
 
--   [Introduction](#introduction)
+-   [Goals and Motivations](#introduction)
+    -- [Goals and Motivations](#introduction)
 -   [Usage](#usage)
 -   [Conclusion](#conclusion)
 
@@ -64,7 +67,9 @@ and Containers.
 
 1. Besides Machine Setup agnostic
 
-2. Get the latest versions of the app / Get Upstream packages
+2. Get the latest versions of the app
+   Easy FULL or PARTIAL UPDATE
+   Get Upstream packages
 
 3. More open source.
 
