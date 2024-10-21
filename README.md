@@ -1,126 +1,72 @@
 # Super Machine Setup
 
-Fedora and Mac Setup with
+Fedora, Mac & Windows Setup with
 Profiles, DevUtils, DevTools, Shortcuts, Alias and Configurations
 for a day of SUPER PRODUCTIVITY.
 
 This repo is designed to work in conjuction with the super machine ecosystem.
 
-`super-machine-setup` include all the configs for the os / ide setup.
 `super-machine-templates` include all the templates and scripts for software development.
 
 The project is under development:
 
-Fedora
-Fedora RawHide systems and packages
-Fedora Kernel from `copr  @kernel-vanilla/fedora   Package: stable-fedora-releases `
-
-```
-https://copr.fedorainfracloud.org/coprs/g/kernel-vanilla/fedora/package/stable-fedora-releases/
-```
-
-#### Kernel
-
-The kernel `kernel.x86_64 6.11.4-450.vanilla.fc41  vanilla`
-works pretty well, it fixes some nvidia issues related to wayland.
-
-#### Nvidia
-
-`| NVIDIA-SMI 560.35.03              Driver Version: 560.35.03      CUDA Version: 12.6`
-
-the smi command show the processes correctly.
-
-#### Nvidia Trouble
-
-We follow the approach of install the drivers from the rpmfusion packages.
-See
-https://rpmfusion.org/Howto/NVIDIA
-
-This is my tuned setup to run with nvidia drivers.
-
-~ nvidia-smi ✔ │ local us-east-1 AWS │ 0.40 L │ 01:08:05 PM │ ⇣0 B/s ⇡0 B/s IP
-Failed to initialize NVML: Driver/library version mismatch
-NVML library version: 560.31
-
----
-
-We use Wayland.
-Always active prime support option to avoid issues with sleep events.
-
-We use the nvidia packages via dnf5 instead of download nvidia binary.
-This with the intention of help the project of use and support
-`https://github.com/gridhead/nvidia-auto-installer-for-fedora-linux.git `
-
-Just enable the third party fedora repo
-
-```/etc/X11/xorg.conf.d/nvidia.conf
-#This file is provided by xorg-x11-drv-nvidia
-#Do not edit
-
-Section "OutputClass"
-    Identifier "nvidia"
-    MatchDriver "nvidia-drm"
-    Driver "nvidia"
-    Option "AllowEmptyInitialConfiguration"
-    Option "SLI" "Auto"
-    Option "BaseMosaic" "on"
-EndSection
-
-Section "ServerLayout"
-    Identifier "layout"
-    Option "AllowNVIDIAGPUScreens"
-EndSection
-```
-
-I use `./utils/fedora/nvidia` script to reinstall to the proper arch(latest / stable) and release
-I try to compile or install Recommended/Certified drivers, not beta.
-
-Branch | PROD | TEST
-Hardware primary | Lenovo Legion 7 16ACHg6
-OS Primary | Fedora 40 | Fedora 41 / Beta distribution
-OS MacOs | Fedora 40 | Fedora Raid
-Terminal Console 1 | alacritty | wezterm
-Terminal Console 2 | alacritty | wezterm
-Terminal Editor 1 | Neovim | Neovim
-Terminal Editor 2 | Vim | Helix
-Shell | Zsh | Nushell
-Prompt Shell | powerlevel10k | Starship
-External packager Manager | Brew | Nix
-Network Tool | NetHogs | Bandwhich from brew
-
----
-
-At this stage( prod branch vs test branch ) all the commands assume that
-the path is from to the project root:
-
-Example
-
-```
-# recommended
-$ ./vim/install_vimrc.sh
-
-# does not work
-$ cd ./vim/
-./install_vimrc.sh
-
-```
+with Fedora 40, Fedora 41 and Fedora RawHide systems and packages.
+Support with Windows WSL and MacOs.
 
 Use the stable setup in the `master` branch.
 
 Use `next` branch for development.
 
-PR's are welcome.
+#### PR's are welcome.
+
+## Table of Contents
+
+-   [Introduction](#introduction)
+-   [Usage](#usage)
+-   [Conclusion](#conclusion)
 
 ## Goals and Motivations
 
-0. Productivity: FOCUS to Terminal Tmux Nvim
+### Story
 
-1. Machine Setup agnostic
+`super-machine-setup`
+began as a personal project under "MyDotFiles,"
+designed to support setups for Debian, Fedora, and Mac.
 
-2. Get the latest versions of the app /
-   Get Upstream packages
+It provides tools and configurations
+for my general software development and AWS cloud operations,
+with a focus on OPEN SOURCE development tools.
 
-3. More open source
+The project emphasizes open-source development customizations and prefers
+terminal-based (TUI) tools over graphical user interfaces (GUI).
+
+Mainly tmux + vim.
+
+I collaborated on multiple projects with various contributors.
+During video conference sessions, and helping team-mates,
+working where we shared screens and solved issues in real-time (oncall?)
+people often asked about the commands and tools I used,
+and whether I could help them configure their setups on personal machines,
+docker containers or servers.
+Then, I decided to formalize the process by developing and maintaining this repo.
+`The super machine collection`, `templates`, and what else?, let see the motivations.
+
+### Motivations
+
+I like to open the terminal, open tmux and `get things/shit done`.
+So, this setup priorizate that, things that allow that.
+
+So, even I like Fedora, this setup is moving to an "OS agnostic"
+setup to be able to work with MacOs and Winwdows with WSL
+and Containers.
+
+0. Productivity: FOCUS to Terminal Tmux with Nvim
+
+1. Besides Machine Setup agnostic
+
+2. Get the latest versions of the app / Get Upstream packages
+
+3. More open source.
 
 4. Support for LONG PROJECTS.
 
@@ -129,12 +75,21 @@ PR's are welcome.
 6. No payments for software: Mandatory "Free use"
    even if there is some paid license.
 
+7. This support Nvidia drivers.
+
+## Installation
+
 ## Features
+
+Once the repo is installed
 
 ### Update Stages
 
 You can update the setup by stages:
-OS: Tools: Nvim: Plugings and configs
+OS
+Packages and Tools
+Nvim
+Plugings and configs
 
 You can use the `./update_all.sh`: script to update all the stages.
 
@@ -299,6 +254,20 @@ https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/save_dir.md
 
 ### Roadmap
 
+Branch | PROD | TEST
+OS Primary | Fedora 40 | Fedora 41 / Beta distribution
+OS MacOs | Fedora 40 | Fedora Raid
+Terminal Console 1 | alacritty
+Terminal Console 2 | kitty | wezterm
+Terminal Editor 1 | Neovim | Neovim
+Terminal Editor 2 | Vim | Helix
+Shell | Zsh | Nushell
+Prompt Shell | powerlevel10k | Starship
+External packager Manager | Brew | Nix
+Network Tool | NetHogs | Bandwhich from brew
+
+---
+
 configure dnf5 properly
 
     to use multiple threads to process
@@ -328,21 +297,6 @@ WIP features:
 Fedora Considerations
 
 -   Considerate save your custom Fedora Repos /etc/yum.repos.d/ or similar with DNF
-
-### Story
-
-super-machine-setup started as personal "MyDotFiles"
-For Debian, Fedora and Mac setup.
-
-Use for general Software Develpoment and
-AWS cloud operations and agnostic dev tools.
-
-Since more people are using this setup
-the development of the project will be
-transition from individual projecto to
-comunitty driven project.
-
----
 
 ## How to use
 
@@ -405,3 +359,95 @@ tmux
 
 -   why not use `stow` instead ?
     Cuz we are using not built in sysmlinks
+
+#### mesa workaround
+
+```
+mv .config/environment.d/gsk.conf  .config/environment.d/gsk.conf2
+
+# test
+mv .config/environment.d/gsk.conf2  .config/environment.d/gsk.conf
+```
+
+## Fedora Setup
+
+#### Kernel
+
+The kernel `kernel.x86_64 6.11.4-450.vanilla.fc41  vanilla`
+works pretty well, it fixes some nvidia issues related to wayland.
+Also, fixed the issue with the mesa issue.
+Note: seems the sleep / awake process does not work correctly
+
+Fedora Kernel from `copr  @kernel-vanilla/fedora   Package: stable-fedora-releases `
+
+```
+https://copr.fedorainfracloud.org/coprs/g/kernel-vanilla/fedora/package/stable-fedora-releases/
+```
+
+#### Nvidia
+
+`| NVIDIA-SMI 560.35.03              Driver Version: 560.35.03      CUDA Version: 12.6`
+
+the `nvidia-smi` command show the processes correctly.
+
+#### Nvidia Trouble
+
+We follow the approach of install the drivers from the rpmfusion packages.
+See
+https://rpmfusion.org/Howto/NVIDIA
+
+This is my tuned setup to run with nvidia drivers.
+
+~ nvidia-smi ✔ │ local us-east-1 AWS │ 0.40 L │ 01:08:05 PM │ ⇣0 B/s ⇡0 B/s IP
+Failed to initialize NVML: Driver/library version mismatch
+NVML library version: 560.31
+
+---
+
+We use Wayland.
+Always active prime support option to avoid issues with sleep events.
+
+We use the nvidia packages via dnf5 instead of download nvidia binary.
+This with the intention of help the project of use and support
+`https://github.com/gridhead/nvidia-auto-installer-for-fedora-linux.git `
+
+Just enable the third party fedora repo
+
+```/etc/X11/xorg.conf.d/nvidia.conf
+#This file is provided by xorg-x11-drv-nvidia
+#Do not edit
+
+Section "OutputClass"
+    Identifier "nvidia"
+    MatchDriver "nvidia-drm"
+    Driver "nvidia"
+    Option "AllowEmptyInitialConfiguration"
+    Option "SLI" "Auto"
+    Option "BaseMosaic" "on"
+EndSection
+
+Section "ServerLayout"
+    Identifier "layout"
+    Option "AllowNVIDIAGPUScreens"
+EndSection
+```
+
+I use `./utils/fedora/nvidia` script to reinstall to the proper arch(latest / stable) and release
+I try to compile or install Recommended/Certified drivers, not beta.
+
+---
+
+At this stage( prod branch vs test branch ) all the commands assume that
+the path is from to the project root:
+
+Example
+
+```
+# recommended
+$ ./vim/install_vimrc.sh
+
+# does not work
+$ cd ./vim/
+./install_vimrc.sh
+
+```
