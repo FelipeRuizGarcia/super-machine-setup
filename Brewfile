@@ -16,6 +16,7 @@ brew "fd", args: ["HEAD"]
 brew "fzf"
 brew "gh"
 brew "git"
+brew "git-delta", args: ["HEAD"]
 brew "glow"
 brew "go"
 brew "lua"
