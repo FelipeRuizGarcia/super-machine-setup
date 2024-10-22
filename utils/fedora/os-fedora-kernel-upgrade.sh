@@ -38,6 +38,8 @@ sudo dnf5 install \
     'kernel-core*'$family_kernel'*' \
     'kernel-modules*'$family_kernel'*' \
     'kernel-headers*'$family_kernel'*' \
+    'kernel-cross-headers*'$family_kernel'*' \
+    'kernel-tools*'$family_kernel'*' \
     'kernel-devel*'$family_kernel'*' \
     'kernel-devel-matched*'$family_kernel'*' \
     'bpftool*'$family_kernel'*' \
@@ -46,3 +48,4 @@ sudo dnf5 install \
     'rv*'$family_kernel'*' \
     'libperf*'$family_kernel'*' \
     'python3-perf*'$family_kernel'*'
+
