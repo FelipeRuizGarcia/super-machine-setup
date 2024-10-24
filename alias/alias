@@ -15,7 +15,7 @@ alias smskk="dnfkk && brkk"
 
 # br brew
 alias bri="brew info "
-alias brbd="brew bundle dump"
+alias brbd="brew bundle dump --force"
 alias bris="brew install -s --fetch-HEAD --verbose"
 alias brish="brew install -s --HEAD --fetch-HEAD --verbose"
 alias brkk="brew cleanup --prune=all && brew autoremove"
@@ -148,13 +148,15 @@ alias dmi="python3 manage.py migrate "
 # docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --memory=14g --memory-swap=50g --name ollama ollama/ollama
 alias ollsetup="docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama "
 alias ollupdate="docker pull ollama/ollama"
-alias ollx="docker exec -it ollama ollama run deepseek-coder-v2"
 alias olll="docker exec -it ollama ollama list"
 alias oll="docker exec -it ollama ollama"
 alias olls="docker start ollama"
 alias ollps="docker exec -it ollama ollama ps"
 alias ollsta="docker exec ollama ollama ps | awk 'NR>1 {print \$1}' | xargs -n 1 docker exec ollama ollama stop "
 alias ollua=" docker exec ollama ollama list | awk 'NR>1 {print \$1}' | xargs -n 1 docker exec ollama ollama pull "
+
+alias ollxd="docker exec -it ollama ollama run deepseek-coder-v2:latest"
+alias ollxq="docker exec -it ollama ollama run qwen2.5-coder:latest"
 
 # ALIAS DOCKER
 alias dcadduser="sudo usermod -aG kvm $USER"
@@ -171,7 +173,8 @@ git config --global user.email "felipe.ruiz@adapa.mx"
 git config --global user.name "Felipe Ruiz"
 git config --global core.editor nvim
 git config --global credential.helper store
-git config --global diff.tool nvimdiff
+git config --global core.pager delta
+git config --global diff.tool delta
 
 ### Github CLI
 alias ghrcp="gh repo create EXAMPLE --private --add-readme -c"
@@ -220,10 +223,3 @@ alias rv="git review "
 # LINUX ALIAS
 alias us="setxkbmap us"
 alias latam="setxkbmap latam"
-alias ins="apt-get install -y"
-alias keypub="cat ~/.ssh/id_rsa.pub"
-alias load="source ~/.bashrc && source ~/.proxy"
-alias del="rm -rf "
-alias c="cd .."
-alias cd..="cd .."
-alias proxy="env | rg proxy"
