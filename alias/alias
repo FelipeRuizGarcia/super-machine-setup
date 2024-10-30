@@ -34,6 +34,9 @@ alias sln="ln -sf \$SLN1 \$SLN2"
 alias jkk="kill %1"
 alias sdnscl="resolvectl flush-caches"
 
+# PACKAGE - SEARCH
+alias rg="rg -S "
+
 # Fedora
 alias dnf="dnf5"
 alias dnfli="dnf5 list --installed"
