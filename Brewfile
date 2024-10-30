@@ -19,6 +19,7 @@ brew "git"
 brew "git-delta", args: ["HEAD"]
 brew "glow"
 brew "go"
+brew "helmfile"
 brew "kubelogin"
 brew "kubernetes-cli"
 brew "lua"
