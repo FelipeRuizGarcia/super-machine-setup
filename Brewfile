@@ -1,11 +1,12 @@
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "natesales/repo", "https://github.com/natesales/repo"
+brew "act", args: ["HEAD"]
 brew "ruby"
 brew "asciidoctor"
 brew "node"
-brew "python@3.12"
 brew "aws-amplify"
+brew "python@3.12"
 brew "awscli"
 brew "bandwhich"
 brew "bat"
@@ -29,7 +30,7 @@ brew "tree-sitter", args: ["HEAD"]
 brew "utf8proc", args: ["HEAD"]
 brew "neovim", args: ["HEAD"]
 brew "nethogs"
-brew "pnpm"
+brew "pnpm", link: false
 brew "ripgrep", args: ["HEAD"]
 brew "rust"
 brew "starship", args: ["HEAD"]
@@ -39,4 +40,5 @@ brew "yarn"
 brew "zellij"
 brew "zoxide"
 brew "zsh-autocomplete", args: ["HEAD"]
+brew "derailed/k9s/k9s"
 brew "natesales/repo/q"
