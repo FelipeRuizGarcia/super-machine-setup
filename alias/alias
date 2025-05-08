@@ -78,9 +78,6 @@ alias nnn="nvim --noplugin"
 alias nvimgg="pnpm install -g neovim"
 
 alias rmf="rm -rf "
-
-alias rep="rg -rl \/inscripcion . | xargs sed -i  -s  -r 's/\/inscripcion/\/inscripcion/g'"
-alias grepex="rg -R -n \$GREPEX --exclude-dir=node_modules ./*"
 alias findit="find ./* -type f -exec rg -l 'aws-sdk' {} +"
 
 # TMUX
@@ -89,7 +86,6 @@ alias tmuxkk="tmux kill-server"
 
 # APIS
 alias post="curl -i -X POST localhost:8000/test -H 'authorization: FFF'"
-
 
 # AWS ALIAS
 alias awalsa="aws iam create-account-alias --account-alias CHANGEME"
@@ -224,6 +220,9 @@ alias repos="git remote -v"
 alias push="git push "
 alias rv="git review "
 
-# LINUX ALIAS
+# LINUX KEYBOARD
 alias us="setxkbmap us"
 alias latam="setxkbmap latam"
+
+# WINGET
+alias swge="winget export -o winget_dump.json"
