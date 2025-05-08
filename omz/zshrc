@@ -1,4 +1,8 @@
-# Path to your oh-my-zsh installation.
+# WSL + Windows Docker Desktop
+export DOCKER_AUTH_CONFIG="$(cat ~/.docker/config.json)"
+# export DOCKER_HOST="unix:///mnt/wsl/shared-docker/docker.sock"
+
+# path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
 # ZOXIDE | https://github.com/ajeetdsouza/zoxide
@@ -50,7 +54,7 @@ export EDITOR=nvim
 # Go path
 export PATH=$PATH:/usr/local/go/bin
 
-#source ~/.secrets/env.sh
+# source ~/.secrets/env.sh
 
 # my custom alias
 source ~/.bash_aliases
@@ -58,6 +62,9 @@ source ~/.bash_aliases
 # the local virtual env
 # needs to create the env from scratch on that path
 #source ~/tmp/venv/bin/activate
+
+# GITHUB Configs
+# export GITHUB_TOKEN=local;
 
 # AWS Configs
 # the aws profile, localstack default
