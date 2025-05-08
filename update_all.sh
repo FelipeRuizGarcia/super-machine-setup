@@ -10,6 +10,9 @@
 # Config Values
 # SMS_VERSION = 0.2
 
+# Since WSL is running fedora
+# OSTYPE is linux-gnu
+
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 
     # Cleaning ? Uncomment
@@ -19,6 +22,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # if Fedora do need to grant sudo permission
     sudo echo "SMS UPDATE ALL"
 
+    # running fedora with WSL ?
     bash -x ./update_os_fedora.sh
 
 # WIP elif [[ "$OSTYPE" == "darwin"* ]]; then
