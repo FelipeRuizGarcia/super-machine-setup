@@ -131,6 +131,7 @@ alias pf="packer fmt "
 # K8S Alias
 alias mn="minikube"
 alias k="kubectl"
+alias kv="kubectl version --client=true --client=true"
 
 # PYTHON
 # provider | https://neovim.io/doc/user/provider.html
