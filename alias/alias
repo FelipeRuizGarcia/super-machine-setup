@@ -145,6 +145,10 @@ alias dmi="python3 manage.py migrate "
 # ALIAS DOCKER AI
 
 # OLLAMA
+# TODO: separate client alias VS daemon - admin alias
+# Ollama will run in a container, not installed in the host
+# but the client command will be from brew ...
+#
 # docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --memory=14g --memory-swap=50g --name ollama ollama/ollama
 alias ollsetup="docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama "
 alias ollupdate="docker pull ollama/ollama"
@@ -197,7 +201,8 @@ alias gdex="git diff -- :\^$GDEX1 :\^$GDEX2"
 alias dff="git diff --color-words"
 
 ### GIT STATUS
-alias gssm="git status --porcelain | rg '^ M' | awk '{print $2}'"
+alias gsm="git status --porcelain | rg '^ M' | awk '{print $2}'"
+alias gsmm="git status --porcelain | rg '^ M' | awk -F'\"' '{for (i=2; i<=NF; i+=2) print $i}' "
 
 ### Git log
 alias glgg="git log -p --color-words"
@@ -206,7 +211,6 @@ alias glgsa="git log --name-status --all"
 alias log="git log --oneline --decorate"
 alias all="git log --oneline --decorate --all"
 
-alias list="git config --list"
 alias config="git config "
 alias global="git config --global"
 alias add="git add "
@@ -219,6 +223,9 @@ alias new="git remote add "
 alias repos="git remote -v"
 alias push="git push "
 alias rv="git review "
+
+# GIT STASH
+alias gssm="git stash save -a -m 'wip before merge'"
 
 # LINUX KEYBOARD
 alias us="setxkbmap us"
