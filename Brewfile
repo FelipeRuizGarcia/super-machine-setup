@@ -26,12 +26,12 @@ brew "msgpack", args: ["HEAD"]
 brew "utf8proc", args: ["HEAD"]
 brew "neovim"
 brew "nethogs"
-brew "ollama"
-brew "pnpm"
+brew "ollama", args: ["HEAD"]
+brew "pnpm", link: false
 brew "python@3.12"
-brew "ripgrep"
+brew "ripgrep", args: ["HEAD"]
 brew "rust"
-brew "starship"
+brew "starship", args: ["HEAD"]
 brew "the_silver_searcher", args: ["HEAD"]
 brew "tmux", args: ["HEAD"]
 brew "tree-sitter", args: ["HEAD"]
@@ -45,3 +45,16 @@ flatpak "com.spotify.Client"
 flatpak "me.timschneeberger.GalaxyBudsClient"
 flatpak "org.mozilla.vpn"
 flatpak "org.telegram.desktop"
+vscode "astro-build.astro-vscode"
+vscode "augment.vscode-augment"
+vscode "biomejs.biome"
+vscode "continue.continue"
+vscode "esbenp.prettier-vscode"
+vscode "firefox-devtools.vscode-firefox-debug"
+vscode "johnnymorganz.stylua"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode.vscode-typescript-next"
+vscode "rvest.vs-code-prettier-eslint"
+vscode "tabnine.tabnine-vscode"
+vscode "xadillax.viml"
