@@ -252,6 +252,8 @@ Plug 'CRAG666/code_runner.nvim'
 Plug 'David-Kunz/gen.nvim'
 
 " AVANTE
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'stevearc/dressing.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'MeanderingProgrammer/render-markdown.nvim'
