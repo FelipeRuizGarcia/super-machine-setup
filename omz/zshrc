@@ -1,5 +1,5 @@
 # WSL + Windows Docker Desktop
-export DOCKER_AUTH_CONFIG="$(cat ~/.docker/config.json)"
+# export DOCKER_AUTH_CONFIG="$(cat ~/.docker/config.json)"
 # export DOCKER_HOST="unix:///mnt/wsl/shared-docker/docker.sock"
 
 # path to your oh-my-zsh installation.
@@ -10,9 +10,6 @@ export __VK_LAYER_NV_optimus=NVIDIA_only
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-
-# ZOXIDE | https://github.com/ajeetdsouza/zoxide
-eval "$(zoxide init zsh)"
 
 # STARSHIP | https://github.com/starship/starship
 eval "$(starship init zsh)"
@@ -268,6 +265,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# ZOXIDE | https://github.com/ajeetdsouza/zoxide
+eval "$(zoxide init zsh)"
+
 # pnpm
 export PNPM_HOME="/home/adapa/.local/share/pnpm"
 case ":$PATH:" in
@@ -278,3 +278,4 @@ esac
 
 # Added by Amplify CLI binary installer
 export PATH="$HOME/.amplify/bin:$PATH"
+eval "$(mise activate zsh)"

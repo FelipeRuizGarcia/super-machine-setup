@@ -189,6 +189,8 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --producti
 " nvim-treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'nvim-treesitter/nvim-treesitter-refactor'
 Plug 'nvim-treesitter/nvim-treesitter-context'
 
@@ -275,7 +277,7 @@ call plug#end()
 lua <<EOF
 
 require("nvim-treesitter.install").prefer_git = true
-require"nvim-treesitter.configs".setup{
+require("nvim-treesitter.configs").setup{
 
 -- textobjects
 
@@ -370,6 +372,12 @@ require"nvim-treesitter.configs".setup{
   },
 
   ignore_install = {
+    "mlir",
+    "ocamllex",
+    "scfg",
+    "swift",
+    "teal",
+    "unison",
     "norg",
     "arduino",
     "agda",
