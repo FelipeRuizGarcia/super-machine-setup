@@ -17,20 +17,20 @@
   "dependencies": {
     "coc-css": ">=2.1.0",
     "coc-html": ">=1.8.0",
-    "coc-json": ">=1.9.2",
+    "coc-json": ">=1.9.3",
     "coc-marketplace": ">=1.9.0",
-    "coc-pyright": ">=1.1.383",
-    "coc-snippets": ">=3.1.10",
+    "coc-pyright": ">=1.1.400",
+    "coc-snippets": ">=3.4.5",
     "coc-tslint-plugin": ">=1.2.0",
     "coc-sql": ">=0.12.0",
-    "coc-git": ">=2.7.0",
-    "coc-markdownlint": ">=1.35.0",
+    "coc-git": ">=2.7.6",
+    "coc-markdownlint": ">=1.36.0",
     "coc-tailwindcss": ">=0.7.0",
-    "@yaegassy/coc-tailwindcss3": ">=0.5.16",
+    "@yaegassy/coc-tailwindcss3": ">=0.6.5",
     "coc-diagnostic": ">=0.24.1",
-    "coc-dictionary": ">=1.2.2",
+    "coc-dictionary": ">=1.2.3",
     "coc-tag": ">=1.2.5",
     "coc-syntax": ">=1.2.5"
   },
-  "lastUpdate": 1729158230060
+  "lastUpdate": 1772076660288
 }

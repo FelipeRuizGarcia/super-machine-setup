@@ -1,22 +1,16 @@
 #!/bin/bash
-# https://docs.fedoraproject.org/en-US/quick-docs/set-nvidia-as-primary-gpu-on-optimus-based-laptops/
 
-sudo akmods --force
-
-    #--repo="rpmfusion-nonfree-nvidia-driver.repo" \
-sudo dnf5 install --refresh \
-    --releasever=42 \
+sudo dnf5 info --installed \
     akmod-nvidia \
+    nvidia-gpu-firmware \
     nvidia-modprobe \
     nvidia-persistenced \
     nvidia-settings \
-    nvidia-xconfig \
     xorg-x11-server-Xwayland \
     xorg-x11-server-common \
     xorg-x11-server-Xorg \
     xorg-x11-drv-nvidia \
     xorg-x11-drv-nvidia-libs \
-    xorg-x11-drv-nvidia-libs.i686 \
     xorg-x11-drv-nvidia-power \
     xorg-x11-drv-nvidia-cuda \
     xorg-x11-drv-nvidia-cuda-libs \
@@ -32,10 +26,3 @@ sudo dnf5 install --refresh \
     wayland-devel \
     xisxwayland \
     xorg-x11-server-Xwayland
-
-sudo dnf5 reinstall nvidia-gpu-firmware;
-
-sudo akmods --force
-sudo dracut --force
-
-sudo systemctl enable nvidia-suspend nvidia-resume nvidia-hibernate

@@ -1,13 +1,16 @@
 #!/bin/bash
+# This script update the `common` tools
 
-# This script update the `common` tools for Fedora and Mac
+# OS > TOOLS inside the Linux env
+# ZSH > TMUX > TMUX PLUGINGS > OMZ
 
-# OS > TOOLS
-# ALACRITTY > TMUX > TMUX PLUGINGS > OMZ
+brew update --verbose --force
 
 # brew upgrade with HEAD packages
 brew upgrade --fetch-HEAD --verbose --force # --formula -s
 # brew list --formula | xargs brew reinstall --build-from-source --verbose
+
+brew bundle dump --force
 
 corepack enable pnpm
 corepack use pnpm@latest

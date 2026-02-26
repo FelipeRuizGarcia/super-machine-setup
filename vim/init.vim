@@ -1,3 +1,8 @@
+" PROVIDERS
+" PYTHON
+" https://neovim.io/doc/user/provider.html#provider-python
+let g:python3_host_prog = '/usr/bin/python3'
+
 syntax enable
 set ignorecase
 
@@ -105,6 +110,9 @@ let airline#extensions#coc#stl_format_err = '%C(L%L)'
 
 " change the warning format (%C - error count, %L - line number): >
 let airline#extensions#coc#stl_format_warn = '%C(L%L)'
+
+" AVANTE
+autocmd! User avante.nvim lua
 
 " BEGIN
 call plug#begin('~/.local/share/nvim/plugged')
@@ -242,6 +250,22 @@ Plug 'CRAG666/code_runner.nvim'
 
 " GEN
 Plug 'David-Kunz/gen.nvim'
+
+" AVANTE
+Plug 'nvim-lua/plenary.nvim'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'MeanderingProgrammer/render-markdown.nvim'
+
+" Optional deps
+Plug 'hrsh7th/nvim-cmp'
+Plug 'nvim-tree/nvim-web-devicons' "or Plug 'echasnovski/mini.icons'
+Plug 'HakonHarnes/img-clip.nvim'
+Plug 'zbirenbaum/copilot.lua'
+Plug 'stevearc/dressing.nvim' " for enhanced input UI
+Plug 'folke/snacks.nvim' " for modern input UI
+
+" Yay, pass source=true if you want to build from source
+Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
 
 call plug#end()
 
@@ -621,25 +645,8 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
     require("lint").try_lint()
   end,
 })
----
-
---- supermaven
-
----require("supermaven-nvim").setup({
----  keymaps = {
----    accept_suggestion = "<Tab>",
----    clear_suggestion = "<C-]>",
----    accept_word = "<C-j>",
----  },
----  ignore_filetypes = { cpp = true },
----  color = {
----    suggestion_color = "#ffffff",
----    cterm = 244,
----  }
----})
 
 --- Code_Runner
-
 require('code_runner').setup({
   filetype = {
     python = "python3 -u",
@@ -648,19 +655,35 @@ require('code_runner').setup({
     markdown = "bat",
   }
 })
+
 vim.keymap.set('n', '<leader>r', ':RunCode<CR>', { noremap = true, silent = false })
 
 
 --- GEN
 require('gen').setup({
     --- if runs from the container, needs to add the full container name
-    --- deepseek-coder-v2:latest
+
+        --- model = "yi-coder:latest",
+        --- deepseek-coder-v2:latest
         --- model = "deepseek-coder-v2",
-        model = "qwen2.5-coder",
+        --- model = "qwen2.5-coder",
+        --- model = "qwen2.5:14b",
+        --- model = "qwen2.5-coder:latest",
+
+        model = "qwen2.5-coder:14b",
+        quit_map = "q", -- set keymap to close the response window
+        retry_map = "<c-r>", -- set keymap to re-send the current prompt
+        accept_map = "<c-o>", -- set keymap to replace the previous selection with the last result
+
         host = "0.0.0.0", -- The host running the Ollama service.
         port = "11434", -- The port on which the Ollama service is listening.
-        quit_map = "q", -- set keymap for close the response window
-        retry_map = "<c-r>", -- set keymap to re-send the current prompt
+        display_mode = "split", -- The display mode. Can be "float" or "split" or "horizontal-split".
+        show_prompt = true, -- Shows the prompt submitted to Ollama.
+        show_model = true, -- Displays which model you are using at the beginning of your chat session.
+        no_auto_close = true, -- Never closes the window automatically.
+
+         file = false, -- Write the payload to a temporary file to keep the command short.
+        hidden = false, -- Hide the generation window (if true, will implicitly set `prompt.replace = true`), requires Neovim >= 0.10
         init = function(options) pcall(io.popen, "ollama serve > /dev/null 2>&1 &") end,
         -- Function to initialize Ollama
         command = function(options)
@@ -672,10 +695,11 @@ require('gen').setup({
         -- The executed command must return a JSON object with { response, context }
         -- (context property is optional).
         -- list_models = '<omitted lua function>', -- Retrieves a list of model names
-        display_mode = "float", -- The display mode. Can be "float" or "split" or "horizontal-split".
-        show_prompt = false, -- Shows the prompt submitted to Ollama.
-        show_model = true, -- Displays which model you are using at the beginning of your chat session.
-        no_auto_close = false, -- Never closes the window automatically.
+        -- The command for the Ollama service. You can use placeholders $prompt, $model and $body (shellescaped).
+        -- This can also be a command string.
+        -- The executed command must return a JSON object with { response, context }
+        -- (context property is optional).
+        -- list_models = '<omitted lua function>', -- Retrieves a list of model names
         debug = false -- Prints errors and the command which is run.
   -- same as above
 })
@@ -686,5 +710,29 @@ require('gen').prompts['F'] = {
   replace = true,
   extract = "```$filetype\n(.-)```"
 }
+
+--- AVANTE - from LUA installation
+--- autocmd! User avante.nvim lua
+
+require('avante').setup({
+  -- Example: Using snacks.nvim as input provider
+  input = {
+    provider = "snacks", -- "native" | "dressing" | "snacks"
+    provider_opts = {
+      -- Snacks input configuration
+      title = "Avante Input",
+      icon = " ",
+      placeholder = "Enter your API key...",
+    },
+  },
+  -- Your other config here!
+  provider = "ollama",
+providers = {
+  ollama = {
+    endpoint = "http://localhost:11434",
+    model = "devstral:latest",
+  },
+}
+})
 
 EOF

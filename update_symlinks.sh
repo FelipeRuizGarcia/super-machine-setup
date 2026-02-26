@@ -9,7 +9,8 @@
 # omz/install_zshrc.sh
 # omz/install_omz.sh
 
-bash omz/install_zshrc.sh
+# Production
+# bash -x omz/install_zshrc.sh
 bash omz/install_omz.sh
 bash p10k/install_p10k.sh
 bash tmux/install_alacritty.sh
@@ -26,7 +27,6 @@ echo "--------------------"
 
 echo "Install ZSH"
 
-bash alias/install_alias_all.sh
 echo "--------------------"
 
 echo "Install Alias"

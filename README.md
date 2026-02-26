@@ -1,12 +1,15 @@
 # Super Machine Setup
 
-Fedora, Mac & Windows Setup with
+🏎️ The Fedora, Mac & Windows Setup with
 Profiles, DevUtils, DevTools, Shortcuts, Alias and Configurations
 for a day of SUPER PRODUCTIVITY.
 
 This repo is designed to work in conjuction with the super machine ecosystem.
 
 `super-machine-templates` include all the templates and scripts for software development.
+
+I do my best to complemente the "topics/tools" in the `learner` repo:
+Include all the templates and scripts for software development.
 
 The project is under development:
 
@@ -17,16 +20,16 @@ Use the stable `master` branch.
 
 Use `next` branch for development, we run test on this branch before move to `master`.
 
-Use `test` for the latest unstable and experimental changes to add to `next`.
+Use `test` for the latest unstable and experimental 'stash' changes to add to `next`.
 
 #### PR's are welcome.
 
 ## Table of Contents
 
--   [Goals and Motivations](#introduction)
-    -- [Goals and Motivations](#introduction)
--   [Usage](#usage)
--   [Conclusion](#conclusion)
+- [Goals and Motivations](#introduction)
+  -- [Goals and Motivations](#introduction)
+- [Usage](#usage)
+- [Conclusion](#conclusion)
 
 ## Goals and Motivations
 
@@ -80,7 +83,7 @@ and Containers.
 6. No payments for software: Mandatory "Free use"
    even if there is some paid license.
 
-7. This support Nvidia drivers.
+7. Fedora with support Nvidia drivers.
 
 ## Installation
 
@@ -121,13 +124,13 @@ Updating and loading repositories:
 
 ```
 
--   Alias Expansions
+- Alias Expansions
 
     You can expand the aliases typing and hitting space
     on this way you can edit the command line.
     We recommend use `ctrl+x ctrl+e`
 
--   Alias Filter
+- Alias Filter
 
 See `alias/alias` for more infor about the aliases and environment variables.
 
@@ -145,8 +148,8 @@ $ alias awalsa="aws iam create-account-alias --account-alias $CHANGEME"
 
 The env vars use for the alias are splited in 2
 
--   Query: Temporal envs, used in alias for READ, do not change anything in the system / app.
-    Query's are handled by $SMS, $SMS1, $SMS2 and so on.
+- Query: Temporal envs, used in alias for READ, do not change anything in the system / app.
+  Query's are handled by $SMS, $SMS1, $SMS2 and so on.
 
 Example
 
@@ -154,7 +157,7 @@ Example
 
 ```
 
--   Commands:
+- Commands:
 
 Intended to track and know which value is use for a COMMAND.
 
@@ -168,7 +171,7 @@ You can search in the alias with
 
 ---
 
--   Alias Parameters
+- Alias Parameters
 
 You can put env variables as alias commands,
 which allows to just define the variable of the
@@ -230,7 +233,7 @@ video demo etc etc WIP
 
 ---
 
--   Tmux Session Template WIP
+- Tmux Session Template WIP
 
 ### How to save and restore your custom tmux sessions ( windows, panels, etc )
 
@@ -260,8 +263,8 @@ https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/save_dir.md
 ### Roadmap
 
 Branch | PROD | TEST
-OS Primary | Fedora 40 | Fedora 41 / Beta distribution
-OS MacOs | Fedora 40 | Fedora Raid
+OS Primary | Fedora Stable | Fedora Rawhide
+OS 2 | Windos | Mac
 Terminal Console 1 | alacritty
 Terminal Console 2 | kitty | wezterm
 Terminal Editor 1 | Neovim | Neovim
@@ -287,21 +290,21 @@ Feel free to file your question.
 
 WIP features:
 
--   nix integration
--   brew packages list
--   node packages
--   tmux session
--   You can manage your current setup with json file
--   Brew allows "build from source"
--   and "head" upstream, usually via github
--   We use brew as our main.
--   Migrate from coc.nvim
+- nix integration
+- brew packages list
+- node packages
+- tmux session
+- You can manage your current setup with json file
+- Brew allows "build from source"
+- and "head" upstream, usually via github
+- We use brew as our main.
+- Migrate from coc.nvim
 
 ---
 
 Fedora Considerations
 
--   Considerate save your custom Fedora Repos /etc/yum.repos.d/ or similar with DNF
+- Considerate save your custom Fedora Repos /etc/yum.repos.d/ or similar with DNF
 
 ## How to use
 
@@ -316,9 +319,9 @@ http://sms.click.sh | FelipeRuizGarcia/desk
 
 ### Monitoring
 
--   `htop` : for OS process.
--   `nethogs` : for Network bandwidth.
--   `nvidia-smi -l 2` : for GPU process.
+- `htop` : for OS process.
+- `nethogs` : for Network bandwidth.
+- `nvidia-smi -l 2` : for GPU process.
 
 ### Markdown files with Glow
 
@@ -330,8 +333,8 @@ This Setup assume usage on
 
 OS:
 
--   Fedora 38 or higher
--   MacOs Sonoma ( Intel )
+- Fedora 38 or higher
+- MacOs Sonoma ( Intel )
 
 Nvidia Graphics Card
 
@@ -341,9 +344,9 @@ This setup is start with
 
 OS >
 
--   ALACRITTY + Config
-    \*\* ZSH + Config + Plugins > TMUX + Plugins > P10K
-    ZSH >
+- ALACRITTY + Config
+  \*\* ZSH + Config + Plugins > TMUX + Plugins > P10K
+  ZSH >
 
 Package managers
 
@@ -362,8 +365,10 @@ tmux
 
 ### Miscellaneous
 
--   why not use `stow` instead ?
-    Cuz we are using not built in sysmlinks
+- why not use `chezmoi` instead ?
+
+- why not use `stow` instead ?
+  Cuz we are using not built in sysmlinks
 
 #### mesa workaround
 
@@ -376,12 +381,20 @@ mv .config/environment.d/gsk.conf2  .config/environment.d/gsk.conf
 
 ## Fedora Setup
 
-#### Kernel
+#### Officials Fedora Kernel
 
-The kernel `kernel.x86_64 6.11.4-450.vanilla.fc41  vanilla`
+The kernel `6.18.8-200.fc43.x86_64` from bodhi
 works pretty well, it fixes some nvidia issues related to wayland.
 Also, fixed the issue with the mesa issue.
-Note: seems the sleep / awake process does not work correctly
+
+Fedora Kernel from `bodhi`
+https://bodhi.fedoraproject.org/updates/?search=kernel&releases=F41
+
+You can configure the yum repo or use koji directly.
+
+##### No official Fedora Kernel: vanilla
+
+Also there are no official and super fast released kernels with similar.
 
 Fedora Kernel from `copr  @kernel-vanilla/fedora   Package: stable-fedora-releases `
 
@@ -418,6 +431,10 @@ This with the intention of help the project of use and support
 
 Just enable the third party fedora repo
 
+Also, configure the `nvidia.conf` with the proper configs.
+see
+https://docs.fedoraproject.org/en-US/quick-docs/set-nvidia-as-primary-gpu-on-optimus-based-laptops/
+
 ```/etc/X11/xorg.conf.d/nvidia.conf
 #This file is provided by xorg-x11-drv-nvidia
 #Do not edit
@@ -426,6 +443,7 @@ Section "OutputClass"
     Identifier "nvidia"
     MatchDriver "nvidia-drm"
     Driver "nvidia"
+    Option "PrimaryGPU" "yes"
     Option "AllowEmptyInitialConfiguration"
     Option "SLI" "Auto"
     Option "BaseMosaic" "on"

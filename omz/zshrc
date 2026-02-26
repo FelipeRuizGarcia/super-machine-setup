@@ -3,6 +3,12 @@ export DOCKER_AUTH_CONFIG="$(cat ~/.docker/config.json)"
 # export DOCKER_HOST="unix:///mnt/wsl/shared-docker/docker.sock"
 
 # path to your oh-my-zsh installation.
+# test wayland
+export __NV_PRIME_RENDER_OFFLOAD=1
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export __VK_LAYER_NV_optimus=NVIDIA_only
+
+# Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
 # ZOXIDE | https://github.com/ajeetdsouza/zoxide

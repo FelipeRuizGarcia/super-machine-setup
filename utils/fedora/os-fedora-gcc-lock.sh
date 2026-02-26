@@ -1,0 +1,60 @@
+#!/bin/bash
+
+# set the versionlock to avoid updates
+sudo dnf5 versionlock add \
+    cpp \
+    gcc \
+    gcc-c++ \
+    gcc-gdb-plugin \
+    gcc-gdc \
+    gcc-gfortran \
+    gcc-gm2 \
+    gcc-gnat \
+    gcc-go \
+    gcc-objc++ \
+    gcc-objc \
+    gcc-offload-amdgcn \
+    gcc-offload-nvptx \
+    gcc-plugin-annobin \
+    gcc-plugin-devel \
+    libasan \
+    libasan-static \
+    libatomic \
+    libatomic-static \
+    libgcc \
+    libgccjit \
+    libgccjit-devel \
+    libgfortran \
+    libgfortran-static \
+    libgm2 \
+    libgm2-static \
+    libgnat \
+    libgnat-devel \
+    libgnat-static \
+    libgo \
+    libgo-devel \
+    libgomp \
+    libgomp-offload-amdgcn \
+    libgomp-offload-nvptx \
+    libgo-static \
+    libgphobos \
+    libgphobos-static \
+    libhwasan \
+    libhwasan-static \
+    libitm \
+    libitm-devel \
+    libitm-static \
+    liblsan \
+    liblsan-static \
+    libobjc \
+    libquadmath \
+    libquadmath-devel \
+    libquadmath-static \
+    libstdc++ \
+    libstdc++-devel \
+    libstdc++-docs \
+    libstdc++-static \
+    libtsan \
+    libtsan-static \
+    libubsan \
+    libubsan-static 

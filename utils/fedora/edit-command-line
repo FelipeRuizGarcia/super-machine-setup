@@ -1,11 +1,9 @@
 #!/bin/bash
 
-set -eux
-
 # list kernel's
 rpm -aq kernel
 
-export family_kernel='6.18';
+export family_kernel='6.13.5';
 
 # you can not remove an "upgrade vs installed" package
 # 1. upgrade the kernel and libs to the desired kernel

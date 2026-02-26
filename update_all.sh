@@ -32,5 +32,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 fi
 
 # common section
+sudo service docker restart;
 bash -x ./update_os_tools.sh
 bash -x ./update_nvim.sh
+bash -x ./update_tools_ollama.sh

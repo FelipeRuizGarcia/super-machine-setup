@@ -145,10 +145,9 @@ alias dmi="python3 manage.py migrate "
 # ALIAS DOCKER AI
 
 # OLLAMA
-# TODO: separate client alias VS daemon - admin alias
-# Ollama will run in a container, not installed in the host
-# but the client command will be from brew ...
-#
+# client will be oll
+# daemon will be dol
+
 # docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --memory=14g --memory-swap=50g --name ollama ollama/ollama
 alias ollsetup="docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama "
 alias ollupdate="docker pull ollama/ollama"
